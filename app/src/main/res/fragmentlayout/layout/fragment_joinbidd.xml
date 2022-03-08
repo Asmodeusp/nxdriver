@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:background="@color/bg"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/ll"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <include layout="@layout/common_toolbar"></include>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:background="@color/pink"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px60dp">
+                    <TextView
+                        android:textColor="@color/gray333"
+                        android:textSize="@dimen/px30dp"
+                        android:paddingLeft="@dimen/px30dp"
+                        android:gravity="center"
+                        android:text="竞价结束时间："
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/px60dp">
+                    </TextView>
+                    <TextView
+                        android:textSize="@dimen/px30dp"
+                        android:paddingLeft="@dimen/px30dp"
+                        android:gravity="center"
+                        android:text=""
+                        android:id="@+id/tvendtime"
+                        android:textColor="@color/red"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/px60dp">
+                    </TextView>
+                </LinearLayout>
+
+
+
+                <RelativeLayout
+                    android:id="@+id/rlrob"
+                    android:paddingLeft="@dimen/px20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px80dp">
+                    <TextView
+                        android:textSize="@dimen/px28dp"
+                        android:textColor="@color/gray333"
+                        android:layout_centerVertical="true"
+                        android:text="抢单量："
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"></TextView>
+
+                    <EditText
+                        android:inputType="numberDecimal"
+                        android:id="@+id/edRobNum"
+                        android:layout_marginRight="@dimen/px24dp"
+                        android:background="@null"
+                        android:textSize="@dimen/px28dp"
+                        android:layout_centerVertical="true"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入"
+                        android:textColor="@color/gray666"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"></EditText>
+                </RelativeLayout>
+                <include layout="@layout/common_line"></include>
+                <RelativeLayout
+                    android:id="@+id/rlHightNum"
+                    android:visibility="visible"
+                    android:paddingLeft="@dimen/px20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px80dp">
+                    <TextView
+
+                        android:textSize="@dimen/px28dp"
+                        android:textColor="@color/gray333"
+                        android:layout_centerVertical="true"
+                        android:text="最高抢单量："
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"></TextView>
+
+                    <TextView
+                        android:textColor="@color/red"
+                        android:inputType="numberDecimal"
+                        android:paddingRight="@dimen/px20dp"
+                        android:layout_weight="1"
+                        android:id="@+id/tvHightNum"
+                        android:background="@null"
+                        android:textSize="@dimen/px28dp"
+                        android:layout_centerVertical="true"
+                        android:gravity="right|center_vertical"
+                        android:hint=""
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </TextView>
+                </RelativeLayout>
+                <include layout="@layout/common_line"></include>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/px24dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px80dp">
+                    <TextView
+                        android:textColor="@color/gray333"
+                        android:textSize="@dimen/px28dp"
+                        android:layout_centerVertical="true"
+                        android:text="我的竞价："
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                    <EditText
+                        android:textColor="@color/red"
+                        android:inputType="numberDecimal"
+                        android:paddingRight="@dimen/px20dp"
+                        android:layout_weight="1"
+                        android:layout_toLeftOf="@+id/util"
+                        android:id="@+id/edprice"
+                        android:background="@null"
+                        android:textSize="@dimen/px28dp"
+                        android:layout_centerVertical="true"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                    </EditText>
+                    <TextView
+                        android:textColor="@color/gray333"
+                        android:textSize="@dimen/px28dp"
+                        android:textStyle="bold"
+                        android:id="@+id/util"
+                        android:layout_centerVertical="true"
+                        android:text="元/吨："
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                </LinearLayout>
+                <include layout="@layout/common_line"></include>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/rlBiddRank"
+                    android:layout_marginRight="@dimen/px20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/px24dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px96dp">
+                    <TextView
+                        android:layout_weight="1"
+                        android:textColor="@color/gray333"
+                        android:textSize="@dimen/px28dp"
+                        android:layout_centerVertical="true"
+                        android:text="竞价排名："
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                    <ImageView
+                        android:layout_marginRight="@dimen/px20dp"
+                        android:src="@drawable/ico_right"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp">
+
+                    </ImageView>
+
+
+
+                </LinearLayout>
+                <include layout="@layout/common_line"></include>
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/rlfloor"
+                    android:paddingLeft="@dimen/px20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px80dp">
+                    <TextView
+                        android:textSize="@dimen/px28dp"
+                        android:textColor="@color/gray333"
+                        android:layout_centerVertical="true"
+                        android:text="底价："
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"></TextView>
+
+                    <TextView
+                        android:inputType="numberDecimal"
+                        android:id="@+id/tv_loor_price"
+                        android:layout_marginRight="@dimen/px24dp"
+                        android:background="@null"
+                        android:textSize="@dimen/px28dp"
+                        android:layout_centerVertical="true"
+                        android:gravity="right|center_vertical"
+                        android:hint=""
+                        android:textColor="@color/gray666"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"></TextView>
+                </RelativeLayout>
+                <include layout="@layout/common_line"></include>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/llsendByCar"
+                    android:layout_marginTop="@dimen/px20dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:visibility="visible"
+                        android:id="@+id/llcheck"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/px96dp">
+                            <CheckBox
+                                android:clickable="false"
+                                android:text="北斗"
+                                android:visibility="visible"
+                                android:layout_centerVertical="true"
+                                android:id="@+id/checkBeidou"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </CheckBox>
+                            <CheckBox
+                                android:clickable="false"
+                                android:text="允许竞价多个派车单"
+                                android:visibility="visible"
+                                android:layout_marginLeft="@dimen/px20dp"
+                                android:layout_centerVertical="true"
+                                android:id="@+id/checkmoresend"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </CheckBox>
+                        </LinearLayout>
+                        <include layout="@layout/common_line"></include>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlcar"
+                        android:layout_marginTop="@dimen/px2dp"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px100dp">
+
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="@dimen/px20dp"
+                            android:textSize="@dimen/px30dp"
+                            android:textColor="@color/color_black"
+                            android:text="车辆类型:"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true" />
+                        <LinearLayout
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/tvCarType"
+                                android:text=""
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <ImageView
+                                android:visibility="invisible"
+                                android:layout_marginRight="@dimen/px20dp"
+                                android:layout_marginLeft="@dimen/px20dp"
+                                android:src="@drawable/ico_right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <include layout="@layout/common_line"></include>
+                    <RelativeLayout
+                        android:id="@+id/rlchooseCar"
+                        android:layout_marginTop="@dimen/px2dp"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px100dp">
+
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="@dimen/px20dp"
+                            android:textSize="@dimen/px30dp"
+                            android:textColor="@color/color_black"
+                            android:text="选择车辆:"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true" />
+                        <LinearLayout
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/tvCarNo"
+                                android:text=""
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <ImageView
+                                android:visibility="visible"
+                                android:layout_marginRight="@dimen/px20dp"
+                                android:layout_marginLeft="@dimen/px20dp"
+                                android:src="@drawable/ico_right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <include layout="@layout/common_line"></include>
+                    <RelativeLayout
+                        android:id="@+id/rlchooseDriver"
+                        android:layout_marginTop="@dimen/px2dp"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px100dp">
+
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="@dimen/px20dp"
+                            android:textSize="@dimen/px30dp"
+                            android:textColor="@color/color_black"
+                            android:text="选择司机:"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true" />
+                        <LinearLayout
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/tvDriverName"
+                                android:text=""
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <ImageView
+                                android:visibility="visible"
+                                android:layout_marginRight="@dimen/px20dp"
+                                android:layout_marginLeft="@dimen/px20dp"
+                                android:src="@drawable/ico_right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <include layout="@layout/common_line"></include>
+                    <RelativeLayout
+                        android:visibility="visible"
+                        android:paddingLeft="@dimen/px20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px80dp">
+                        <TextView
+
+                            android:textSize="@dimen/px28dp"
+                            android:textColor="@color/gray333"
+                            android:layout_centerVertical="true"
+                            android:text="竞价车次："
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"></TextView>
+
+                        <EditText
+                            android:layout_marginRight="@dimen/px20dp"
+                            android:textColor="@color/color_black"
+                            android:inputType="numberDecimal"
+                            android:paddingRight="@dimen/px20dp"
+                            android:layout_weight="1"
+                            android:id="@+id/tvCarNum"
+                            android:background="@null"
+                            android:textSize="@dimen/px28dp"
+                            android:layout_centerVertical="true"
+                            android:gravity="right|center_vertical"
+                            android:hint="请输入车次"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        </EditText>
+                    </RelativeLayout>
+                    <include layout="@layout/common_line"></include>
+                </LinearLayout>
+
+            </LinearLayout>
+            <TextView
+                android:textColor="@color/gray888"
+                android:textSize="@dimen/px28dp"
+                android:id="@+id/tvbidddelation"
+                android:padding="@dimen/px20dp"
+                android:layout_below="@+id/ll"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+            <TextView
+                android:layout_marginBottom="@dimen/px20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="@dimen/px24dp"
+                android:layout_marginLeft="@dimen/px24dp"
+                android:id="@+id/tvOrder"
+                android:textSize="@dimen/px30dp"
+                android:gravity="center"
+                android:text="确认"
+                android:textColor="@color/white"
+                android:background="@drawable/loading_btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px80dp">
+
+            </TextView>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

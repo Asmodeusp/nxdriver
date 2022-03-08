@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_marginBottom="@dimen/px10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:paddingRight="@dimen/px20dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px100dp">
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/tvGoodName"
+            android:layout_marginLeft="@dimen/px20dp"
+            android:textSize="@dimen/px30dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_black"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:visibility="invisible"
+                android:id="@+id/edguobang"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:focusable="false"
+                android:gravity="right"
+                android:hint="请输入确认数量"
+                android:inputType="numberDecimal"
+                android:text=""
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/px30dp"></EditText>
+            <TextView
+                android:visibility="invisible"
+                android:text="（过磅量）"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+        </LinearLayout>
+    </RelativeLayout>
+    <include layout="@layout/common_line"></include>
+
+    <RelativeLayout
+        android:paddingRight="@dimen/px20dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px100dp">
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/tvtag"
+            android:layout_marginLeft="@dimen/px20dp"
+            android:textSize="@dimen/px30dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_black"
+            android:text="签收量："
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@+id/tvtag"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <EditText
+                android:paddingLeft="@dimen/px20dp"
+                android:paddingRight="@dimen/px20dp"
+                android:background="@drawable/shape_bidd_btn_blue"
+                android:gravity="left|center"
+                android:inputType="numberDecimal"
+                android:hint="请输入签收数量"
+                android:id="@+id/tvnum"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text=""
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/px30dp"></EditText>
+        </LinearLayout>
+    </RelativeLayout>
+    <TextView
+        android:paddingBottom="@dimen/px20dp"
+        android:layout_marginTop="@dimen/px10dp"
+        android:textColor="@color/color_black"
+        android:layout_marginLeft="@dimen/px20dp"
+        android:textSize="@dimen/px24dp"
+        android:text="签收量司机可根据实际情况修改"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </TextView>
+</LinearLayout>

@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/bg"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"></include>
+
+    <android.support.v4.widget.NestedScrollView
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="123dp">
+
+                <TextView
+                    android:layout_toLeftOf="@+id/imgBusiness"
+                    android:id="@+id/titl"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginLeft="30dp"
+                    android:textColor="#101010"
+                    android:textSize="15sp"
+                    android:text="营业执照照片"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <TextView
+                    android:gravity="left"
+                    android:layout_toLeftOf="@+id/imgBusiness"
+                    android:layout_below="@+id/titl"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginLeft="30dp"
+                    android:textColor="#FD614A"
+                    android:textSize="12sp"
+                    android:text="请拍摄尽量清晰的营业执照照片便于快速审核"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <ImageView
+                    android:scaleType="fitXY"
+                    android:background="@drawable/ico_load_yezz"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/imgBusiness"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="131dp"
+                    android:layout_height="88dp">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+            <View
+                android:background="#F6F6F6"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px20dp">
+
+            </View>
+            <RelativeLayout
+                android:paddingTop="13dp"
+                android:layout_marginLeft="30dp"
+                android:minHeight="72dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/tvqeyi"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_weight="1"
+                        android:textColor="#101010"
+                        android:textSize="15sp"
+                        android:text="完善企业基础信息"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                    <ImageView
+                        android:id="@+id/imgdown"
+                        android:layout_marginRight="32dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ico_taxi_down"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp">
+
+                    </ImageView>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llcontect"
+                    android:layout_marginTop="14dp"
+                    android:layout_below="@+id/tvqeyi"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_marginRight="32dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="#101010"
+                            android:textSize="13sp"
+                            android:text="企业名称"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+                        <EditText
+                            android:enabled="false"
+                            android:id="@+id/edCompanyName"
+                            android:textColor="#101010"
+                            android:layout_marginTop="8dp"
+                            android:paddingLeft="10dp"
+                            android:textSize="13sp"
+                            android:hint="请输入企业名称 必填"
+                            android:background="@drawable/search_btn"
+                            android:minHeight="32dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </EditText>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_marginRight="32dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="#101010"
+                            android:textSize="13sp"
+                            android:text="企业纳税人识别号"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/ednsrnum"
+                            android:textColor="#101010"
+                            android:layout_marginTop="8dp"
+                            android:paddingLeft="10dp"
+                            android:textSize="13sp"
+                            android:hint="请输入企业纳税人识别号 必填"
+                            android:background="@drawable/search_btn"
+                            android:minHeight="32dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </EditText>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_marginRight="32dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="#101010"
+                            android:textSize="13sp"
+                            android:text="法定代表人姓名"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/edMainPerson"
+                            android:textColor="#101010"
+                            android:layout_marginTop="8dp"
+                            android:paddingLeft="10dp"
+                            android:textSize="13sp"
+                            android:hint="请输入法定代表人姓名 必填"
+                            android:background="@drawable/search_btn"
+                            android:minHeight="32dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </EditText>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_marginRight="32dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="#101010"
+                            android:textSize="13sp"
+                            android:text="企业联系方式"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+                        <EditText
+                            android:maxLength="11"
+                            android:inputType="number"
+                            android:id="@+id/edphone"
+                            android:textColor="#101010"
+                            android:layout_marginTop="8dp"
+                            android:paddingLeft="10dp"
+                            android:textSize="13sp"
+                            android:hint="请输入企业联系方式 必填"
+                            android:background="@drawable/search_btn"
+                            android:minHeight="32dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </EditText>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_marginRight="32dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="#101010"
+                            android:textSize="13sp"
+                            android:text="注册资本"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/zcMoney"
+                            android:textColor="#101010"
+                            android:layout_marginTop="8dp"
+                            android:paddingLeft="10dp"
+                            android:textSize="13sp"
+                            android:hint="请输入注册资本 必填"
+                            android:background="@drawable/search_btn"
+                            android:minHeight="32dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </EditText>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_marginRight="32dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="#101010"
+                            android:textSize="13sp"
+                            android:text="企业归属地"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/tvadress"
+                            android:paddingRight="20dp"
+                            android:drawableRight="@drawable/ico_taxi_adress"
+                            android:gravity="center_vertical"
+                            android:textColor="#101010"
+                            android:layout_marginTop="8dp"
+                            android:paddingLeft="10dp"
+                            android:textSize="13sp"
+                            android:hint="请选择企业归属地"
+                            android:background="@drawable/search_btn"
+                            android:minHeight="32dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_marginRight="32dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="#101010"
+                            android:textSize="13sp"
+                            android:text="详细地址"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/edxxadress"
+                            android:textColor="#101010"
+                            android:layout_marginTop="8dp"
+                            android:paddingLeft="10dp"
+                            android:textSize="13sp"
+                            android:hint="请输入企业详细地址 必填"
+                            android:background="@drawable/search_btn"
+                            android:minHeight="32dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </EditText>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_marginRight="32dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="#101010"
+                            android:textSize="13sp"
+                            android:text="企业类型"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/tvtype"
+                            android:paddingRight="20dp"
+                            android:drawableRight="@drawable/ico_taxi_typr"
+                            android:gravity="center_vertical"
+                            android:textColor="#101010"
+                            android:layout_marginTop="8dp"
+                            android:paddingLeft="10dp"
+                            android:textSize="13sp"
+                            android:hint="请选择企业类型 必填"
+                            android:background="@drawable/search_btn"
+                            android:minHeight="32dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_marginRight="32dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="#101010"
+                            android:textSize="13sp"
+                            android:text="企业经营范围"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/edjyfw"
+                            android:textColor="#101010"
+                            android:layout_marginTop="8dp"
+                            android:paddingLeft="10dp"
+                            android:textSize="13sp"
+                            android:hint="请输入企业经营范围 必填"
+                            android:background="@drawable/search_btn"
+                            android:minHeight="32dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </EditText>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_marginRight="32dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="#101010"
+                            android:textSize="13sp"
+                            android:text="所属主管税务机关"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/edswjg"
+                            android:textColor="#101010"
+                            android:layout_marginTop="8dp"
+                            android:paddingLeft="10dp"
+                            android:textSize="13sp"
+                            android:hint="请输入所属主管税务机关 必填"
+                            android:background="@drawable/search_btn"
+                            android:minHeight="32dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </EditText>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_marginRight="32dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="#101010"
+                            android:textSize="13sp"
+                            android:text="注册时间"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+                        <TextView
+                            android:paddingRight="20dp"
+                            android:drawableRight="@drawable/ico_jisuanqi"
+                            android:id="@+id/zctime"
+                            android:gravity="center_vertical"
+                            android:textColor="#101010"
+                            android:layout_marginTop="8dp"
+                            android:paddingLeft="10dp"
+                            android:textSize="13sp"
+                            android:hint="请输入注册时间 必填"
+                            android:background="@drawable/search_btn"
+                            android:minHeight="32dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_marginRight="32dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="#101010"
+                            android:textSize="13sp"
+                            android:text="成立日期"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/tvclData"
+                            android:gravity="center_vertical"
+                            android:textColor="#101010"
+                            android:layout_marginTop="8dp"
+                            android:paddingLeft="10dp"
+                            android:textSize="13sp"
+                            android:hint="请选择成立日期 必填"
+                            android:background="@drawable/search_btn"
+                            android:minHeight="32dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_below="@+id/ll"
+                        android:id="@+id/tvOrder"
+                        android:textSize="@dimen/px30dp"
+                        android:gravity="center"
+                        android:text="提交"
+                        android:textColor="@color/white"
+                        android:background="@drawable/loading_btn_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px80dp">
+
+                    </TextView>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

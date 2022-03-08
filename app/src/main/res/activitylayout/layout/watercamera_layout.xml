@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/rlPhoto"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:scaleType="fitCenter"
+        android:layout_centerInParent="true"
+        android:id="@+id/imgView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ImageView>
+
+    <LinearLayout
+        android:paddingBottom="@dimen/px40dp"
+        android:minHeight="120dp"
+        android:id="@+id/ll_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/transparent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_watermark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/lltext"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="13dp"
+                    android:maxWidth="200dp"
+                    android:text=""
+                    android:textColor="@color/blue1"
+                    android:textSize="@dimen/px30dp"
+                    android:visibility="visible" />
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/imgChange"
+                    android:src="@drawable/ico_changeadress"
+                    android:layout_width="@dimen/px50dp"
+                    android:layout_height="@dimen/px50dp">
+
+                </ImageView>
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_marginTop="@dimen/px10dp"
+                android:layout_below="@+id/lltext"
+                android:visibility="visible"
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="13dp"
+                android:text=""
+                android:textColor="@color/blue1"
+                android:textSize="14sp" />
+            <TextView
+                android:layout_marginTop="@dimen/px10dp"
+                android:layout_below="@+id/tv_date"
+                android:visibility="visible"
+                android:id="@+id/tv_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="13dp"
+                android:text=""
+                android:textColor="@color/blue1"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+
+        <ImageButton
+            android:layout_marginLeft="@dimen/px20dp"
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            android:background="@drawable/ic_close_bottom_bar"
+            android:onClick="onClose" />
+        <RelativeLayout
+            android:id="@+id/llpic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btn_save_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/save_photo_selector"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_list_btn_8dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvkf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/px100dp"
+            android:background="@null"
+            android:gravity="center"
+            android:hint=""
+            android:text="个人信息保护指引"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/px30dp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="@dimen/px40dp"
+            android:layout_below="@+id/tvkf"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvtips"
+                android:textStyle="bold"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/px26dp"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="10dp"
+            android:background="@color/drivel"
+            android:id="@+id/viewline"
+            android:layout_below="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp">
+
+        </View>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+           android:layout_below="@+id/viewline"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <TextView
+                android:layout_marginBottom="5dp"
+                android:id="@+id/tvcancel"
+                android:textColor="@color/gray333"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="不同意"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </TextView>
+            <View
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/drivel"
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent">
+
+            </View>
+            <TextView
+                android:layout_marginBottom="5dp"
+                android:id="@+id/tvconfire"
+                android:textColor="@color/blue"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="同意"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </TextView>
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/common_toolbar"></include>
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px100dp">
+
+            <TextView
+                android:layout_marginLeft="@dimen/px20dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:text="上一级"
+                android:id="@+id/tvuplever"
+                android:layout_width="@dimen/px100dp"
+                android:layout_height="match_parent">
+
+            </TextView>
+            <TextView
+                android:layout_marginRight="@dimen/px20dp"
+                android:textStyle="bold"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:text="下一级"
+                android:id="@+id/tvdownlever"
+                android:layout_width="@dimen/px100dp"
+                android:layout_height="match_parent"/>
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvOrder"
+        android:textSize="@dimen/px30dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="确定"
+        android:background="@color/blue"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px80dp">
+
+    </TextView>
+
+
+
+</RelativeLayout>

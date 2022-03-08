@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/bg"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/ll"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/common_toolbar"></include>
+
+        <EditText
+            android:layout_marginTop="@dimen/px20dp"
+            android:id="@+id/edssuggest"
+            android:layout_weight="1"
+            android:padding="@dimen/px24dp"
+            android:gravity="left"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/px28dp"
+            android:hint="输入建议详情"
+            android:background="@color/white"
+            android:minHeight="200dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </EditText>
+        <GridView
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:columnWidth="60dp"
+            android:horizontalSpacing="10dp"
+            android:numColumns="auto_fit"
+            android:verticalSpacing="10dp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_marginTop="@dimen/px100dp"
+        android:layout_marginRight="@dimen/px24dp"
+        android:layout_marginLeft="@dimen/px24dp"
+        android:layout_below="@+id/ll"
+        android:id="@+id/tvOrder"
+        android:textSize="@dimen/px30dp"
+        android:gravity="center"
+        android:text="确认"
+        android:textColor="@color/white"
+        android:background="@drawable/loading_btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px80dp">
+
+    </TextView>
+
+</RelativeLayout>

@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:background="@color/bg"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/tool"
+        layout="@layout/common_toolbar"></include>
+    <ScrollView
+        android:layout_below="@+id/tool"
+        android:layout_above="@+id/tvSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/rl_user_type"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px100dp">
+
+                <TextView
+                    android:layout_marginLeft="@dimen/px10dp"
+                    android:textSize="@dimen/px30dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/color_black"
+                    android:text="会员类型"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/px30dp"
+                        android:id="@+id/tvresister_type"
+                        android:text="个人"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/px20dp"
+                        android:layout_marginRight="@dimen/px20dp"
+                        android:src="@drawable/ico_wallet_down" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+            <include layout="@layout/common_line"></include>
+            <LinearLayout
+                android:visibility="visible"
+                android:id="@+id/llperson"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px100dp">
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/px10dp"
+                        android:textSize="@dimen/px30dp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/color_black"
+                        android:text="真实姓名"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:gravity="right"
+                            android:layout_marginRight="@dimen/px20dp"
+                            android:textColor="@color/color_black"
+                            android:background="@null"
+                            android:textSize="@dimen/px30dp"
+                            android:id="@+id/edrealName"
+                            android:text=""
+                            android:hint="请输入真实姓名"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:id="@+id/deleteperosoname"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/px20dp"
+                            android:layout_marginRight="@dimen/px20dp"
+                            android:src="@drawable/ico_wallet_delete" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <include layout="@layout/common_line"></include>
+                <RelativeLayout
+                    android:id="@+id/rl_card_type"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px100dp">
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/px10dp"
+                        android:textSize="@dimen/px30dp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/color_black"
+                        android:text="证件号码"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:gravity="right"
+                            android:layout_marginRight="@dimen/px20dp"
+                            android:textColor="@color/color_black"
+                            android:background="@null"
+                            android:textSize="@dimen/px30dp"
+                            android:id="@+id/ed_idcard"
+                            android:text=""
+                            android:hint="请输入身份证号码"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:id="@+id/deleteperosncard"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/px20dp"
+                            android:layout_marginRight="@dimen/px20dp"
+                            android:src="@drawable/ico_wallet_delete" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <include layout="@layout/common_line"></include>
+                <RelativeLayout
+                    android:id="@+id/rl_user_sex"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px100dp">
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/px10dp"
+                        android:textSize="@dimen/px30dp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/color_black"
+                        android:text="性        别"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="@color/color_black"
+                            android:textSize="@dimen/px30dp"
+                            android:id="@+id/tvsex"
+                            android:text="男"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/px20dp"
+                            android:layout_marginRight="@dimen/px20dp"
+                            android:src="@drawable/ico_wallet_down" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <include layout="@layout/common_line"></include>
+                <RelativeLayout
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px100dp">
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/px10dp"
+                        android:textSize="@dimen/px30dp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/color_black"
+                        android:text="银行卡号"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:imeOptions="actionDone"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:layout_marginRight="@dimen/px20dp"
+                            android:textColor="@color/color_black"
+                            android:background="@null"
+                            android:textSize="@dimen/px30dp"
+                            android:id="@+id/edardnum"
+                            android:text=""
+                            android:hint="请输入银行卡号"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:id="@+id/imgchoosePerson"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/px20dp"
+                            android:layout_marginRight="@dimen/px20dp"
+                            android:src="@drawable/ico_piccard" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <include layout="@layout/common_line"></include>
+                <RelativeLayout
+                    android:id="@+id/rlpersonbank"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px100dp">
+
+                    <TextView
+                        android:id="@+id/op"
+                        android:layout_marginLeft="@dimen/px10dp"
+                        android:textSize="@dimen/px30dp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/color_black"
+                        android:text="开  户  行"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_toRightOf="@+id/op"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:gravity="right"
+                            android:layout_marginRight="@dimen/px20dp"
+                            android:textColor="@color/color_black"
+                            android:background="@null"
+                            android:textSize="@dimen/px30dp"
+                            android:id="@+id/tvopenbank"
+                            android:text=""
+                            android:hint=""
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:visibility="visible"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/px20dp"
+                            android:layout_marginRight="@dimen/px20dp"
+                            android:src="@drawable/ico_right" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <include layout="@layout/common_line"></include>
+
+
+                <RelativeLayout
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px100dp">
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/px10dp"
+                        android:textSize="@dimen/px30dp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/color_black"
+                        android:text="手机号码"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:gravity="right"
+                            android:inputType="phone"
+                            android:layout_marginRight="@dimen/px20dp"
+                            android:textColor="@color/color_black"
+                            android:background="@null"
+                            android:textSize="@dimen/px30dp"
+                            android:id="@+id/edphone"
+                            android:text=""
+                            android:hint="请输入银行预留号码"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:id="@+id/deletepersonphone"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/px20dp"
+                            android:layout_marginRight="@dimen/px20dp"
+                            android:src="@drawable/ico_wallet_delete" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <include layout="@layout/common_line"></include>
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/llauthor"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px100dp">
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/px10dp"
+                        android:textSize="@dimen/px30dp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/color_black"
+                        android:text="机构名称"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:gravity="right"
+                            android:layout_marginRight="@dimen/px20dp"
+                            android:textColor="@color/color_black"
+                            android:background="@null"
+                            android:textSize="@dimen/px30dp"
+                            android:id="@+id/edauthorName"
+                            android:text=""
+                            android:hint="请输入机构名称"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:id="@+id/deleteauthorname"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/px20dp"
+                            android:layout_marginRight="@dimen/px20dp"
+                            android:src="@drawable/ico_wallet_delete" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <include layout="@layout/common_line"></include>
+                <RelativeLayout
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px100dp">
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/px10dp"
+                        android:textSize="@dimen/px30dp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/color_black"
+                        android:text="机构证件号码"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:gravity="right"
+                            android:layout_marginRight="@dimen/px20dp"
+                            android:textColor="@color/color_black"
+                            android:background="@null"
+                            android:textSize="@dimen/px30dp"
+                            android:id="@+id/ed_authorcard"
+                            android:text=""
+                            android:hint="请输入统一社会信用代码"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:id="@+id/deleteauthorcard"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/px20dp"
+                            android:layout_marginRight="@dimen/px20dp"
+                            android:src="@drawable/ico_wallet_delete" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <include layout="@layout/common_line"></include>
+                <RelativeLayout
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px100dp">
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/px10dp"
+                        android:textSize="@dimen/px30dp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/color_black"
+                        android:text="法人姓名"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:gravity="right"
+                            android:layout_marginRight="@dimen/px20dp"
+                            android:textColor="@color/color_black"
+                            android:background="@null"
+                            android:textSize="@dimen/px30dp"
+                            android:id="@+id/edfrname"
+                            android:text=""
+                            android:hint="请输入法人姓名"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/px20dp"
+                            android:layout_marginRight="@dimen/px20dp"
+                            android:src="@drawable/ico_wallet_delete" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <include layout="@layout/common_line"></include>
+                <RelativeLayout
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px100dp">
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/px10dp"
+                        android:textSize="@dimen/px30dp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/color_black"
+                        android:text="法人身份证"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:gravity="right"
+                            android:layout_marginRight="@dimen/px20dp"
+                            android:textColor="@color/color_black"
+                            android:background="@null"
+                            android:textSize="@dimen/px30dp"
+                            android:id="@+id/edfrid_card"
+                            android:text=""
+                            android:hint="请输入身份证号"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:id="@+id/deleteFrCard"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/px20dp"
+                            android:layout_marginRight="@dimen/px20dp"
+                            android:src="@drawable/ico_wallet_delete" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <include layout="@layout/common_line"></include>
+                <RelativeLayout
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px100dp">
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/px10dp"
+                        android:textSize="@dimen/px30dp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/color_black"
+                        android:text="经办人姓名"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:gravity="right"
+                            android:layout_marginRight="@dimen/px20dp"
+                            android:textColor="@color/color_black"
+                            android:background="@null"
+                            android:textSize="@dimen/px30dp"
+                            android:id="@+id/edjbrname"
+                            android:text=""
+                            android:hint="请输入经办人姓名"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/px20dp"
+                            android:layout_marginRight="@dimen/px20dp"
+                            android:src="@drawable/ico_wallet_delete" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <include layout="@layout/common_line"></include>
+                <RelativeLayout
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px100dp">
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/px10dp"
+                        android:textSize="@dimen/px30dp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/color_black"
+                        android:text="经办人身份证"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:gravity="right"
+                            android:layout_marginRight="@dimen/px20dp"
+                            android:textColor="@color/color_black"
+                            android:background="@null"
+                            android:textSize="@dimen/px30dp"
+                            android:id="@+id/edjbridcard"
+                            android:text=""
+                            android:hint="请输入经办人身份证号"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:id="@+id/deletejbrcard"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/px20dp"
+                            android:layout_marginRight="@dimen/px20dp"
+                            android:src="@drawable/ico_wallet_delete" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <include layout="@layout/common_line"></include>
+                <RelativeLayout
+                    android:id="@+id/rlauthoropenbank"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px100dp">
+
+                    <TextView
+                        android:id="@+id/op2"
+                        android:layout_marginLeft="@dimen/px10dp"
+                        android:textSize="@dimen/px30dp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/color_black"
+                        android:text="开  户  行"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_toRightOf="@+id/op2"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:gravity="right"
+                            android:layout_marginRight="@dimen/px20dp"
+                            android:textColor="@color/color_black"
+                            android:background="@null"
+                            android:textSize="@dimen/px30dp"
+                            android:id="@+id/tvauthor_openbank"
+                            android:text=""
+                            android:hint="请选择开户行"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:visibility="visible"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/px20dp"
+                            android:layout_marginRight="@dimen/px20dp"
+                            android:src="@drawable/ico_right" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <include layout="@layout/common_line"></include>
+                <RelativeLayout
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px100dp">
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/px10dp"
+                        android:textSize="@dimen/px30dp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/color_black"
+                        android:text="银行卡号"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:gravity="right"
+                            android:imeOptions="actionDone"
+                            android:background="@null"
+                            android:textColor="@color/color_black"
+                            android:textSize="@dimen/px30dp"
+                            android:id="@+id/tvauthor_cardNum"
+                            android:text=""
+                            android:hint="输入银行卡号"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:id="@+id/imgchooseAuthorBank"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/px20dp"
+                            android:layout_marginRight="@dimen/px20dp"
+                            android:src="@drawable/ico_piccard" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <include layout="@layout/common_line"></include>
+
+                <RelativeLayout
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px100dp">
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/px10dp"
+                        android:textSize="@dimen/px30dp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/color_black"
+                        android:text="手机号码"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:gravity="right"
+                            android:layout_marginRight="@dimen/px20dp"
+                            android:textColor="@color/color_black"
+                            android:background="@null"
+                            android:textSize="@dimen/px30dp"
+                            android:id="@+id/edauthor_phone"
+                            android:text=""
+                            android:hint="请输入银行预留号码"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:id="@+id/deleteauthorphone"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/px20dp"
+                            android:layout_marginRight="@dimen/px20dp"
+                            android:src="@drawable/ico_wallet_delete" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <include layout="@layout/common_line"></include>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tvSubmit"
+        android:textColor="@color/white"
+        android:textSize="@dimen/px30dp"
+        android:gravity="center"
+        android:text="提交"
+        android:layout_alignParentBottom="true"
+        android:background="@color/blue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px100dp">
+
+    </TextView>
+
+</RelativeLayout>

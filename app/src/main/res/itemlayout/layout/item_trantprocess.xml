@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/lltext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px40dp"
+        android:layout_marginTop="@dimen/px10dp"
+        android:layout_marginRight="@dimen/px40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgisDeal"
+            android:layout_width="@dimen/px24dp"
+            android:layout_height="@dimen/px24dp"
+            android:visibility="visible"></ImageView>
+
+        <TextView
+            android:id="@+id/tvContect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px40dp"
+            android:text=""
+            android:textSize="@dimen/px30dp">
+
+        </TextView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/lldpwn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lltext"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/px40dp"
+        android:layout_marginRight="@dimen/px40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvline"
+            android:layout_width="@dimen/px2dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/px12dp"
+            android:minHeight="70dp"
+            android:text="">
+
+        </TextView>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px70dp"
+            android:layout_toRightOf="@+id/tvline">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <ImageView
+            android:id="@+id/imgPic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"></ImageView>
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tvOrder"
+            android:layout_width="@dimen/px166dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/loading_btn_login"
+            android:paddingTop="@dimen/px16dp"
+            android:paddingBottom="@dimen/px16dp"
+            android:text="确认"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px28dp"
+            android:visibility="gone">
+
+        </TextView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_marginBottom="@dimen/px10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tvId"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/px10dp"
+        android:layout_marginLeft="@dimen/px20dp"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/px30dp"
+        android:text="ffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <LinearLayout
+        android:layout_marginTop="@dimen/px8dp"
+        android:layout_marginLeft="@dimen/px20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/px30dp"
+            android:text="司机姓名:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_marginLeft="@dimen/px20dp"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/px30dp"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="@dimen/px8dp"
+        android:layout_marginLeft="@dimen/px20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/px30dp"
+            android:text="车牌号:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <TextView
+            android:id="@+id/tvCarNo"
+            android:layout_marginLeft="@dimen/px20dp"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/px30dp"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="@dimen/px10dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="@dimen/px20dp"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/px30dp"
+        android:text="撤单原因:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvrerson"
+        android:layout_marginTop="@dimen/px10dp"
+        android:layout_marginLeft="@dimen/px20dp"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/px30dp"
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <LinearLayout
+        android:padding="@dimen/px20dp"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:textSize="@dimen/px28dp"
+            android:textColor="@color/gray333"
+            android:gravity="center"
+            android:id="@+id/viewrefuse"
+            android:layout_marginLeft="@dimen/px10dp"
+            android:background="@drawable/shape_list_btn"
+            android:text="拒绝"
+            android:paddingLeft="@dimen/px30dp"
+            android:paddingRight="@dimen/px30dp"
+            android:layout_width="@dimen/px166dp"
+            android:layout_height="@dimen/px80dp">
+
+        </TextView>
+
+        <TextView
+            android:textSize="@dimen/px28dp"
+            android:textColor="@color/white"
+            android:id="@+id/viewagreen"
+            android:layout_width="@dimen/px166dp"
+            android:layout_height="@dimen/px80dp"
+            android:layout_marginLeft="@dimen/px10dp"
+            android:background="@drawable/shape_list_btn_blue"
+            android:gravity="center"
+            android:text="同意">
+
+        </TextView>
+
+    </LinearLayout>
+
+</LinearLayout>

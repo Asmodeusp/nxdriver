@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:padding="20dp"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/bg_round_time_out">
+
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请选择此任务关联的车队长，完成任务后运费将支付给您选择的车队长"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/cy"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/text_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <View
+        android:background="@color/bg"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp">
+
+    </View>
+    <LinearLayout
+        android:layout_marginTop="@dimen/px10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:id="@+id/tvcancel"
+            android:textColor="@color/gray888"
+            android:textSize="@dimen/px28dp"
+            android:gravity="center"
+            android:text="取消"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TextView>
+        <View
+            android:background="@color/bg"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent">
+
+        </View>
+        <TextView
+            android:id="@+id/tvorder"
+            android:gravity="center"
+            android:text="确定"
+            android:textSize="@dimen/px28dp"
+            android:textColor="@color/blue"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TextView>
+    </LinearLayout>
+
+
+</LinearLayout>

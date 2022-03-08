@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxHeight="1000dp"
+            android:src="@drawable/ico_update_nocorn" />
+        <LinearLayout
+            android:paddingBottom="@dimen/px40dp"
+            android:background="@drawable/shape_list_btn_update"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginLeft="@dimen/px20dp"
+                android:textStyle="bold"
+                android:textSize="@dimen/px30dp"
+                android:text="更新说明："
+                android:textColor="@color/color_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+            <TextView
+                android:id="@+id/tvContect"
+                android:layout_marginTop="@dimen/px10dp"
+                android:layout_marginLeft="@dimen/px20dp"
+                android:textColor="@color/gray888"
+                android:textSize="@dimen/px28dp"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:text="立即升级"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/px50dp"
+                android:layout_marginRight="@dimen/px20dp"
+                android:layout_marginLeft="@dimen/px20dp"
+                android:textSize="@dimen/px30dp"
+                android:textColor="@color/white"
+                android:background="@drawable/shape_list_btn_blue"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/btnUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px80dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tvNoUpdate"
+                android:layout_marginTop="@dimen/px20dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/gray666"
+                android:text="暂不升级"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

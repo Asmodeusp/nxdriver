@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/common_toolbar"></include>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+           android:id="@+id/chooseidpositive"
+            android:layout_marginRight="@dimen/px20dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:scaleType="fitCenter"
+                android:id="@+id/imgidpositive"
+                android:layout_margin="@dimen/px10dp"
+                android:src="@drawable/ico_default_idcard_front"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px200dp" />
+            <TextView
+                android:layout_marginTop="@dimen/px10dp"
+                android:text="身份证正面"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/chooseidotherside"
+            android:layout_marginLeft="@dimen/px20dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:scaleType="fitCenter"
+                    android:id="@+id/imgidotherside"
+                    android:layout_margin="@dimen/px10dp"
+                    android:src="@drawable/ico_defalut_idcard_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px200dp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px10dp"
+                    android:text="身份证反面" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="@dimen/px20dp"
+        android:background="@color/bg_17"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px20dp"></View>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/px10dp"
+        android:layout_marginTop="@dimen/px20dp"
+        android:layout_marginLeft="@dimen/px20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px80dp">
+
+        <TextView
+            android:textColor="@color/gray333"
+            android:textSize="@dimen/px30dp"
+            android:text="用户姓名:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_marginRight="@dimen/px30dp"
+            android:gravity="right"
+            android:textColor="@color/gray888"
+            android:id="@+id/tvuser"
+            android:textSize="@dimen/px30dp"
+            android:layout_marginLeft="@dimen/px20dp"
+            android:background="@null"
+            android:hint="上传照片自动获取"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <include layout="@layout/common_line"></include>
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/px10dp"
+        android:layout_marginTop="@dimen/px20dp"
+        android:layout_marginLeft="@dimen/px20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px80dp">
+
+        <TextView
+            android:textColor="@color/gray333"
+            android:textSize="@dimen/px30dp"
+            android:text="身份证号:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_marginRight="@dimen/px30dp"
+            android:gravity="right"
+            android:textColor="@color/gray888"
+            android:id="@+id/tvidcard"
+            android:textSize="@dimen/px30dp"
+            android:layout_marginLeft="@dimen/px20dp"
+            android:background="@null"
+            android:hint="上传照片自动获取"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <include layout="@layout/common_line"></include>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/px10dp"
+        android:layout_marginTop="@dimen/px20dp"
+        android:layout_marginLeft="@dimen/px20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px80dp">
+
+        <TextView
+            android:textColor="@color/gray333"
+            android:textSize="@dimen/px30dp"
+            android:text="用户类型:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginRight="@dimen/px30dp"
+            android:gravity="right"
+            android:textColor="@color/gray888"
+            android:id="@+id/tvcarrier"
+            android:textSize="@dimen/px30dp"
+            android:layout_marginLeft="@dimen/px20dp"
+            android:background="@null"
+            android:text="承运商"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <include layout="@layout/common_line"></include>
+    <LinearLayout
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/px10dp"
+        android:layout_marginTop="@dimen/px20dp"
+        android:layout_marginLeft="@dimen/px20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px80dp">
+
+        <TextView
+            android:textColor="@color/gray333"
+            android:textSize="@dimen/px30dp"
+            android:text="开票最大限额:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:inputType="numberDecimal"
+            android:layout_marginRight="@dimen/px30dp"
+            android:gravity="right"
+            android:textColor="@color/gray888"
+            android:id="@+id/edmaxAmcount"
+            android:textSize="@dimen/px30dp"
+            android:layout_marginLeft="@dimen/px20dp"
+            android:background="@null"
+            android:text="100000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/px10dp"
+        android:layout_marginTop="@dimen/px20dp"
+        android:layout_marginLeft="@dimen/px20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px80dp">
+
+        <TextView
+            android:textColor="@color/gray333"
+            android:textSize="@dimen/px30dp"
+            android:text="所在地区:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginRight="@dimen/px30dp"
+            android:gravity="right"
+            android:textColor="@color/gray888"
+            android:text=""
+            android:id="@+id/tvArea"
+            android:textSize="@dimen/px30dp"
+            android:layout_marginLeft="@dimen/px20dp"
+            android:background="@null"
+            android:hint="请选择所在区域"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <include layout="@layout/common_line"></include>
+</LinearLayout>

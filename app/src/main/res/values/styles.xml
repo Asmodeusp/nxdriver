@@ -1,0 +1,168 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your eee theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:textViewStyle">@style/myTextStyle</item>
+    </style>
+    <!--窗体背景，这个背景能在第一时间显示, 避免启动时白屏，黑屏问题-->
+
+    <style name="LaunchTheme" parent="Theme.AppCompat.NoActionBar">
+
+        <item name="android:background">@drawable/icowelcome</item>
+
+        <item name="android:windowFullscreen">true</item>
+
+    </style>
+    <style name="myTextStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/color_black</item>
+
+    </style>
+    <!--加载中对话框样式-->
+    <style name="selectorDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@color/transparent</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">false</item><!--模糊-->
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+    <!--toolbar样式-->
+    <style name="ToolbarTheme" parent="Theme.AppCompat.Light">
+        <!-- 设置 toolbar 溢出菜单的文字的颜色 -->
+        <item name="android:textColor">@android:color/holo_red_dark</item>
+        <!-- 设置 显示在toobar上菜单文字的颜色 -->
+        <item name="actionMenuTextColor">@color/theme_color</item>
+        <!-- 设置toolbar 弹出菜单的字体大小-->
+        <item name="android:textSize">15sp</item>
+    </style>
+    <declare-styleable name="LeanTextView">
+        <attr name="degree" format="dimension"/>
+    </declare-styleable>
+    <style name="DefaultDialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+
+    <!-- 更新update -->
+    <style name="BaseDialog" parent="android:Theme.Light">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+
+    <style name="mainfstyle">
+        <item name="android:windowEnterAnimation">@anim/animal_dialogeject</item>
+
+    </style>
+    <declare-styleable name="CaterpillarIndicator">
+        <attr name="slide_text_color" format="color|reference"/>
+        <attr name="slide_text_size_normal" format="dimension"/>
+        <attr name="slide_text_size_selected" format="dimension"/>
+        <attr name="slide_text_color_normal" format="color"/>
+        <attr name="slide_text_color_selected" format="color"/>
+        <attr name="slide_footer_line_height" format="dimension"/>
+        <attr name="slide_footer_color" format="color"/>
+        <attr name="slide_round" format="boolean"/>
+        <attr name="slide_item_width" format="dimension"/>
+        <attr name="slide_caterpillar" format="boolean"/>
+        <attr name="slide_count" format="integer"/>
+        <attr name="slide_padding_bottom" format="dimension"/>
+        <attr name="slide_text_center_flag">
+            <enum name="textCenter" value="0"/>
+            <enum name="lineCenter" value="1"/>
+        </attr>
+
+    </declare-styleable>
+
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/select_check</item>
+    </style>
+    <declare-styleable name="FocusSurfaceView">
+        <attr name="focus_mode">
+            <enum name="fit_image" value="0"/>
+            <enum name="ratio_4_3" value="1"/>
+            <enum name="ratio_3_4" value="2"/>
+            <enum name="square" value="3"/>
+            <enum name="ratio_16_9" value="4"/>
+            <enum name="ratio_9_16" value="5"/>
+            <enum name="free" value="6"/>
+            <enum name="custom" value="7"/>
+            <enum name="circle" value="8"/>
+            <enum name="circle_square" value="9"/>
+        </attr>
+        <attr name="focus_overlay_color" format="reference|color"/>
+        <attr name="focus_frame_color" format="reference|color"/>
+        <attr name="focus_handle_color" format="reference|color"/>
+        <attr name="focus_guide_color" format="reference|color"/>
+        <attr name="focus_guide_show_mode">
+            <enum name="show_always" value="1"/>
+            <enum name="show_on_touch" value="2"/>
+            <enum name="not_show" value="3"/>
+        </attr>
+        <attr name="focus_handle_show_mode">
+            <enum name="show_always" value="1"/>
+            <enum name="show_on_touch" value="2"/>
+            <enum name="not_show" value="3"/>
+        </attr>
+        <attr name="focus_handle_size" format="dimension"/>
+        <attr name="focus_touch_padding" format="dimension"/>
+        <attr name="focus_min_frame_size" format="dimension"/>
+        <attr name="focus_frame_stroke_weight" format="dimension"/>
+        <attr name="focus_guide_stroke_weight" format="dimension"/>
+        <attr name="focus_crop_enabled" format="boolean"/>
+        <attr name="focus_initial_frame_scale" format="float"/>
+        <attr name="focus_animation_enabled" format="boolean"/>
+        <attr name="focus_animation_duration" format="integer"/>
+        <attr name="focus_handle_shadow_enabled" format="boolean"/>
+        <attr name="focus_crop_width" format="dimension"/>
+        <attr name="focus_crop_height" format="dimension"/>
+        <attr name="focus_frame_can_change" format="boolean"/>
+        <attr name="focus_frame_background" format="reference|color"/>
+        <attr name="focus_frame_ratio_x" format="float"/>
+        <attr name="focus_frame_ratio_y" format="float"/>
+    </declare-styleable>
+
+    <style name="TransparentStyle">
+
+        <item name="android:windowBackground">@android:color/transparent</item>
+
+        <item name="android:windowFrame">@null</item>
+
+        <item name="android:windowNoTitle">true</item>
+
+        <item name="android:windowIsFloating">true</item>
+
+        <item name="android:backgroundDimEnabled">false</item>
+
+        <item name="android:windowContentOverlay">@null</item>
+
+        <item name="android:windowIsTranslucent">true</item>
+
+        <item name="android:windowAnimationStyle">@null</item>
+
+        <item name="android:windowDisablePreview">true</item>
+
+        <item name="android:windowNoDisplay">false</item>
+
+    </style>
+</resources>

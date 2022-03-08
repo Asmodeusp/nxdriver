@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px100dp">
+
+        <TextView
+            android:id="@+id/tvId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px20dp"
+            android:text=""
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/px30dp"></TextView>
+
+        <TextView
+            android:visibility="gone"
+            android:paddingTop="@dimen/px8dp"
+            android:paddingBottom="@dimen/px8dp"
+            android:id="@+id/tvRole"
+            android:paddingLeft="@dimen/px22dp"
+            android:paddingRight="@dimen/px22dp"
+            android:background="@drawable/shape_list_btn"
+            android:gravity="center"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/px30dp"
+            android:layout_marginRight="@dimen/px20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="线路"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <TextView
+            android:paddingTop="@dimen/px8dp"
+            android:paddingBottom="@dimen/px8dp"
+            android:id="@+id/tv_more"
+            android:paddingLeft="@dimen/px22dp"
+            android:paddingRight="@dimen/px22dp"
+            android:background="@drawable/ico_more"
+            android:gravity="center"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/px30dp"
+            android:layout_marginRight="@dimen/px20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text=""
+            android:layout_width="@dimen/px50dp"
+            android:layout_height="@dimen/px50dp">
+
+        </TextView>
+    </RelativeLayout>
+    <include layout="@layout/common_line"></include>
+
+
+    <RelativeLayout
+        android:layout_margin="@dimen/px20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px30dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/ico_goodname"
+                    android:layout_width="@dimen/px34dp"
+                    android:layout_height="@dimen/px34dp">
+
+                </ImageView>
+                <TextView
+                    android:layout_marginLeft="@dimen/px16dp"
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/ico_fahuoadress"
+                    android:layout_width="@dimen/px34dp"
+                    android:layout_height="@dimen/px34dp">
+
+                </ImageView>
+                <TextView
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:layout_marginLeft="@dimen/px16dp"
+                    android:id="@+id/tvSendAdress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"></TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/ico_fahuoadress"
+                    android:layout_width="@dimen/px34dp"
+                    android:layout_height="@dimen/px34dp">
+
+                </ImageView>
+                <TextView
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:layout_marginLeft="@dimen/px16dp"
+                    android:id="@+id/tvReceiveAdress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llCard"
+                android:layout_marginTop="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/ico_fahuoadress"
+                    android:layout_width="@dimen/px34dp"
+                    android:layout_height="@dimen/px34dp">
+
+                </ImageView>
+                <TextView
+                    android:layout_marginLeft="@dimen/px16dp"
+                    android:id="@+id/tvCardId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llPass"
+                android:layout_marginTop="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/ico_fahuoadress"
+                    android:layout_width="@dimen/px34dp"
+                    android:layout_height="@dimen/px34dp">
+
+                </ImageView>
+                <TextView
+                    android:layout_marginLeft="@dimen/px16dp"
+                    android:id="@+id/tvPass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llnotice"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/ico_notice"
+                    android:layout_width="@dimen/px34dp"
+                    android:layout_height="@dimen/px34dp">
+
+                </ImageView>
+                <TextView
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/px16dp"
+                    android:id="@+id/tvMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/px30dp"></TextView>
+
+                <TextView
+                    android:id="@+id/btnResh"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:background="@drawable/loading_btn_login"
+                    android:layout_marginRight="@dimen/px20dp"
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:text="刷新"
+                    android:layout_width="60dp"
+                    android:layout_height="31dp">
+
+                </TextView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llcancel"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginLeft="@dimen/px16dp"
+                    android:id="@+id/tvCancelstatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/px30dp"></TextView>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

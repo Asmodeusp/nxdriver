@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_list_btn_8dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="@drawable/shape_list_btn_8dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxHeight="1000dp" />
+
+        <LinearLayout
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:paddingBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_list_btn_8dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/px20dp"
+                android:layout_marginBottom="@dimen/px10dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px80dp">
+                <TextView
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"
+                    android:gravity="center"
+                    android:text="请选择你的身份"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_gravity="center"
+                android:textColor="@color/text_gray"
+                android:id="@+id/tvTime"
+                android:textSize="@dimen/px25dp"
+                android:layout_marginLeft="@dimen/px20dp"
+                android:text="请选择你要以什么样的身份进行注册"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/lineDriver"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/ico_app"
+                        android:layout_width="@dimen/px150dp"
+                        android:layout_height="@dimen/px150dp" />
+                    <TextView
+                        android:layout_marginTop="@dimen/px20dp"
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/lineCarrier"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/ico_app_cys"
+                        android:layout_width="@dimen/px150dp"
+                        android:layout_height="@dimen/px150dp" />
+                    <TextView
+                        android:layout_marginTop="@dimen/px20dp"
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

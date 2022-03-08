@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@color/bg"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"></include>
+    <LinearLayout
+        android:id="@+id/ll"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rlrob"
+            android:paddingLeft="@dimen/px20dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px96dp">
+            <TextView
+                android:textSize="@dimen/px28dp"
+                android:textColor="@color/gray333"
+                android:layout_centerVertical="true"
+                android:text="开始时间："
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+
+            <TextView
+                android:inputType="numberDecimal"
+                android:id="@+id/tvStartTime"
+                android:layout_marginRight="@dimen/px24dp"
+                android:background="@null"
+                android:textSize="@dimen/px28dp"
+                android:layout_centerVertical="true"
+                android:gravity="right|center_vertical"
+                android:hint="点击选择开始时间"
+                android:textColor="@color/gray666"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></TextView>
+        </RelativeLayout>
+        <include layout="@layout/common_line"></include>
+
+        <RelativeLayout
+            android:paddingLeft="@dimen/px20dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px96dp">
+            <TextView
+                android:textSize="@dimen/px28dp"
+                android:textColor="@color/gray333"
+                android:layout_centerVertical="true"
+                android:text="结束时间："
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+
+            <TextView
+                android:inputType="numberDecimal"
+                android:id="@+id/tvEndTime"
+                android:layout_marginRight="@dimen/px24dp"
+                android:background="@null"
+                android:textSize="@dimen/px28dp"
+                android:layout_centerVertical="true"
+                android:gravity="right|center_vertical"
+                android:hint="点击选择结束时间"
+                android:textColor="@color/gray666"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></TextView>
+        </RelativeLayout>
+        <include layout="@layout/common_line"></include>
+        <RelativeLayout
+            android:id="@+id/rlaccountcompany"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px96dp">
+            <TextView
+                android:layout_toRightOf="@+id/rz"
+                android:paddingLeft="@dimen/px20dp"
+                android:textSize="@dimen/px30dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/color_black"
+                android:text="货主公司"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvaccountcompany"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_marginRight="@dimen/px20dp"
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:src="@drawable/ico_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        </RelativeLayout>
+        <include layout="@layout/common_line"></include>
+        <RelativeLayout
+            android:id="@+id/rltycompany"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px96dp">
+            <TextView
+                android:layout_toRightOf="@+id/rz"
+                android:paddingLeft="@dimen/px20dp"
+                android:textSize="@dimen/px30dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/color_black"
+                android:text="托运公司"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvtycompany"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_marginRight="@dimen/px20dp"
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:src="@drawable/ico_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        </RelativeLayout>
+        <include layout="@layout/common_line"></include>
+
+        <RelativeLayout
+            android:paddingLeft="@dimen/px20dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px96dp">
+            <TextView
+                android:textSize="@dimen/px28dp"
+                android:textColor="@color/gray333"
+                android:layout_centerVertical="true"
+                android:text="运单编号："
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+
+            <EditText
+                android:id="@+id/edtrantNo"
+                android:layout_marginRight="@dimen/px24dp"
+                android:background="@null"
+                android:textSize="@dimen/px28dp"
+                android:layout_centerVertical="true"
+                android:gravity="right|center_vertical"
+                android:hint="在此输运单编号"
+                android:textColor="@color/gray666"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></EditText>
+        </RelativeLayout>
+        <include layout="@layout/common_line"></include>
+        <RelativeLayout
+            android:paddingLeft="@dimen/px20dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px96dp">
+            <TextView
+                android:textSize="@dimen/px28dp"
+                android:textColor="@color/gray333"
+                android:layout_centerVertical="true"
+                android:text="物料名称："
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+
+            <EditText
+               android:id="@+id/edWulIao"
+                android:layout_marginRight="@dimen/px24dp"
+                android:background="@null"
+                android:textSize="@dimen/px28dp"
+                android:layout_centerVertical="true"
+                android:gravity="right|center_vertical"
+                android:hint="在此输入物料名称"
+                android:textColor="@color/gray666"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></EditText>
+        </RelativeLayout>
+        <include layout="@layout/common_line"></include>
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="@dimen/px24dp"
+        android:layout_marginLeft="@dimen/px24dp"
+        android:layout_below="@+id/ll"
+        android:id="@+id/btnsearch"
+        android:textSize="@dimen/px30dp"
+        android:gravity="center"
+        android:text="查询"
+        android:textColor="@color/white"
+        android:background="@drawable/loading_btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px80dp">
+
+    </TextView>
+</LinearLayout>

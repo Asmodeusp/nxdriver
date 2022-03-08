@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners
+        android:bottomLeftRadius="24dp"
+        android:bottomRightRadius="24dp"
+        android:topLeftRadius="0dp"
+        android:topRightRadius="0dp"/>
+
+    <!-- 设置矩形内的颜色,此处为透明色 -->
+    <solid android:color="@color/white" />
+    <stroke
+        android:width="0dp"
+        android:color="@color/white"
+        />
+
+</shape>

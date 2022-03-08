@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:jp="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:visibility="gone"
+        android:paddingBottom="@dimen/px40dp"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvtwxt"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+        <TextView
+            android:id="@+id/tvwlin"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/bg" />
+
+    <com.jpeng.jptabbar.JPTabBar
+        android:background="@color/white"
+        jp:TabTextSize="@dimen/px24dp"
+        jp:TabNormalColor="#666666"
+        jp:TabSelectColor="#1278FE"
+        android:id="@+id/tabbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        jp:BadgeColor="@color/red"
+        android:layout_alignParentBottom="true"
+        jp:TabAnimate="Scale" />
+
+
+</LinearLayout>

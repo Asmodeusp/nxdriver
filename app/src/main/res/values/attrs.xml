@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SquareImageView">
+        <attr name="type" format="string"/>
+    </declare-styleable>
+
+    <item name="tag_live_gift_data" type="id"/>
+    <item name="tag_live_gift_time" type="id"/>
+    <item name="tag_live_gift_key" type="id"/>
+    <item name="tag_live_gift_view" type="id"/>
+    <item name="tag_live_gift_show" type="id"/>
+    <item name="tag_live_gift_run" type="id"/>
+
+    <item name="adapter_item_tag_key" type="id" />
+    <item name="grild_item_tag_key" type="id" />
+    <item type="id" name="tag_inner_entity"/>
+
+    <declare-styleable name="FlowLayout">
+        <attr name="lineSpacing" format="dimension" />
+        <attr name="maxLine" format="integer" />
+    </declare-styleable>
+</resources>

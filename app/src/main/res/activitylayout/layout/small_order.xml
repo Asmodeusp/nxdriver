@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:paddingRight="@dimen/px24dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px100dp">
+        <TextView
+            android:layout_marginLeft="@dimen/px24dp"
+            android:textSize="@dimen/px28dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_black"
+            android:text="承运商"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/gray666"
+                android:textSize="@dimen/px28dp"
+                android:id="@+id/tvCarrive"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+    <include layout="@layout/common_line"></include>
+    <RelativeLayout
+        android:paddingRight="@dimen/px20dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px100dp">
+        <TextView
+            android:layout_marginLeft="@dimen/px24dp"
+            android:textSize="@dimen/px28dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_black"
+            android:text="车号"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/gray666"
+                android:textSize="@dimen/px28dp"
+                android:id="@+id/tvCarNo"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View
+        android:background="@color/bg_17"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px20dp"></View>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvSmallorder"
+        android:layout_marginLeft="@dimen/px24dp"
+        android:layout_marginRight="@dimen/px24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+    <View
+        android:background="@color/bg_17"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px20dp"></View>
+    <RelativeLayout
+        android:paddingRight="@dimen/px24dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px100dp">
+        <TextView
+            android:layout_marginLeft="@dimen/px24dp"
+            android:textSize="@dimen/px28dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_black"
+            android:text="客商订单编号"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/gray666"
+                android:textSize="@dimen/px28dp"
+                android:id="@+id/tvKeshang"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+   <include layout="@layout/common_line"></include>
+
+    <RelativeLayout
+        android:paddingRight="@dimen/px24dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px100dp">
+        <TextView
+            android:layout_marginLeft="@dimen/px24dp"
+            android:textSize="@dimen/px28dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_black"
+            android:text="客商派车编号"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/gray666"
+                android:textSize="@dimen/px28dp"
+                android:id="@+id/tvKeBm"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+   <include layout="@layout/common_line"></include>
+
+
+    <RelativeLayout
+        android:paddingRight="@dimen/px24dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px100dp">
+        <TextView
+            android:layout_marginLeft="@dimen/px24dp"
+            android:textSize="@dimen/px28dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_black"
+            android:text="客商派车密码"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/gray666"
+                android:textSize="@dimen/px28dp"
+                android:id="@+id/tvSendPass"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+  <include layout="@layout/common_line"></include>
+    <RelativeLayout
+        android:paddingRight="@dimen/px24dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px100dp">
+        <TextView
+            android:layout_marginLeft="@dimen/px24dp"
+            android:textSize="@dimen/px28dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_black"
+            android:text="派车取卡开始时间"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/gray666"
+                android:textSize="@dimen/px28dp"
+                android:id="@+id/tvQkTime"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+   <include layout="@layout/common_line"></include>
+
+    <RelativeLayout
+        android:paddingRight="@dimen/px24dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px100dp">
+        <TextView
+            android:layout_marginLeft="@dimen/px24dp"
+            android:textSize="@dimen/px28dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_black"
+            android:text="派车取卡结束时间"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/gray666"
+                android:textSize="@dimen/px28dp"
+                android:id="@+id/tvpaicheEndTime"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+   <include layout="@layout/common_line"></include>
+
+
+
+
+    <LinearLayout
+        android:padding="@dimen/px24dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px80dp">
+            <ImageView
+                android:id="@+id/imgapplyfp"
+                android:layout_width="@dimen/px34dp"
+                android:layout_height="@dimen/px34dp">
+
+            </ImageView>
+            <TextView
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/px20dp"
+                android:textSize="@dimen/px30dp"
+                android:textColor="@color/color_black"
+                android:text="提供发票"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px80dp">
+            <ImageView
+                android:id="@+id/imgapplyzh"
+                android:layout_width="@dimen/px34dp"
+                android:layout_height="@dimen/px34dp">
+
+            </ImageView>
+            <TextView
+                android:layout_marginLeft="@dimen/px20dp"
+                android:textSize="@dimen/px30dp"
+                android:textColor="@color/color_black"
+                android:text="提供装货"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px80dp">
+            <ImageView
+                android:id="@+id/imgapplyxh"
+                android:layout_width="@dimen/px34dp"
+                android:layout_height="@dimen/px34dp">
+
+            </ImageView>
+            <TextView
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/px20dp"
+                android:textSize="@dimen/px30dp"
+                android:textColor="@color/color_black"
+                android:text="提供卸货"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="@dimen/px30dp"
+        android:background="@drawable/popup"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:paddingBottom="@dimen/px20dp"
+                android:id="@+id/ll"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:maxWidth="160dp"
+                    android:id="@+id/tvName"
+                    android:textSize="@dimen/px30dp"
+                    android:textColor="@color/color_black"
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:maxWidth="160dp"
+                    android:layout_marginTop="@dimen/px10dp"
+                    android:id="@+id/tvlocation"
+                    android:textSize="@dimen/px30dp"
+                    android:textColor="@color/color_black"
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:text="确定"
+                android:layout_toRightOf="@+id/ll"
+                android:layout_marginTop="@dimen/px20dp"
+                android:id="@+id/imgDaoahng"
+                android:layout_marginLeft="@dimen/px10dp"
+                android:src="@drawable/ico_daohang"
+                android:layout_width="@dimen/px80dp"
+                android:layout_height="@dimen/px50dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

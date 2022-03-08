@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="@color/bg"
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/common_toolbar" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@+id/llperson" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/px100dp">
+                <TextView android:textSize="@dimen/px30dp" android:textColor="@color/color_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/px10dp" android:text="银行卡号" android:layout_centerVertical="true" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                    <EditText android:textSize="@dimen/px30dp" android:textColor="@color/color_black" android:gravity="right" android:id="@+id/edardnum" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/px20dp" android:text="" android:hint="请输入银行卡号" android:inputType="number" android:imeOptions="actionDone" />
+                    <ImageView android:id="@+id/imgchoosePerson" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/px20dp" android:layout_marginRight="@dimen/px20dp" android:src="@drawable/ico_piccard" />
+                </LinearLayout>
+            </RelativeLayout>
+            <include layout="@layout/common_line" />
+            <RelativeLayout android:orientation="horizontal" android:id="@+id/rlpersonbank" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/px100dp">
+                <TextView android:textSize="@dimen/px30dp" android:textColor="@color/color_black" android:id="@+id/op" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/px10dp" android:text="开  户  行" android:layout_centerVertical="true" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/op" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                    <TextView android:textSize="@dimen/px30dp" android:textColor="@color/color_black" android:gravity="right" android:id="@+id/tvopenbank" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/px20dp" android:text="" android:hint="" />
+                    <ImageView android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/px20dp" android:layout_marginRight="@dimen/px20dp" android:src="@drawable/ico_right" />
+                </LinearLayout>
+            </RelativeLayout>
+            <include layout="@layout/common_line" />
+            <RelativeLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/px100dp">
+                <TextView android:textSize="@dimen/px30dp" android:textColor="@color/color_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/px10dp" android:text="手机号码" android:layout_centerVertical="true" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                    <EditText android:textSize="@dimen/px30dp" android:textColor="@color/color_black" android:gravity="right" android:id="@+id/edphone" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/px20dp" android:text="" android:hint="请输入银行预留号码" android:inputType="phone" />
+                    <ImageView android:id="@+id/deletepersonphone" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/px20dp" android:layout_marginRight="@dimen/px20dp" android:src="@drawable/ico_wallet_delete" />
+                </LinearLayout>
+            </RelativeLayout>
+            <include layout="@layout/common_line" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textSize="@dimen/px30dp" android:textColor="@color/white" android:gravity="center" android:id="@+id/tvSubmit" android:background="@color/blue" android:layout_width="fill_parent" android:layout_height="@dimen/px100dp" android:layout_marginTop="@dimen/px100dp" android:text="提交" android:layout_alignParentBottom="true" />
+</LinearLayout>

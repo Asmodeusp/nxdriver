@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@color/bg"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"></include>
+
+    <LinearLayout
+        android:paddingTop="20dp"
+        android:paddingRight="26dp"
+        android:paddingLeft="26dp"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/text_10"
+                android:textSize="14sp"
+                android:text="车牌号码"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/edcarNo"
+                android:gravity="center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="15dp"
+                android:textColor="@color/gray888"
+                android:textSize="14sp"
+                android:background="@drawable/search_btn"
+                android:hint="输入车牌号码"
+                android:layout_marginLeft="26dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/text_10"
+                android:textSize="14sp"
+                android:text="车主电话"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <EditText
+                android:maxLength="11"
+                android:inputType="phone"
+                android:id="@+id/edphone"
+                android:gravity="center_vertical"
+                android:minHeight="30dp"
+                android:paddingLeft="15dp"
+                android:textColor="@color/gray888"
+                android:textSize="14sp"
+                android:background="@drawable/search_btn"
+                android:hint="输入车主电话"
+                android:layout_marginLeft="26dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </EditText>
+
+        </LinearLayout>
+        <TextView
+           android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/tvSubmit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px30dp"
+            android:gravity="center"
+            android:text="搜索"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/loading_btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="38dp">
+
+        </TextView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:id="@+id/rlserach"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_round_time_out"
+        android:layout_width="match_parent"
+        android:layout_height="86dp">
+
+        <com.saimawzc.freight.weight.CircleImageView
+            android:id="@+id/avatar_min"
+            android:layout_marginLeft="@dimen/px32dp"
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/px96dp"
+            android:layout_height="@dimen/px96dp">
+
+        </com.saimawzc.freight.weight.CircleImageView>
+
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/avatar_min"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvCarNo"
+                android:layout_marginTop="23dp"
+                android:textStyle="bold"
+                android:text=""
+                android:textSize="@dimen/px32dp"
+                android:textColor="@color/text_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:textSize="@dimen/px28dp"
+                android:textColor="@color/gray888"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvJoin"
+            android:textSize="@dimen/px28dp"
+            android:textColor="@color/blue"
+            android:text="加入"
+            android:layout_marginRight="@dimen/px28dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+    </RelativeLayout>
+
+</LinearLayout>

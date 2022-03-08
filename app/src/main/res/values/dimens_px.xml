@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="px1dp">0.5dp</dimen>
+    <dimen name="px2dp">1.0dp</dimen>
+    <dimen name="px5dp">2.5dp</dimen>
+    <dimen name="px6dp">3.0dp</dimen>
+    <dimen name="px8dp">4.0dp</dimen>
+    <dimen name="px12dp">6.0dp</dimen>
+    <dimen name="px14dp">7.0dp</dimen>
+    <dimen name="px10dp">5.0dp</dimen>
+    <dimen name="px16dp">8.0dp</dimen>
+    <dimen name="px18dp">9.0dp</dimen>
+    <dimen name="px20dp">10.0dp</dimen>
+    <dimen name="px22dp">11.0dp</dimen>
+    <dimen name="px24dp">12.0dp</dimen>
+    <dimen name="px25dp">12.5dp</dimen>
+    <dimen name="px26dp">13.0dp</dimen>
+    <dimen name="px28dp">14.0dp</dimen>
+    <dimen name="px30dp">15.0dp</dimen>
+    <dimen name="px34dp">17.0dp</dimen>
+    <dimen name="px32dp">16.0dp</dimen>
+    <dimen name="px35dp">17.5dp</dimen>
+    <dimen name="px36dp">18dp</dimen>
+    <dimen name="px40dp">20.0dp</dimen>
+    <dimen name="px48dp">24.0dp</dimen>
+
+    <dimen name="px50dp">25.0dp</dimen>
+    <dimen name="px52dp">26.0dp</dimen>
+    <dimen name="px56dp">28.0dp</dimen>
+    <dimen name="px60dp">30.0dp</dimen>
+    <dimen name="px64dp">32.0dp</dimen>
+    <dimen name="px70dp">35.0dp</dimen>
+    <dimen name="px76dp">38.0dp</dimen>
+    <dimen name="px80dp">40.0dp</dimen>
+    <dimen name="px82dp">41.0dp</dimen>
+    <dimen name="px84dp">42.0dp</dimen>
+    <dimen name="px88dp">44.0dp</dimen>
+    <dimen name="px96dp">48.0dp</dimen>
+    <dimen name="px100dp">50.0dp</dimen>
+    <dimen name="px104dp">52.0dp</dimen>
+    <dimen name="px116dp">58.0dp</dimen>
+    <dimen name="px120dp">60.0dp</dimen>
+    <dimen name="px142dp">71.0dp</dimen>
+
+    <dimen name="px150dp">75.0dp</dimen>
+    <dimen name="px160dp">80.0dp</dimen>
+    <dimen name="px166dp">83.0dp</dimen>
+    <dimen name="px188dp">94.0dp</dimen>
+    <dimen name="px200dp">100.0dp</dimen>
+    <dimen name="px202dp">101.0dp</dimen>
+    <dimen name="px240dp">120.0dp</dimen>
+    <dimen name="px250dp">125.0dp</dimen>
+    <dimen name="px280dp">140.0dp</dimen>
+    <dimen name="px300dp">150.0dp</dimen>
+    <dimen name="px400dp">200.0dp</dimen>
+    <dimen name="px480dp">240.0dp</dimen>
+</resources>

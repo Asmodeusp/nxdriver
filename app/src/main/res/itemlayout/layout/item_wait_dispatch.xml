@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/shape_list_btn_no_bord"
+    android:layout_marginLeft="@dimen/px24dp"
+    android:layout_marginRight="@dimen/px24dp"
+    android:layout_marginBottom="@dimen/px20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/px30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text=""
+            android:layout_marginTop="30dp"
+            android:id="@+id/tvId"
+            android:textColor="@color/gray666"
+            android:textSize="@dimen/px26dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:visibility="visible">
+
+        </TextView>
+
+    </RelativeLayout>
+    <include layout="@layout/common_line"></include>
+    <RelativeLayout
+        android:layout_marginBottom="@dimen/px20dp"
+        android:layout_margin="@dimen/px30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:layout_marginRight="@dimen/px30dp"
+            style="@style/CustomCheckboxTheme"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </CheckBox>
+
+        <LinearLayout
+            android:layout_toLeftOf="@+id/checkbox"
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px30dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_marginTop="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="运输车辆："
+                    android:textColor="@color/gray333"
+                    android:textSize="@dimen/px28dp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:id="@+id/tvcarnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/gray999"
+                    android:textSize="@dimen/px28dp"></TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_marginTop="@dimen/px20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="暂结金额："
+                        android:textColor="@color/gray333"
+                        android:textSize="@dimen/px28dp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/px20dp"
+                        android:id="@+id/tvzanjie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/gray999"
+                        android:textSize="@dimen/px28dp"></TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:layout_marginTop="@dimen/px20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/运价："
+                        android:textColor="@color/gray333"
+                        android:textSize="@dimen/px28dp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/px20dp"
+                        android:id="@+id/tvyunjia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/gray999"
+                        android:textSize="@dimen/px28dp"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_marginTop="@dimen/px20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="签收数量："
+                        android:textColor="@color/gray333"
+                        android:textSize="@dimen/px28dp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/px20dp"
+                        android:id="@+id/tvsignnum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/gray999"
+                        android:textSize="@dimen/px28dp"></TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:layout_marginTop="@dimen/px20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/过磅数量："
+                        android:textColor="@color/gray333"
+                        android:textSize="@dimen/px28dp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/px20dp"
+                        android:id="@+id/tvguobangnum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/gray999"
+                        android:textSize="@dimen/px28dp"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="签收类型："
+                    android:textColor="@color/gray333"
+                    android:textSize="@dimen/px28dp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:id="@+id/tvsigntype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/gray999"
+                    android:textSize="@dimen/px28dp"></TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="签收时间："
+                    android:textColor="@color/gray333"
+                    android:textSize="@dimen/px28dp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:id="@+id/tvtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/gray999"
+                    android:textSize="@dimen/px28dp"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

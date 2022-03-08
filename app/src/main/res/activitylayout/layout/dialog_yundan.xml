@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:paddingRight="@dimen/px40dp"
+    android:paddingLeft="@dimen/px40dp"
+    android:paddingBottom="@dimen/px40dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:padding="@dimen/px2dp"
+    android:background="@drawable/ico_popul_one"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_marginTop="@dimen/px80dp"
+        android:id="@+id/rlall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/px30dp"
+            android:textColor="@color/color_black"
+            android:text="全部"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="@dimen/px30dp"
+        android:id="@+id/receiveS"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="@dimen/px30dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_black"
+            android:text="收货商"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="@dimen/px30dp"
+        android:id="@+id/fahuos"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="@dimen/px30dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_black"
+            android:text="发货商"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/px30dp"
+        android:layout_marginBottom="@dimen/px40dp"
+        android:id="@+id/wuliaoname"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="@dimen/px30dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_black"
+            android:text="物料名称"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</LinearLayout>

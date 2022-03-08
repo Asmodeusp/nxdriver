@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/tool"
+        layout="@layout/common_toolbar">
+
+    </include>
+
+    <com.baidu.mapapi.map.MapView
+        android:layout_below="@+id/tool"
+        android:id="@+id/tracing_mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"/>
+    <LinearLayout
+        android:id="@+id/ll_choose"
+        android:background="@color/bg"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <CheckBox
+            android:checked="true"
+            android:id="@+id/check_ys_gj"
+            android:text="预设轨迹"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/px30dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </CheckBox>
+        <CheckBox
+            android:checked="true"
+            android:id="@+id/check_bd_gj"
+            android:textSize="@dimen/px30dp"
+            android:textColor="@color/beidou"
+            android:text="北斗轨迹"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </CheckBox>
+        <CheckBox
+            android:checked="true"
+            android:id="@+id/check_yy_gj"
+            android:textColor="@color/yingyan"
+            android:text="鹰眼轨迹"
+            android:textSize="@dimen/px30dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </CheckBox>
+    </LinearLayout>
+
+</RelativeLayout>

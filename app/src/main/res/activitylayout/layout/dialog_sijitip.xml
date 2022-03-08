@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_list_btn_8dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:background="@drawable/shape_list_btn_8dp"
+        android:layout_width="300dp"
+        android:layout_height="350dp"
+        android:orientation="vertical">
+
+        <TextView
+
+            android:layout_marginTop="@dimen/px100dp"
+            android:lineSpacingExtra="@dimen/px20dp"
+            android:paddingLeft="@dimen/px40dp"
+            android:paddingRight="@dimen/px40dp"
+            android:textStyle="bold"
+            android:id="@+id/tvcontect"
+            android:gravity="left"
+            android:text=""
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/px30dp"
+            android:hint=""
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tvOrder"
+            android:layout_marginRight="@dimen/px40dp"
+            android:layout_marginLeft="@dimen/px40dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginBottom="@dimen/px40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="确定"
+            android:background="@drawable/shape_list_btn_blue"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px60dp">
+
+        </TextView>
+
+
+
+
+    </RelativeLayout>
+</LinearLayout>

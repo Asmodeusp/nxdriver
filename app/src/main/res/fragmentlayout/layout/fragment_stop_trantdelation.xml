@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:background="@color/bg"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/tool"
+        layout="@layout/common_toolbar">
+
+    </include>
+    <LinearLayout
+        android:layout_below="@+id/tool"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:paddingTop="@dimen/px24dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/px28dp"
+                android:layout_marginLeft="@dimen/px20dp"
+                android:text="调度单号："
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:id="@+id/tvdanhao"
+                android:textColor="@color/gray888"
+                android:textSize="@dimen/px26dp"
+                android:layout_marginLeft="@dimen/px20dp"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:paddingTop="@dimen/px24dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/px28dp"
+                android:layout_marginLeft="@dimen/px20dp"
+                android:text="申请人："
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:id="@+id/tvapplyPeople"
+                android:textColor="@color/gray888"
+                android:textSize="@dimen/px26dp"
+                android:layout_marginLeft="@dimen/px20dp"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:paddingTop="@dimen/px24dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/px28dp"
+                android:layout_marginLeft="@dimen/px20dp"
+                android:text="申请时间："
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:id="@+id/tvtime"
+                android:textColor="@color/gray888"
+                android:textSize="@dimen/px26dp"
+                android:layout_marginLeft="@dimen/px20dp"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="@dimen/px20dp"
+            android:paddingTop="@dimen/px24dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/px28dp"
+                android:layout_marginLeft="@dimen/px20dp"
+                android:text="申请原因："
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:id="@+id/tvreason"
+                android:textColor="@color/gray888"
+                android:textSize="@dimen/px26dp"
+                android:layout_marginLeft="@dimen/px20dp"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

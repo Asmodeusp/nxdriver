@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/bg"
+    android:orientation="vertical"
+    android:padding="11dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"></include>
+
+    <LinearLayout
+        android:padding="16dp"
+        android:background="@drawable/bg_round_time_out"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_centerVertical="true"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/text_10"
+                android:text="车队长信息"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:textSize="14sp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:text="去钱包查看"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/text_10"
+                android:textSize="14sp"
+                android:text="姓名"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:id="@+id/tvName"
+                android:textColor="@color/text_6C"
+                android:textSize="14sp"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/text_10"
+                android:textSize="14sp"
+                android:text="开户行"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:id="@+id/tvOpenHang"
+                android:textColor="@color/text_6C"
+                android:textSize="14sp"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/text_10"
+                android:textSize="14sp"
+                android:text="银行卡号"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:id="@+id/tvbankNum"
+                android:textColor="@color/text_6C"
+                android:textSize="14sp"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/text_10"
+                android:textSize="14sp"
+                android:text="身份证号"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:id="@+id/tvCardNum"
+                android:textColor="@color/text_6C"
+                android:textSize="14sp"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:padding="16dp"
+        android:background="@drawable/bg_round_time_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/text_10"
+            android:text="成员信息"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <View
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/bg"
+            android:layout_width="match_parent"
+            android:layout_height="1dp">
+
+        </View>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/cy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/google/' }
+        maven { url 'https://maven.aliyun.com/repository/public/'}
+        maven{ url'http://maven.aliyun.com/nexus/content/groups/public/'}
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.1'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+        classpath 'org.robolectric:robolectric-gradle-plugin:0.11.+'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.0'
+        classpath 'com.tencent.bugly:symtabfileuploader:latest.release'
+        classpath "com.mob.sdk:MobSDK:+"
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url 'https://dl.google.com/dl/android/maven2/'  }
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/groups/public/'
+        }
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.aliyun.com/repository/google/' }
+        maven { url 'https://maven.aliyun.com/repository/public/'}
+        maven {
+            url "https://mvn.mob.com/android"
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:background="@color/bg"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/px30dp"
+                android:id="@+id/llpopuw"
+                android:gravity="center"
+                android:background="@drawable/shape_list_btn_gray"
+                android:orientation="horizontal"
+                android:layout_width="108dp"
+                android:layout_height="36dp">
+                <TextView
+                    android:textSize="@dimen/px26dp"
+                    android:textColor="@color/gray888"
+                    android:id="@+id/tvpopuw"
+                    android:gravity="center"
+                    android:text="全部"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                </TextView>
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="8dp"
+                    android:layout_marginLeft="6dp"
+                    android:src="@drawable/ico_down">
+                </ImageView>
+
+            </LinearLayout>
+
+            <com.saimawzc.freight.weight.ClearTextEditText
+                android:layout_marginRight="@dimen/px30dp"
+                android:gravity="center_vertical"
+                android:drawableLeft="@drawable/ico_search"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/px20dp"
+                android:textSize="@dimen/px26dp"
+                android:layout_toRightOf="@+id/tvCannel"
+                android:paddingRight="@dimen/px24dp"
+                android:drawableRight="@drawable/ico_empty"
+                android:paddingLeft="@dimen/px40dp"
+                android:hint="请输入"
+                android:layout_toLeftOf="@+id/tvCannel"
+                android:layout_marginTop="@dimen/px24dp"
+                android:layout_marginBottom="@dimen/px24dp"
+                android:layout_marginLeft="@dimen/px24dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/shape_list_btn_gray"
+                android:id="@+id/edsearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llSearch"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/px20dp"
+            android:paddingLeft="@dimen/px30dp"
+            android:layout_marginBottom="@dimen/px30dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px80dp">
+            <ImageView
+                android:src="@drawable/ico_app"
+                android:layout_width="@dimen/px80dp"
+                android:layout_height="@dimen/px80dp" />
+
+            <TextView
+                android:textColor="@color/color_black"
+                android:layout_marginLeft="@dimen/px20dp"
+                android:textSize="@dimen/px30dp"
+                android:gravity="center_vertical"
+                android:text="搜索:"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/tvSearch"
+                android:textColor="@color/green"
+                android:layout_marginLeft="@dimen/px20dp"
+                android:textSize="@dimen/px30dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

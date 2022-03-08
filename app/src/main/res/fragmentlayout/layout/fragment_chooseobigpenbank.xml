@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:background="@color/bg"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:background="@color/bg"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:background="@color/bg"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <LinearLayout
+                    android:id="@+id/tvCannel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_marginLeft="@dimen/px24dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ico_menu_return"
+                        android:layout_marginRight="@dimen/px20dp"
+                        android:layout_centerVertical="true"
+                        android:text=""
+                        android:layout_width="@dimen/px16dp"
+                        android:layout_height="@dimen/px32dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvbankname"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                </TextView>
+
+
+                <com.saimawzc.freight.weight.ClearTextEditText
+                    android:drawableLeft="@drawable/ico_search"
+                    android:layout_toRightOf="@+id/tvCannel"
+                    android:paddingRight="@dimen/px20dp"
+                    android:drawableRight="@drawable/ico_empty"
+                    android:paddingLeft="@dimen/px30dp"
+                    android:hint="请输入银行所属区域（如xx省xx市）"
+                    android:textSize="@dimen/px26dp"
+                    android:textColor="@color/gray333"
+                    android:layout_toLeftOf="@+id/tvCannel"
+                    android:layout_margin="@dimen/px20dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shape_list_btn_gray"
+                    android:id="@+id/edsearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSearch"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/px20dp"
+                android:paddingLeft="@dimen/px30dp"
+                android:layout_marginBottom="@dimen/px30dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px80dp">
+                <ImageView
+                    android:src="@drawable/ico_app"
+                    android:layout_width="@dimen/px80dp"
+                    android:layout_height="@dimen/px80dp" />
+
+                <TextView
+                    android:textColor="@color/color_black"
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:textSize="@dimen/px30dp"
+                    android:gravity="center_vertical"
+                    android:text="搜索:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/tvSearch"
+                    android:textColor="@color/green"
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:textSize="@dimen/px30dp"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvCar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

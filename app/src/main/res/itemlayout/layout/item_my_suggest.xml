@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/shape_list_btn_no_bord"
+    android:padding="@dimen/px20dp"
+    android:layout_marginTop="@dimen/px20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_toLeftOf="@+id/tvStatus"
+            android:layout_marginTop="@dimen/px20dp"
+            android:layout_marginLeft="@dimen/px20dp"
+            android:layout_marginRight="@dimen/px20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:text=" 浏览状态"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <TextView
+                    android:gravity="right"
+                    android:layout_weight="1"
+                    android:text=" "
+                    android:id="@+id/tvbrowse"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:text=" 回复状态"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <TextView
+                    android:gravity="right"
+                    android:layout_weight="1"
+                    android:text=" "
+                    android:id="@+id/tvreply"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+            </LinearLayout>
+
+            <TextView
+                android:text=" "
+                android:id="@+id/tvmiaoshu"
+                android:layout_marginBottom="@dimen/px20dp"
+                android:layout_marginTop="@dimen/px20dp"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/px30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </TextView>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include layout="@layout/common_line"></include>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginLeft="@dimen/px20dp"
+        android:layout_marginRight="@dimen/px20dp"
+        android:id="@+id/cvimg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+
+</LinearLayout>

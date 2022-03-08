@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/bg"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"></include>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="@dimen/px30dp"
+                android:padding="@dimen/px20dp"
+                android:text="安卓由于省电设置和后台进程限制，可能会将我找车关闭从而部分轨迹数据丢失。"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/px30dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="鹰眼开启状态:"
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/px30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:id="@+id/tvTraceStatus"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"
+                    android:text=""
+                    android:layout_marginRight="@dimen/px40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:padding="@dimen/px30dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="在其他应用上层显示（悬浮框）设置"
+                    android:textStyle="bold"
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/px30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <TextView
+                    android:layout_marginTop="@dimen/px20dp"
+                    android:textSize="@dimen/px30dp"
+                    android:text="为保证我找车在使用过程中不被系统误杀，导致轨迹缺失，请授予悬浮框权限"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/tvopenxf"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/px30dp"
+                    android:text="开启悬浮框权限"
+                    android:layout_marginRight="@dimen/px40dp"
+                    android:layout_marginLeft="@dimen/px40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:background="@drawable/shape_order_btn_blue"
+                    android:layout_marginTop="@dimen/px20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px80dp">
+
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:padding="@dimen/px30dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="电池优化"
+                    android:textStyle="bold"
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/px30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <TextView
+                    android:layout_marginTop="@dimen/px20dp"
+                    android:textSize="@dimen/px30dp"
+                    android:text="在省电模式下，我找车的运行可能收到限制。关闭省电模式有助于防止被系统误杀"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/tvopsd"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/px30dp"
+                    android:text="已开启电池优化，点击关闭"
+                    android:layout_marginRight="@dimen/px40dp"
+                    android:layout_marginLeft="@dimen/px40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:background="@drawable/shape_order_btn_blue"
+                    android:layout_marginTop="@dimen/px20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px80dp">
+
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:padding="@dimen/px30dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="后台保护以及防睡眠设置"
+                    android:textStyle="bold"
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/px30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <TextView
+                    android:layout_marginTop="@dimen/px20dp"
+                    android:textSize="@dimen/px30dp"
+                    android:text="将我找车加入后台保护名单，可以在一定程度上使应用在后台持续运行"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/tvdaohang"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/px30dp"
+                    android:text="后台保护系统设置"
+                    android:layout_marginRight="@dimen/px40dp"
+                    android:layout_marginLeft="@dimen/px40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:background="@drawable/shape_order_btn_blue"
+                    android:layout_marginTop="@dimen/px20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px80dp">
+
+                </TextView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+</LinearLayout>

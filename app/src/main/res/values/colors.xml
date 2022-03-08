@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1278FE</color>
+    <color name="colorPrimaryDark">#1278FE</color>
+    <color name="colorAccent">#1278FE</color>
+    <color name="gray">#EEEEEE</color>
+    <color name="blue">#1278FE</color>
+    <color name="theme_color">#FF453F</color>
+    <color name="theme_no">#999999</color>
+    <color name="green">#55CE78</color>
+    <color name="drivel">#DFDFDF</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="blue1">#3C90BC</color>
+    <color name="beidou">#f66</color>
+    <color name="yingyan">#3c3</color>
+
+    <color name="divider_e5e5e5">#cccccc</color>
+    <color name="color_black">#333333</color>
+    <color name="text_gray">#868686</color>
+    <color name="text_gray_more">#EEEEEE</color>
+    <color name="bg">#F7F7F7</color>
+    <color name="pink">#FEF0F0</color>
+    <color name="red">#FF453F</color>
+
+    <!--wheel 的颜色值-->
+    <color name="whell_item_bg_select">#efefef</color>
+    <color name="black33">#333333</color>
+    <color name="blue_bg">#45a2ff</color>
+    <color name="withe">#ffffff</color>
+    <color name="black99">#999999</color>
+    <color name="blueLight">#7eb3ff</color>
+
+    <color name="login_gray888">#888888</color>
+    <color name="gray666">#666666</color>
+    <color name="gray333">#333333</color>
+    <color name="gray222">#222222</color>
+    <color name="gray999">#999999</color>
+    <color name="gray888">#888888</color>
+    <color name="blue_side">#1278FE</color>
+    <color name="bg_17">#F7F7F7</color>
+    <color name="bg_18">#C6C6C6</color>
+    <color name="text_10">#101010</color>
+    <color name="text_66666">#666666</color>
+    <color name="text_B7">#B7B7B7</color>
+    <color name="text_6C">#6C6C6C</color>
+    <color name="bg_line">#F6F6F6</color>
+    <color name="textBCBFBF">#BCBFBF</color>
+    <color name="orange">#F78B43</color>
+</resources>

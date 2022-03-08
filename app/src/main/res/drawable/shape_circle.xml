@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    android:useLevel="false"
+    android:shape="oval"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 设置矩形内的颜色,此处为透明色 -->
+    <solid android:color="@color/text_gray" />
+
+
+</shape>

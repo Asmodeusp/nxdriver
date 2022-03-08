@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/px20dp"
+    android:layout_marginLeft="@dimen/px24dp"
+    android:layout_marginRight="@dimen/px24dp"
+    android:background="@drawable/shape_list_btn_no_bord"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tvUserName"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/px20dp"
+        android:layout_marginLeft="@dimen/px40dp"
+        android:text=""
+        android:textColor="@color/text_10"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.saimawzc.freight.weight.CircleImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/imgView"
+            android:layout_width="@dimen/px96dp"
+            android:layout_height="@dimen/px96dp"
+            android:layout_margin="@dimen/px40dp"
+            android:src="@drawable/ico_app" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/px40dp"
+            android:layout_toRightOf="@+id/imgView"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="@color/gray333"
+                    android:id="@+id/tvcarNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="@dimen/px28dp" />
+
+                <TextView
+                    android:textColor="@color/gray333"
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px10dp"
+                    android:text=""
+                    android:textSize="@dimen/px28dp" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+    <include layout="@layout/common_line"></include>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/lloper"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="36dp">
+        <TextView
+            android:id="@+id/tvrefuse"
+            android:textSize="@dimen/px28dp"
+            android:textColor="@color/textBCBFBF"
+            android:gravity="center"
+            android:text="拒绝"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TextView>
+        <View
+            android:background="@color/bg"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent">
+
+        </View>
+        <TextView
+            android:id="@+id/tvagree"
+            android:textSize="@dimen/px28dp"
+            android:textColor="@color/blue"
+            android:gravity="center"
+            android:text="同意"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TextView>
+    </LinearLayout>
+
+
+</LinearLayout>

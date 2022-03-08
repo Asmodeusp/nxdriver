@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/rlTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginTop="@dimen/px60dp"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"
+                    android:text="抢单"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+        </RelativeLayout>
+
+        <include layout="@layout/common_popu_search"></include>
+
+        <FrameLayout
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent">
+                <android.support.v4.widget.SwipeRefreshLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:id="@id/SwipeRefreshLayout">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:layout_height="wrap_content"
+                            android:layout_width="fill_parent"
+                            android:id="@id/cv"/>
+
+                </android.support.v4.widget.SwipeRefreshLayout>
+
+                <com.saimawzc.freight.weight.NoData
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:id="@+id/nodata"
+                    android:visibility="gone"/>
+        </FrameLayout>
+
+
+</LinearLayout>

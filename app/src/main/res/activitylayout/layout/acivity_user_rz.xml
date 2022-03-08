@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/common_toolbar"></include>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px20dp"
+                    android:gravity="center"
+                    android:text="拍摄/上传您的二代身份证" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_marginTop="@dimen/px20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:id="@+id/imgAddpic"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ico_app"
+                            android:layout_width="@dimen/px200dp"
+                            android:layout_height="@dimen/px200dp"/>
+                        <TextView
+                            android:layout_marginTop="@dimen/px10dp"
+                            android:text="点击拍摄/上传人面像"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginTop="@dimen/px20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="@dimen/px200dp"
+                            android:layout_height="@dimen/px200dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ico_app" />
+                        <TextView
+                            android:layout_marginTop="@dimen/px10dp"
+                            android:text="点击拍摄/上传国徽面"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_marginTop="@dimen/px20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ico_app"
+                            android:layout_width="@dimen/px200dp"
+                            android:layout_height="@dimen/px200dp" />
+                        <TextView
+                            android:layout_marginTop="@dimen/px10dp"
+                            android:text="点击拍摄/上传营业执照"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginTop="@dimen/px20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="@dimen/px200dp"
+                            android:layout_height="@dimen/px200dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ico_app" />
+                        <TextView
+                            android:layout_marginTop="@dimen/px10dp"
+                            android:text="点击拍摄/上传道路许可证"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px20dp"
+                android:gravity="center"
+                android:text="拍摄/上传您的委托书" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/px20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ico_app"
+                    android:layout_width="@dimen/px200dp"
+                    android:layout_height="@dimen/px200dp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginBottom="@dimen/px10dp"
+                android:layout_marginTop="@dimen/px20dp"
+                android:layout_marginLeft="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="@dimen/px30dp"
+                    android:text="用户姓名:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:background="@null"
+                    android:hint="请输入用户姓名"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+      <View
+          android:background="@color/divider_e5e5e5"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/px5dp"></View>
+
+            <LinearLayout
+                android:layout_marginBottom="@dimen/px10dp"
+                android:layout_marginTop="@dimen/px20dp"
+                android:layout_marginLeft="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="@dimen/px30dp"
+                    android:text="身份证号:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:background="@null"
+                    android:hint="请输入身份证号"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View
+                android:background="@color/divider_e5e5e5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px5dp"></View>
+            <LinearLayout
+                android:layout_marginBottom="@dimen/px10dp"
+                android:layout_marginTop="@dimen/px20dp"
+                android:layout_marginLeft="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="@dimen/px30dp"
+                    android:text="用户类型:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:background="@null"
+                    android:hint="请输入用户类型"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View
+                android:background="@color/divider_e5e5e5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px5dp"></View>
+            <LinearLayout
+                android:layout_marginBottom="@dimen/px10dp"
+                android:layout_marginTop="@dimen/px20dp"
+                android:layout_marginLeft="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="@dimen/px30dp"
+                    android:text="所在地区:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:background="@null"
+                    android:hint="请输入所在地区"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View
+                android:background="@color/divider_e5e5e5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px5dp"></View>
+            <LinearLayout
+                android:layout_marginBottom="@dimen/px10dp"
+                android:layout_marginTop="@dimen/px20dp"
+                android:layout_marginLeft="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="@dimen/px30dp"
+                    android:text="公司名称:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:background="@null"
+                    android:hint="请输入公司名称"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View
+                android:background="@color/divider_e5e5e5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px5dp"></View>
+            <LinearLayout
+                android:layout_marginBottom="@dimen/px10dp"
+                android:layout_marginTop="@dimen/px20dp"
+                android:layout_marginLeft="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="@dimen/px30dp"
+                    android:text="法人姓名:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:background="@null"
+                    android:hint="请输入法人姓名"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View
+                android:background="@color/divider_e5e5e5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px5dp"></View>
+            <LinearLayout
+                android:layout_marginBottom="@dimen/px10dp"
+                android:layout_marginTop="@dimen/px20dp"
+                android:layout_marginLeft="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="@dimen/px30dp"
+                    android:text="法人身份证:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:background="@null"
+                    android:hint="请输入法人身份证"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View
+                android:background="@color/divider_e5e5e5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px5dp"></View>
+            <LinearLayout
+                android:layout_marginBottom="@dimen/px10dp"
+                android:layout_marginTop="@dimen/px20dp"
+                android:layout_marginLeft="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="@dimen/px30dp"
+                    android:text="营业执照编号:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:background="@null"
+                    android:hint="请输入营业执照编号："
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View
+                android:background="@color/divider_e5e5e5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px5dp"></View>
+            <LinearLayout
+                android:layout_marginBottom="@dimen/px10dp"
+                android:layout_marginTop="@dimen/px20dp"
+                android:layout_marginLeft="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="@dimen/px30dp"
+                    android:text="营业执照有效期:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:background="@null"
+                    android:hint="请输入营业执照有效期"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View
+                android:background="@color/divider_e5e5e5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px5dp"></View>
+            <LinearLayout
+                android:layout_marginBottom="@dimen/px10dp"
+                android:layout_marginTop="@dimen/px20dp"
+                android:layout_marginLeft="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="@dimen/px30dp"
+                    android:text="道路运输证编号:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:background="@null"
+                    android:hint="请输入道路运输证编号"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View
+                android:background="@color/divider_e5e5e5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px5dp"></View>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@color/bg"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"></include>
+    <RelativeLayout
+        android:layout_marginTop="@dimen/px80dp"
+        android:layout_marginRight="@dimen/px60dp"
+        android:layout_marginLeft="@dimen/px60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:background="@drawable/shape_bidd_btn"
+            android:layout_toLeftOf="@+id/tvOrder"
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+            <EditText
+                android:id="@+id/edNum"
+                android:layout_toLeftOf="@+id/llhern"
+                android:paddingLeft="@dimen/px20dp"
+                android:textSize="@dimen/px28dp"
+                android:background="@null"
+                android:hint="请输入电子锁编码"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </EditText>
+
+            <LinearLayout
+                android:layout_marginRight="11dp"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:id="@+id/llhern"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <View
+                    android:background="@color/gray333"
+                    android:layout_width="0.5dp"
+                    android:layout_height="22dp"></View>
+                <ImageView
+                    android:id="@+id/imgScan"
+                    android:layout_marginLeft="11dp"
+                    android:src="@drawable/ico_scan"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp">
+
+                </ImageView>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="@dimen/px40dp"
+        android:layout_marginRight="@dimen/px60dp"
+        android:layout_marginLeft="@dimen/px60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:background="@drawable/shape_bidd_btn"
+            android:layout_toLeftOf="@+id/tvOrder"
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/tvPass"
+                android:layout_toLeftOf="@+id/llhern1"
+                android:paddingLeft="@dimen/px20dp"
+                android:textSize="@dimen/px28dp"
+                android:background="@null"
+                android:hint="请点击获取密码"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </TextView>
+
+            <LinearLayout
+                android:layout_marginRight="11dp"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:id="@+id/llhern1"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <View
+                    android:background="@color/blue"
+                    android:layout_width="0.5dp"
+                    android:layout_height="22dp"></View>
+                <TextView
+                    android:layout_marginLeft="@dimen/px30dp"
+                    android:id="@+id/tvGetPass"
+                    android:textSize="@dimen/px28dp"
+                    android:textColor="@color/blue"
+                    android:gravity="center"
+                    android:text="获取密码"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="68dp"
+                    android:layout_height="44dp">
+
+                </TextView>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <TextView
+        android:textSize="@dimen/px28dp"
+        android:layout_marginTop="@dimen/px20dp"
+        android:layout_marginLeft="@dimen/px60dp"
+        android:text="在智能电子锁上输入获取的密码"
+        android:textColor="@color/red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/mapview"
+        android:layout_marginTop="@dimen/px20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.baidu.mapapi.map.MapView>
+</LinearLayout>

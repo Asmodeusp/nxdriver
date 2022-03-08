@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:paddingRight="10dp"
+       android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:id="@+id/imgView"
+            android:layout_width="@dimen/px104dp"
+            android:layout_height="@dimen/px104dp" />
+
+        <LinearLayout
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/imgView"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="#0B0B0B"
+                    android:id="@+id/tvCarNo"
+                    android:textSize="16sp"
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/px24dp"
+                android:layout_marginTop="@dimen/px10dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/px10dp"
+                    android:text=""
+                    android:textColor="#6C6C6C"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#6C6C6C"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:layout_marginTop="8dp"
+                android:id="@+id/imgdelete"
+                android:visibility="visible"
+                android:src="@drawable/ico_passdelete"
+                android:layout_width="@dimen/px40dp"
+                android:layout_height="@dimen/px40dp">
+
+            </ImageView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <View
+        android:background="@color/bg"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"></View>
+
+
+</LinearLayout>

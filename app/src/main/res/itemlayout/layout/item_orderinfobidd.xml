@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px80dp">
+
+        <TextView
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/px30dp"
+            android:layout_centerVertical="true"
+            android:text="发货地--收货地"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+
+
+
+    </RelativeLayout>
+    <View
+        android:layout_marginTop="@dimen/px20dp"
+        android:background="@color/divider_e5e5e5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px2dp">
+
+    </View>
+
+    <RelativeLayout
+        android:layout_margin="@dimen/px20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_marginRight="@dimen/px20dp"
+            android:id="@+id/image"
+            android:layout_width="@dimen/px100dp"
+            android:layout_height="@dimen/px100dp"
+            android:layout_marginLeft="@dimen/px20dp"
+            android:src="@drawable/ico_app"></ImageView>
+
+        <LinearLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px30dp"
+            android:layout_toRightOf="@+id/image"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvusername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/px30dp"></TextView>
+            <TextView
+                android:id="@+id/tvgoodsname"
+                android:layout_marginTop="@dimen/px20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/px30dp"></TextView>
+        </LinearLayout>
+
+
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ico_phone"
+            android:layout_width="@dimen/px50dp"
+            android:layout_height="@dimen/px50dp">
+
+        </ImageView>
+
+    </RelativeLayout>
+    <View
+        android:background="@color/divider_e5e5e5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px20dp"></View>
+
+
+
+</LinearLayout>

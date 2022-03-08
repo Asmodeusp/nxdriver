@@ -1,0 +1,172 @@
+apply plugin: 'com.android.application'
+apply plugin: 'bugly'
+apply plugin: 'com.mob.sdk'
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.0"
+    dexOptions {
+        javaMaxHeapSize "4g"
+        jumboMode true
+    }
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "com.saimawzc.freight"
+        minSdkVersion 20
+        targetSdkVersion 30
+        multiDexEnabled true //Howard 2017-08-31 解决方法数超过65536的问题
+        versionCode 17
+        versionName "1.4.6"//1.4.4
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters  'armeabi-v7a','arm64-v8a'
+        }
+        // 导航SDK内部使用了annotationProcessor，需要添加下面代码，防止编译异常
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE' //新添加
+    }
+
+    buildTypes {
+        release {
+            lintOptions {
+                checkReleaseBuilds false
+                abortOnError false
+            }
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            //启用代码混淆
+            minifyEnabled false
+            //是否优化zip
+            zipAlignEnabled false
+            // 移除无用的resource文件
+            shrinkResources false
+            //混淆规则配置文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        lintOptions {
+            abortOnError false
+        }
+        compileOptions {
+            sourceCompatibility = 1.8
+            targetCompatibility = 1.8
+        }
+        sourceSets{
+            main{
+                res.srcDirs=[
+                        'src/main/res/activitylayout',
+                        'src/main/res/fragmentlayout',
+                        'src/main/res/itemlayout',
+                        'src/main/res/layout',//必须要有
+                        'src//main/res',//必须要有，倒数两个顺序必须是这样子，不能乱
+                ]
+            }
+        }
+
+    }
+    android {
+        aaptOptions.cruncherEnabled = false
+        aaptOptions.useNewCruncher = false
+    }
+    dependencies {
+        implementation fileTree(include: ['*.jar'], dir: 'libs')
+        implementation'me.drakeet.support:toastcompat:1.1.0'
+        implementation 'android.arch.lifecycle:extensions:1.1.1'
+        androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+            exclude group: 'com.android.support', module: 'support-annotations'
+        })
+        implementation'com.tencent.bugly:crashreport:latest.release'
+        implementation'com.tencent.bugly:nativecrashreport:latest.release'
+        //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
+        implementation'com.android.support:appcompat-v7:26.+'
+        implementation'com.android.support.constraint:constraint-layout:1.1.2'
+        implementation'com.android.support:design:26.0.0-alpha1'
+        testImplementation'junit:junit:4.12'
+        implementation project(':compresshelper')
+        implementation 'com.google.code.gson:gson:2.7'
+        /** 方法数量超过65536                                    */
+        implementation 'com.android.support:multidex:1.0.1'
+        /** 自定义应用崩溃界面                                    */
+        implementation 'cat.ereza:customactivityoncrash:1.5.0'
+
+        /**                                     */
+        /** 注解                                    */
+        implementation 'com.jakewharton:butterknife:8.4.0'
+        annotationProcessor  'com.jakewharton:butterknife-compiler:8.4.0'
+        implementation('com.squareup.retrofit2:converter-simplexml:2.0.1') {
+            exclude group: 'xpp3', module: 'xpp3'
+            exclude group: 'stax', module: 'stax-api'
+            exclude group: 'stax', module: 'stax'
+        }
+        /** 沉浸*/
+        implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+        implementation 'com.gyf.immersionbar:immersionbar-components:3.0.0'
+        /** Android 6.0权限*/
+        implementation 'com.werb.permissionschecker:permissionschecker:0.0.1-beta2'
+        /** 相册选择*/
+        implementation 'cn.finalteam:galleryfinal:1.4.8.7'
+        implementation 'com.easyandroid:easytools:1.1.9'
+
+        implementation 'com.android.support:recyclerview-v7:26.0.0-alpha1'
+        /** 网络访问                                    */
+        implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+        implementation 'com.squareup.okio:okio:1.13.0'
+        implementation 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
+        implementation 'com.github.bumptech.glide:glide:3.7.0'
+        implementation 'com.jpeng:JPTabBar:1.1.0'
+        implementation 'com.youth.banner:banner:1.4.9'
+        /** 滚轮                                */
+        implementation 'com.contrarywind:Android-PickerView:3.2.6'
+        /** * 视频和拍摄                                 **/
+        implementation 'cjt.library.wheel:camera:1.1.9'
+        implementation 'fm.jiecao:jiecaovideoplayer:4.8.3'
+        implementation 'com.squareup.retrofit2:converter-scalars:2.0.0'
+        implementation project(':zbarlibary')
+        implementation project(':silicompressor')
+        implementation files('libs/pushservice-7.0.0.27.jar')
+        implementation 'com.yinglan.scrolllayout:scrolllayout:1.0.2'
+        implementation 'com.android.support:cardview-v7:26+'
+        implementation 'com.isanwenyu.highlight:highlight:1.8.0'
+    }
+}
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+dependencies {
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation files('libs/ocr-sdk.jar')
+    implementation project(path: ':ocr_ui')
+    implementation project(path: ':FingerprintRecognitionManager')
+    implementation(name: 'onsdk_all', ext: 'aar')
+    implementation(name: 'NaviTts', ext: 'aar')
+    implementation files('libs/BaiduLBS_Android.jar')
+    implementation files('libs/bos-android-sdk-1.0.3.jar')
+    implementation project(path: ':faceplatform-ui')
+    implementation 'com.lzy.net:okgo:3.0.4'
+    implementation 'com.alibaba:fastjson:1.2.61'
+    implementation 'org.bouncycastle:bcprov-jdk15on:1.47'
+    implementation (name:'locationsdk-1.0.0', ext:'aar')
+    implementation files('libs\\BaiduTraceSDK_v3_1_10.jar')
+}
+MobSDK {
+    appKey "343bfa020d5b4"
+    appSecret "3b88c3a023193fccdac4b0a5f14b37e0"
+    ShareSDK {
+        loopShare true
+        devInfo {
+            Wechat {
+                appId "wx4868b35061f87885"
+                appSecret "64020361b8ec4c99936c0e3999a9f249"
+                userName "gh_afb25ac019c9"
+                path "pages/index/index.html?id=1"
+                withShareTicket true
+                miniprogramType 2
+            }
+        }
+    }
+}

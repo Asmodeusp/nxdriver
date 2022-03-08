@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pic_iv"
+    android:layout_margin="@dimen/px20dp"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:background="@drawable/shape_bidd_btn"
+    android:scaleType="centerCrop">
+
+</ImageView>

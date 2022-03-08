@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/common_toolbar"></include>
+
+        <RelativeLayout
+            android:id="@+id/rl_mycar"
+            android:layout_marginTop="@dimen/px20dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px100dp">
+            <TextView
+                android:layout_marginLeft="@dimen/px20dp"
+                android:textSize="@dimen/px30dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/color_black"
+                android:text="开始时间"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_marginRight="@dimen/px20dp"
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:src="@drawable/ico_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="@dimen/px10dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px100dp">
+            <TextView
+                android:layout_marginLeft="@dimen/px20dp"
+                android:textSize="@dimen/px30dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/color_black"
+                android:text="结束时间"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_marginRight="@dimen/px20dp"
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:src="@drawable/ico_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="@dimen/px10dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px100dp">
+            <TextView
+                android:layout_marginLeft="@dimen/px20dp"
+                android:textSize="@dimen/px30dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/color_black"
+                android:text="货主公司"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_marginRight="@dimen/px20dp"
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:src="@drawable/ico_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="@dimen/px10dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px100dp">
+            <TextView
+                android:layout_marginLeft="@dimen/px20dp"
+                android:textSize="@dimen/px30dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/color_black"
+                android:text="托运公司"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_marginRight="@dimen/px20dp"
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:src="@drawable/ico_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/px10dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px100dp">
+            <TextView
+                android:layout_marginLeft="@dimen/px20dp"
+                android:textSize="@dimen/px30dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/color_black"
+                android:text="运单编号"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_marginRight="@dimen/px20dp"
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:src="@drawable/ico_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="@dimen/px10dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px100dp">
+            <TextView
+                android:layout_marginLeft="@dimen/px20dp"
+                android:textSize="@dimen/px30dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/color_black"
+                android:text="物料名称"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_marginRight="@dimen/px20dp"
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:src="@drawable/ico_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/btnsearch"
+        android:textSize="@dimen/px40dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="查询"
+        android:background="@color/blue"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px80dp">
+
+    </TextView>
+
+
+</RelativeLayout>

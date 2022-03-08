@@ -1,0 +1,45 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+>
+   <!--  -->
+    <string name="app_name">我找车司机</string>
+
+    <string name="detect_face_in">把脸移入框内</string>
+    <string name="detect_zoom_in">手机拿近一点</string>
+    <string name="detect_zoom_out">手机拿远一点</string>
+    <string name="detect_head_up">头抬高些</string>
+    <string name="detect_head_down">头放低些</string>
+    <string name="detect_head_left">向左调整下头部角度</string>
+    <string name="detect_head_right">向右调整下头部角度</string>
+    <string name="detect_occ_left_eye">左眼有遮挡</string>
+    <string name="detect_occ_right_eye">右眼有遮挡</string>
+    <string name="detect_occ_nose">鼻子有遮挡</string>
+    <string name="detect_occ_mouth">嘴部有遮挡</string>
+    <string name="detect_left_contour">左脸颊有遮挡</string>
+    <string name="detect_right_contour">右脸颊有遮挡</string>
+    <string name="detect_chin_contour">下巴有遮挡</string>
+    <string name="detect_low_light">光线再亮些</string>
+    <string name="detect_keep">请握稳手机，视线平视手机</string>
+
+    <string name="check_info_exit">取消</string>
+    <string name="check_info_message">未获得应用运行所需的基本权限，请在设置中开启权限后再使用</string>
+    <string name="check_info_setting">去设置</string>
+    <string name="check_info_title">权限提示</string>
+     <string name="tab1">首页</string>
+    <string name="tab2">运单</string>
+    <string name="tab3">派车</string>
+    <string name="tab4">我的</string>
+
+    <!--分享类型-->
+    <string name="platform_share_text">分享文本</string>
+    <string name="platform_share_image">分享图片</string>
+    <string name="platform_share_webpage">分享链接</string>
+    <string name="platform_share_music">分享音乐</string>
+    <string name="platform_share_video">分享视频</string>
+    <string name="platform_share_app">分享应用</string>
+    <string name="platform_share_file">分享文件</string>
+    <string name="platform_share_emoji">分享表情</string>
+    <string name="platform_share_mini_app">分享微信小程序</string>
+    <string name="platform_share_linkcard">分享LinkCard</string>
+    <string name="platform_share_qqmini">分享QQ小程序</string>
+    <string name="title_activity_tags_item">TagsItemActivity</string>
+</resources>

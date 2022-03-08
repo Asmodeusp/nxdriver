@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/bg"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_above="@+id/btnOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/common_toolbar"></include>
+            <TextView
+                android:layout_margin="@dimen/px20dp"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/px30dp"
+                android:text="运单信息"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+            <LinearLayout
+                android:padding="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"
+                    android:text="计划单号："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:layout_marginLeft="@dimen/px30dp"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"
+                    android:text="XXXX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"
+                    android:text="发货地址："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:layout_marginLeft="@dimen/px30dp"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"
+                    android:text="XXXX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:padding="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"
+                    android:text="收货地址："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:layout_marginLeft="@dimen/px30dp"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"
+                    android:text="XXXX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:padding="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"
+                    android:text="运输货物："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:layout_marginLeft="@dimen/px30dp"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"
+                    android:text="XXXX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:padding="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"
+                    android:text="我的抢单量："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:layout_marginLeft="@dimen/px30dp"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"
+                    android:text="XXXX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:padding="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我的报价："
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_marginLeft="@dimen/px30dp"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"
+                    android:text="XXXX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <View
+                android:background="@color/bg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px20dp">
+
+            </View>
+            <TextView
+                android:layout_margin="@dimen/px20dp"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/px30dp"
+                android:text="转包信息"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+            <LinearLayout
+                android:padding="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="竞价开始："
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_marginLeft="@dimen/px30dp"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"
+                    android:text="XXXX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:padding="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="竞价结束："
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_marginLeft="@dimen/px30dp"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"
+                    android:text="XXXX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:padding="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="竞价用户："
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_marginLeft="@dimen/px30dp"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"
+                    android:text="XXXX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:padding="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="运输总量："
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_marginLeft="@dimen/px30dp"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"
+                    android:text="XXXX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:padding="@dimen/px20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="运输价格："
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_marginLeft="@dimen/px30dp"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"
+                    android:text="XXXX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/btnOrder"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/px40dp"
+        android:text="转包"
+        android:background="@color/blue"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px80dp">
+
+    </TextView>
+
+</RelativeLayout>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/px20dp"
+    android:layout_marginLeft="@dimen/px24dp"
+    android:layout_marginRight="@dimen/px24dp"
+    android:background="@drawable/shape_list_btn_no_bord"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px80dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textStyle="bold"
+                android:id="@+id/cardnum"
+                android:paddingLeft="@dimen/px30dp"
+                android:textSize="@dimen/px28dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textColor="@color/color_black"
+                android:text="sadas"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/tvadd"
+                android:layout_marginRight="@dimen/px30dp"
+                android:layout_gravity="right|center_vertical"
+                android:gravity="center"
+                android:text="添加"
+                android:background="@drawable/loading_btn_resister"
+                android:layout_width="@dimen/px150dp"
+                android:layout_height="@dimen/px60dp" />
+            <TextView
+                android:layout_marginRight="@dimen/px30dp"
+                android:visibility="gone"
+                android:textColor="@color/gray888"
+                android:textSize="@dimen/px26dp"
+                android:text=""
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/imgView"
+           android:layout_marginLeft="@dimen/px30dp"
+            android:src="@drawable/ico_defalut"
+            android:layout_width="@dimen/px100dp"
+            android:layout_height="@dimen/px100dp" />
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/px30dp"
+            android:layout_toRightOf="@+id/imgView"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tvCarShapeAp"
+                    android:textColor="@color/gray333"
+                    android:textSize="@dimen/px28dp"
+                    android:text="车型："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="@color/gray888"
+                    android:id="@+id/tvcarshap"
+                    android:textSize="@dimen/px28dp"
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/px10dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/gray333"
+                    android:textSize="@dimen/px28dp"
+                    android:text="载重："
+                    android:id="@+id/tvweightAp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="@color/gray888"
+                    android:id="@+id/tvweight"
+                    android:textSize="@dimen/px28dp"
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginBottom="@dimen/px24dp"
+                android:layout_marginTop="@dimen/px10dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/gray333"
+                    android:textSize="@dimen/px28dp"
+                    android:id="@+id/tvuserAp"
+                    android:text="车主："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="@color/gray888"
+                    android:id="@+id/tvuser"
+                    android:textSize="@dimen/px28dp"
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/imgunBind"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ico_unbind"
+            android:layout_marginRight="@dimen/px30dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/px40dp"
+            android:layout_height="@dimen/px40dp">
+
+        </ImageView>
+    </RelativeLayout>
+
+
+</LinearLayout>

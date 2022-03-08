@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvType"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/px40dp"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/px30dp"
+            android:text="入场签到"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_marginLeft="@dimen/px40dp"
+            android:text="签到时间"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/px30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <TextView
+            android:id="@+id/tvAdress"
+            android:layout_marginTop="@dimen/px10dp"
+            android:layout_marginLeft="@dimen/px40dp"
+            android:text="签到地点"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/px30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <ImageView
+            android:id="@+id/imgview"
+            android:layout_margin="@dimen/px40dp"
+            android:layout_width="@dimen/px200dp"
+            android:layout_height="@dimen/px200dp">
+
+        </ImageView>
+        <View
+            android:background="@color/color_black"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px1dp"></View>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px80dp">
+            <TextView
+                android:id="@+id/tvCannel"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="取消"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+            </TextView>
+            <View
+                android:background="@color/color_black"
+                android:layout_width="@dimen/px1dp"
+                android:layout_height="match_parent">
+
+            </View>
+            <TextView
+                android:id="@+id/tvOrder"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="确定"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

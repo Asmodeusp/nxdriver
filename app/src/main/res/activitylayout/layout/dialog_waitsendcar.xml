@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="106dp"
+    android:padding="@dimen/px2dp"
+    android:background="@drawable/ico_popul_one"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/px60dp"
+        android:id="@+id/rlall"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/px30dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_black"
+            android:text="全部"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="@dimen/px40dp"
+        android:id="@+id/rlCarNo"
+        android:background="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/px30dp"
+            android:textColor="@color/color_black"
+            android:text="车牌号"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/px40dp"
+        android:id="@+id/rlpaiche"
+        android:background="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/px30dp"
+            android:textColor="@color/color_black"
+            android:text="派车单"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="@dimen/px40dp"
+        android:id="@+id/rlcarrive"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/px30dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_black"
+            android:text="承运商"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/px40dp"
+        android:id="@+id/rlfahuodi"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/px30dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_black"
+            android:text="发货地"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/px40dp"
+        android:paddingBottom="@dimen/px20dp"
+        android:id="@+id/rlmudi"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="目的地"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/px30dp" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginBottom="@dimen/px30dp"
+        android:paddingBottom="@dimen/px40dp"
+        android:id="@+id/rlwuliao"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="物料名称"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/px30dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

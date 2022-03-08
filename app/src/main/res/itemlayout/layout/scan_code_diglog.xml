@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/navi_dimens_300dp"
+    android:layout_height="200dp"
+    android:orientation="vertical"
+    android:background="@drawable/bg_round_time_out"
+    android:weightSum="2">
+
+    <LinearLayout
+        android:id="@+id/scanCodeOpenButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/scan_code_blue"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/navi_dimens_20dp"
+        android:layout_marginRight="@dimen/navi_dimens_20dp"
+        android:layout_marginLeft="@dimen/navi_dimens_20dp"
+        android:layout_weight="1">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:src="@drawable/scan_code_small"
+        android:layout_height="wrap_content"></ImageView>
+        <TextView
+            android:layout_marginRight="@dimen/navi_dimens_20dp"
+            android:layout_width="wrap_content"
+            android:text="开锁扫码"
+            android:textColor="#FFFFFF"
+            android:layout_height="wrap_content"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/scanCodeCloseButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/scan_code_gray999"
+        android:gravity="center"
+        android:layout_margin="@dimen/navi_dimens_20dp"
+        android:layout_weight="1">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:src="@drawable/scan_code_small"
+            android:layout_height="wrap_content"></ImageView>
+        <TextView
+            android:layout_marginRight="@dimen/navi_dimens_20dp"
+            android:layout_width="wrap_content"
+            android:text="关锁扫码"
+            android:textColor="#FFFFFF"
+            android:layout_height="wrap_content"></TextView>
+    </LinearLayout>
+
+</LinearLayout>

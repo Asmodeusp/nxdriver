@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/px20dp"
+    android:layout_marginLeft="@dimen/px24dp"
+    android:layout_marginRight="@dimen/px24dp"
+    android:background="@drawable/shape_list_btn_no_bord"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.saimawzc.freight.weight.CircleImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/imgView"
+            android:layout_width="@dimen/px120dp"
+            android:layout_height="@dimen/px120dp"
+            android:layout_margin="@dimen/px40dp"
+            android:src="@drawable/ico_app" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/px40dp"
+            android:layout_toRightOf="@+id/imgView"
+            android:orientation="vertical">
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/imgunBind"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ico_unbind"
+                android:layout_marginRight="@dimen/px30dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="@dimen/px40dp"
+                android:layout_height="@dimen/px40dp">
+
+            </ImageView>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/gray333"
+                    android:id="@+id/tvname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="@dimen/px28dp" />
+
+                <TextView
+                    android:textColor="@color/gray333"
+                    android:id="@+id/tvphone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px10dp"
+                    android:text=""
+                    android:textSize="@dimen/px28dp" />
+                <TextView
+                    android:textColor="@color/gray333"
+                    android:id="@+id/tvRole"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px10dp"
+                    android:text=""
+                    android:textSize="@dimen/px28dp" />
+                <TextView
+                    android:textColor="@color/gray333"
+                    android:id="@+id/tvcarnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px10dp"
+                    android:text=""
+                    android:textSize="@dimen/px28dp" />
+                <TextView
+                    android:textColor="@color/gray333"
+                    android:id="@+id/tvweight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px10dp"
+                    android:text=""
+                    android:textSize="@dimen/px28dp" />
+                <TextView
+                    android:layout_marginBottom="@dimen/px30dp"
+                    android:textColor="@color/gray333"
+                    android:id="@+id/tvcarshape"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px10dp"
+                    android:text=""
+                    android:textSize="@dimen/px28dp" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+    <include layout="@layout/common_line"></include>
+
+
+</LinearLayout>

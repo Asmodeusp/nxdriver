@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/bg"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"></include>
+
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/ico_wallet_empty"
+            android:layout_width="159dp"
+            android:layout_height="120dp">
+
+        </ImageView>
+
+        <TextView
+            android:layout_marginTop="@dimen/px20dp"
+            android:textColor="@color/gray999"
+            android:textSize="@dimen/px28dp"
+            android:text="您还没有签约"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvSign"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px24dp"
+            android:gravity="center"
+            android:text="去签约"
+            android:layout_marginTop="@dimen/px100dp"
+            android:background="@drawable/shape_list_btn_blue"
+            android:layout_width="300dp"
+            android:layout_height="42dp">
+
+        </TextView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

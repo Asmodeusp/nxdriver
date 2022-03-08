@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@color/bg"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/common_popu_search"></include>
+    <FrameLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/SwipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/cy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+        <com.saimawzc.freight.weight.NoData
+            android:id="@+id/nodata"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.saimawzc.freight.weight.NoData>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:visibility="gone"
+        android:id="@+id/rlbottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px100dp">
+
+        <CheckBox
+            android:layout_centerVertical="true"
+            android:checked="false"
+            android:paddingLeft="@dimen/px30dp"
+            android:drawablePadding="@dimen/px10dp"
+            android:button="@drawable/bg_radiobutton"
+            android:id="@+id/check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px30dp"
+            android:layout_marginRight="@dimen/px20dp"
+            android:layout_weight="1"
+            android:text="全选" />
+
+        <TextView
+            android:id="@+id/tvOffAll"
+            android:layout_marginRight="@dimen/px30dp"
+            android:textSize="@dimen/px30dp"
+            android:textColor="@color/red"
+            android:text="关闭派车单"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

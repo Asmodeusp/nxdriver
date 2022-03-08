@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/px24dp"
+        android:layout_marginRight="@dimen/px24dp"
+        android:layout_marginBottom="@dimen/px24dp"
+        android:background="@drawable/ico_bank"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="84dp">
+
+        <com.saimawzc.freight.weight.CircleImageView
+            android:layout_marginLeft="19dp"
+            android:visibility="visible"
+            android:id="@+id/imgchoose"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/px20dp"
+            android:src="@drawable/ico_yinhang"
+            android:layout_width="@dimen/px56dp"
+            android:layout_height="@dimen/px56dp">
+        </com.saimawzc.freight.weight.CircleImageView>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/px34dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imgchoose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvBankName"
+                android:textSize="@dimen/px28dp"
+                android:textColor="@color/white"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:id="@+id/tvCardNum"
+                android:textSize="@dimen/px24dp"
+                android:textColor="@color/white"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+        </LinearLayout>
+        <TextView
+            android:textColor="@color/white"
+            android:id="@+id/tvdefault"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/navi_dimens_40dp"
+            android:text=""
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+   <include layout="@layout/common_line"></include>
+
+</LinearLayout>

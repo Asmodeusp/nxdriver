@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/rl_carrier"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px100dp">
+            <TextView
+                android:id="@+id/tvdd"
+                android:textStyle="bold"
+                android:paddingLeft="@dimen/px20dp"
+                android:textSize="@dimen/px30dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/color_black"
+                android:text="预运单："
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_toRightOf="@+id/tvdd"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/tvDanHao"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_black"
+                    android:text=""
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tvcy"
+                    android:textColor="@color/red"
+                    android:text="存疑"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:visibility="invisible"
+                    android:layout_marginRight="@dimen/px20dp"
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:src="@drawable/ico_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </RelativeLayout>
+        <include layout="@layout/common_line"></include>
+
+        <RelativeLayout
+            android:layout_margin="@dimen/px20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.saimawzc.freight.weight.CircleImageView
+                android:visibility="visible"
+                android:id="@+id/imgHead"
+                android:src="@drawable/ico_app"
+                android:layout_width="@dimen/px100dp"
+                android:layout_height="@dimen/px100dp">
+
+            </com.saimawzc.freight.weight.CircleImageView>
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/px50dp"
+                android:orientation="vertical"
+                android:layout_toRightOf="@+id/imgHead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/px80dp">
+                    <TextView
+                        android:padding="@dimen/px20dp"
+                        android:gravity="center"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/px30dp"
+                        android:text=""
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                    </TextView>
+                    <TextView
+                        android:visibility="gone"
+                        android:padding="@dimen/px20dp"
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                    </TextView>
+                    <TextView
+                        android:gravity="center"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/px30dp"
+                        android:text=""
+                        android:id="@+id/tvPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                    </TextView>
+                </LinearLayout>
+                <TextView
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:layout_marginTop="@dimen/px10dp"
+                    android:gravity="center"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/px30dp"
+                    android:text=""
+                    android:id="@+id/carNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                </TextView>
+
+            </LinearLayout>
+        </RelativeLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/cv"
+            android:padding="@dimen/px10dp"
+            android:layout_margin="@dimen/px20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

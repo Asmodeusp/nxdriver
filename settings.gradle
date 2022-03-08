@@ -1,0 +1,2 @@
+include ':app', ':compresshelper', ':zbarlibary', ':silicompressor', ':ocr_ui', ':faceplatform-ui', ':faceplatform-release'
+include ':FingerprintRecognitionManager'

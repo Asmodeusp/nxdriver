@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_list_btn_8dp"
+    android:orientation="vertical">
+    
+
+
+    <LinearLayout
+        android:paddingTop="@dimen/px20dp"
+        android:paddingBottom="@dimen/px40dp"
+        android:layout_width="286dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_list_btn_8dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/dissmiss"
+            android:layout_width="@dimen/px200dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginLeft="@dimen/px30dp"
+                android:src="@drawable/ico_delete"
+                android:layout_width="@dimen/px30dp"
+                android:layout_height="@dimen/px30dp">
+
+            </ImageView>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_marginTop="@dimen/px30dp"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="短信验证"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/px30dp"
+            android:textStyle="bold">
+
+        </TextView>
+        <TextView
+            android:layout_marginTop="@dimen/px40dp"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/px28dp"
+            android:gravity="center"
+            android:text="提现"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <TextView
+            android:layout_marginTop="@dimen/px10dp"
+            android:gravity="center_horizontal"
+            android:id="@+id/tvwithDrawMonty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="￥10000"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/px30dp"
+            android:textStyle="bold">
+
+        </TextView>
+        <LinearLayout
+            android:layout_marginBottom="@dimen/px20dp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/px50dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_weight="1"
+                android:gravity="left"
+                android:id="@+id/tvphone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px40dp"
+                android:background="@null"
+                android:inputType="number"
+                android:text=""
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/px30dp">
+            </TextView>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <View
+                    android:background="@color/blue"
+                    android:layout_width="1dp"
+                    android:layout_height="24dp"></View>
+                <TextView
+                    android:id="@+id/getcode"
+                    android:layout_marginRight="@dimen/px30dp"
+                    android:layout_marginLeft="@dimen/px24dp"
+                    android:text="获取验证码"
+                    android:textColor="@color/blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <EditText
+            android:layout_marginTop="@dimen/px10dp"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:id="@+id/idnum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px40dp"
+            android:background="@null"
+            android:hint="输入验证码"
+            android:inputType="number"
+            android:text=""
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/px30dp">
+        </EditText>
+
+        <include layout="@layout/common_line"></include>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/px30dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px70dp"
+            android:orientation="horizontal">
+            <TextView
+                android:textSize="@dimen/px28dp"
+                android:textColor="@color/white"
+                android:layout_marginLeft="@dimen/px30dp"
+                android:layout_marginRight="@dimen/px30dp"
+                android:background="@drawable/shape_list_btn_blue"
+                android:id="@+id/tvOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="确定">
+
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

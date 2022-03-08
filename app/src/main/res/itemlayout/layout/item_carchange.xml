@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    android:paddingBottom="@dimen/px10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px100dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/cardnum"
+                android:paddingLeft="@dimen/px20dp"
+                android:textSize="@dimen/px30dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textColor="@color/color_black"
+                android:text="京A34567"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/tvstatus"
+                android:layout_marginRight="@dimen/px20dp"
+                android:layout_gravity="right|center_vertical"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/blue"
+                android:layout_width="@dimen/px150dp"
+                android:layout_height="@dimen/px60dp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+    <View
+        android:background="@color/divider_e5e5e5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px1dp"></View>
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgView"
+            android:layout_margin="@dimen/px40dp"
+            android:src="@drawable/ico_app"
+            android:layout_width="@dimen/px100dp"
+            android:layout_height="@dimen/px100dp" />
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/px20dp"
+            android:layout_toRightOf="@+id/imgView"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="@dimen/px30dp"
+                    android:text="车型："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvcarshap"
+                    android:textSize="@dimen/px30dp"
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/px10dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="@dimen/px30dp"
+                    android:text="载重:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvweight"
+                    android:textSize="@dimen/px30dp"
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/px10dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="@dimen/px30dp"
+                    android:text="车主："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvuser"
+                    android:textSize="@dimen/px30dp"
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/px10dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="@dimen/px30dp"
+                    android:text="失败原因："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvreason"
+                    android:textSize="@dimen/px30dp"
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

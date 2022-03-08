@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:paddingTop="@dimen/px40dp"
+        android:paddingBottom="@dimen/px40dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvNum"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/px30dp"
+            android:layout_centerVertical="true"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <ImageView
+            android:id="@+id/imgdelete"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ico_passdelete"
+            android:layout_width="22dp"
+            android:layout_height="22dp">
+
+        </ImageView>
+
+    </RelativeLayout>
+    <View
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_18"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px1dp">
+    </View>
+</LinearLayout>

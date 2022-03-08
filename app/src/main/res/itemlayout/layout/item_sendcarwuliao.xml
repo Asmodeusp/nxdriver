@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/image"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:paddingRight="@dimen/px20dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px100dp">
+                <TextView
+                    android:textSize="@dimen/px28dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/color_black"
+                    android:text="物料："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tvgoodname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/gray666"
+                        android:textSize="@dimen/px28dp"></TextView>
+                </LinearLayout>
+            </RelativeLayout>
+            <include layout="@layout/common_line"></include>
+            <RelativeLayout
+                android:paddingRight="@dimen/px24dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px100dp">
+                <TextView
+                    android:textSize="@dimen/px28dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/color_black"
+                    android:text="别名："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tvbieming"
+                        android:layout_marginTop="@dimen/px20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/gray666"
+                        android:textSize="@dimen/px28dp"></TextView>
+                </LinearLayout>
+            </RelativeLayout>
+            <include layout="@layout/common_line"></include>
+            <RelativeLayout
+                android:paddingRight="@dimen/px24dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px100dp">
+                <TextView
+                    android:textSize="@dimen/px28dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/color_black"
+                    android:text="预提量："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tvyutinums"
+                        android:layout_marginTop="@dimen/px20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/gray666"
+                        android:textSize="@dimen/px28dp"></TextView>
+                </LinearLayout>
+            </RelativeLayout>
+            <include layout="@layout/common_line"></include>
+            <RelativeLayout
+                android:paddingRight="@dimen/px24dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px100dp">
+                <TextView
+                    android:textSize="@dimen/px28dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/color_black"
+                    android:text="签收量："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tvsignnums"
+                        android:layout_marginTop="@dimen/px20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/gray666"
+                        android:textSize="@dimen/px28dp"></TextView>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

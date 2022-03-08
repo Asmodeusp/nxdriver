@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:padding="@dimen/px20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/imgView"
+           android:layout_marginLeft="@dimen/px30dp"
+            android:layout_width="@dimen/px104dp"
+            android:layout_height="@dimen/px104dp" />
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/px30dp"
+            android:layout_toRightOf="@+id/imgView"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+            <LinearLayout
+
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="#101010"
+                    android:id="@+id/tvName"
+                    android:textSize="16sp"
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/px24dp"
+                android:layout_marginTop="@dimen/px10dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/ico_carleader_people"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp">
+                </ImageView>
+                <TextView
+                    android:layout_marginLeft="@dimen/px10dp"
+                    android:textColor="#6C6C6C"
+                    android:id="@+id/tvNum"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginRight="16dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imgdelete"
+                android:visibility="visible"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ico_delete_red"
+                android:layout_width="@dimen/px40dp"
+                android:layout_height="@dimen/px40dp">
+
+            </ImageView>
+
+            <ImageView
+                android:layout_marginLeft="20dp"
+                android:id="@+id/imgPcz"
+                android:layout_alignParentRight="true"
+                android:visibility="visible"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ico_carleader_pcd"
+                android:layout_width="@dimen/px40dp"
+                android:layout_height="@dimen/px40dp">
+
+            </ImageView>
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+    <View
+        android:background="@color/bg"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"></View>
+
+
+</LinearLayout>

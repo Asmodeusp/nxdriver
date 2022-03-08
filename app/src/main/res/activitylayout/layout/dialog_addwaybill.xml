@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_list_btn_8dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:background="@drawable/shape_list_btn_8dp"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:inputType="numberDecimal"
+            android:id="@+id/edtrantnum"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+           android:text=""
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/px30dp"
+            android:hint="请输入运输量"
+            android:background="@null"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/edtrantnum"
+            android:layout_marginTop="@dimen/px20dp"
+            android:background="@color/divider_e5e5e5"
+            android:layout_width="260dp"
+            android:layout_height="@dimen/px1dp"></View>
+
+        <TextView
+            android:id="@+id/btnOrder"
+            android:layout_marginBottom="@dimen/px50dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:textSize="@dimen/px40dp"
+            android:text="确定"
+            android:textColor="@color/blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+</LinearLayout>

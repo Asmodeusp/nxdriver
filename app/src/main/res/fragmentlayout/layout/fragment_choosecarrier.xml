@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"></include>
+
+    <LinearLayout
+        android:id="@+id/rl_person"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:src="@drawable/ico_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+       <TextView
+           android:textColor="@color/white"
+           android:textSize="@dimen/px30dp"
+           android:layout_marginTop="@dimen/px20dp"
+           android:padding="@dimen/px20dp"
+           android:background="@drawable/loading_btn_login"
+           android:text="个人承运商"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/nomal_Person"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:src="@drawable/ico_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/white"
+            android:textSize="@dimen/px30dp"
+            android:layout_marginTop="@dimen/px20dp"
+            android:padding="@dimen/px20dp"
+            android:background="@drawable/loading_btn_login"
+            android:text="一般纳税人"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/small_company"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:src="@drawable/ico_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/white"
+            android:textSize="@dimen/px30dp"
+            android:layout_marginTop="@dimen/px20dp"
+            android:padding="@dimen/px20dp"
+            android:background="@drawable/loading_btn_login"
+            android:text="小规模企业"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/bg"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:background="@color/blue"
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/px20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:id="@+id/imgback"
+                        android:layout_width="@dimen/px200dp"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_marginLeft="@dimen/px20dp"
+                            android:src="@drawable/ico_wallet_return"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp">
+                        </ImageView>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="我的钱包"
+                        android:textSize="@dimen/px30dp"
+                        android:textColor="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                </RelativeLayout>
+
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/imgKefu"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/px40dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ico_kefu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </ImageView>
+                <ImageView
+                    android:id="@+id/avatar_max"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp" />
+
+                <com.saimawzc.freight.weight.CircleImageView
+                    android:src="@drawable/ico_head_defalut"
+                    android:layout_marginLeft="@dimen/px30dp"
+                    android:layout_centerVertical="true"
+                    android:visibility="visible"
+                    android:layout_gravity="center"
+                    android:id="@+id/avatar_min"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp" />
+
+                <LinearLayout
+                    android:layout_marginLeft="@dimen/px30dp"
+                    android:layout_toRightOf="@+id/avatar_min"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/px36dp"
+                        android:id="@+id/tvName"
+                        android:layout_marginTop="@dimen/px10dp"
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/px10dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/px28dp"
+                            android:id="@+id/tvcompamy"
+                            android:text=""
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_marginRight="@dimen/px20dp"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/px28dp"
+                            android:text="子账簿编号"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:background="@drawable/ico_wallet_bg"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:textSize="@dimen/px28dp"
+                        android:textColor="@color/white"
+                        android:text="总资产(元)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/tvallmoney"
+                        android:textSize="@dimen/px28dp"
+                        android:textColor="@color/white"
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                </LinearLayout>
+                <View
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:layout_width="1dp"
+                    android:layout_height="38dp"></View>
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="@dimen/px28dp"
+                            android:textColor="@color/white"
+                            android:text="可用余额(元)"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                        <TextView
+                            android:id="@+id/tvusermoney"
+                            android:layout_gravity="center"
+                            android:textSize="@dimen/px28dp"
+                            android:textColor="@color/white"
+                            android:text=""
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tvwithdraw"
+                        android:layout_marginLeft="@dimen/px40dp"
+                        android:textColor="@color/blue"
+                        android:gravity="center"
+                        android:text="提现"
+                        android:background="@drawable/ico_wallet_tuoyuan"
+                        android:layout_width="@dimen/px84dp"
+                        android:layout_height="@dimen/px84dp">
+
+                    </TextView>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 明细 -->
+            <RelativeLayout
+                android:background="@color/white"
+                android:id="@+id/rldelation"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px96dp">
+                <ImageView
+                    android:id="@+id/imgq"
+                    android:layout_marginLeft="@dimen/px28dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ico_wallet_money"
+                    android:layout_width="@dimen/px36dp"
+                    android:layout_height="@dimen/px36dp">
+
+                </ImageView>
+                <TextView
+                    android:textColor="@color/color_black"
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:layout_toRightOf="@+id/imgq"
+                    android:layout_centerVertical="true"
+                    android:text="交易明细"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <ImageView
+                    android:layout_marginRight="@dimen/px30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ico_right"
+                    android:layout_width="@dimen/px24dp"
+                    android:layout_height="@dimen/px24dp"></ImageView>
+
+            </RelativeLayout>
+            <View
+                android:background="@color/bg"
+                android:layout_width="match_parent"
+                android:layout_height="10dp">
+
+            </View>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:id="@+id/addcar"
+                android:gravity="center_vertical"
+                android:layout_marginRight="@dimen/px24dp"
+                android:layout_marginLeft="@dimen/px24dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="84dp">
+
+                <ImageView
+                    android:layout_marginLeft="@dimen/px60dp"
+                    android:src="@drawable/ico_wallet_add"
+                    android:layout_width="@dimen/px32dp"
+                    android:layout_height="@dimen/px32dp">
+
+                </ImageView>
+                <TextView
+                    android:textColor="@color/gray333"
+                    android:textSize="@dimen/px32dp"
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:text="添加银行卡"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_marginBottom="@dimen/px100dp"
+                android:layout_marginTop="@dimen/px28dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/ico_wallet_resh"
+                    android:layout_width="@dimen/px28dp"
+                    android:layout_height="@dimen/px28dp">
+
+                </ImageView>
+                <TextView
+                    android:textSize="@dimen/px28dp"
+                    android:text="更换银行卡"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/bg"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/common_toolbar"></include>
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/px30dp"
+            android:gravity="center"
+            android:text=""
+            android:hint="选择省份"
+            android:id="@+id/tvProcice"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TextView>
+        <TextView
+            android:hint="选择城市"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/px30dp"
+            android:gravity="center"
+            android:text=""
+            android:id="@+id/tvCity"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TextView>
+
+    </LinearLayout>
+    <View
+        android:background="@color/bg"
+        android:layout_width="match_parent"
+        android:layout_height="10dp">
+
+    </View>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/cy"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_above="@+id/tvaddcar"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/common_toolbar"></include>
+
+      <include layout="@layout/common_pagetitle"></include>
+
+
+
+
+
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v4.view.ViewPager>
+    </LinearLayout>
+
+
+ <RelativeLayout
+     android:id="@+id/tvaddcar"
+     android:background="@color/blue"
+     android:layout_alignParentBottom="true"
+     android:layout_width="match_parent"
+     android:layout_height="@dimen/px80dp">
+     <TextView
+         android:layout_centerInParent="true"
+         android:textColor="@color/white"
+         android:textSize="@dimen/px30dp"
+         android:text="添加司机（船员）"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content" />
+
+ </RelativeLayout>
+
+</RelativeLayout>

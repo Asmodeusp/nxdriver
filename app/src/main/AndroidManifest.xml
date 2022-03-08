@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ProtectedPermissions"
+    package="com.saimawzc.freight">
+    <!-- 允许程序读取底层系统日志文件 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+<!--    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>-->
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <!-- 允许挂载和反挂载文件系统可移动存储 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <!-- -视频和录音权限 -->
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+<!--    <uses-permission android:name="android.permission.CALL_PHONE"/>-->
+    <uses-feature android:name="android.hardware.usb.host" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <!-- 允许程序读取或写入系统设置 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <!-- 读取缓存数据 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <!-- 允许访问振动设备 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 允许使用PowerManager的 WakeLocks保持进程在休眠时从屏幕消失 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+
+    <!-- 以下是鹰眼SDK基础权限 -->
+    <!-- 这个权限用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <!-- 这个权限用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入对象存储BOS数据-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <!-- 访问网络，网络定位需要上网-->
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <!-- Android O之后开启前台服务需要申请该权限 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- Android Q之后，后台定位需要申请该权限 -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <!-- 以下不是鹰眼SDK需要的基础权限，可选 -->
+    <!-- 用于加快GPS首次定位，可选权限，非必须-->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"></uses-permission>
+    <!-- 用于Android M及以上系统，申请加入忽略电池优化白名单，可选权限，非必须-->
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--获取网络状态，用于在线算路与离线算路之间的切换 -->
+    <!--用于访问WIFI网络状态，用于判断网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--写入扩展存储，向扩展卡写入数据，用于离线数据的写入 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 用于ugc事件上报拍照录像 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <!-- 用于ugc事件上报录音 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <!-- 用于导航中省电设置 -->
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <!-- 此处com.baidu.push.example要改成应用自己的包名 -->
+    <uses-permission android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.saimawzc.freight" />
+
+    <permission
+        android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.saimawzc.freight"
+        android:protectionLevel="signature" />
+    <!-- Push service 运行的可选权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- Push service 运行需要的权限 END -->
+
+    <application
+        android:requestLegacyExternalStorage="true"
+        android:hardwareAccelerated="true"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/https"
+        tools:replace="icon,label,theme,android:networkSecurityConfig"
+        android:name="com.saimawzc.freight.base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ico_app"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ico_app"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:launchMode="singleTask"
+            android:name=".ui.MainActivity">
+
+        </activity>
+
+        <activity
+            android:windowSoftInputMode="stateUnspecified|adjustPan"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:name=".ui.sendcar.driver.DelationAdressMapActivity"></activity>
+
+        <activity android:name=".ui.WebViewActivity"></activity>
+        <activity android:name="com.saimawzc.freight.ui.my.pubandservice.ChooseTaxiCarActivity"></activity>
+
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".weight.waterpic.WatermarkCameraActivity2">
+
+        </activity>
+        <activity android:name=".ui.CommonActivity"></activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:name=".ui.DriverMainActivity">
+
+        </activity>
+        <activity android:name=".ui.my.pubandservice.ChooseTaxiAdressActivity"></activity>
+        <activity
+            android:name=".ui.login.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".weight.waterpic.ViewPhoto"></activity>
+        <activity android:name=".ui.my.person.ChangeRoleActivity"></activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:name=".ui.login.RegisterActivity">
+
+        </activity>
+
+
+        <activity
+            android:launchMode="standard"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:name=".weight.utils.ocr.OcrCameraActivity"></activity>
+        <activity
+            android:launchMode="standard"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:name=".ui.my.carmanage.TeamGroupSearchActivity">
+
+        </activity>
+        <activity
+            android:launchMode="standard"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:name=".ui.my.carmanage.AddCarServiceInfoActivity">
+        </activity>
+        <activity
+            android:launchMode="standard"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:name=".ui.my.pubandservice.PublisherActivity"></activity>
+        <activity
+            android:launchMode="standard"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:name=".ui.my.pubandservice.MyServicePartyActivity"></activity>
+
+       <activity android:name=".ui.sendcar.driver.NaviGuideActivity"></activity>
+        <activity android:name=".weight.waterpic.WatermarkCameraActivity"></activity>
+        <activity android:name=".ui.my.setment.account.ChooseAuthortityActivity"></activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:name=".ui.my.pubandservice.ServiceSubmitActivity"></activity>
+        <activity android:name=".ui.my.carqueue.MyCarQueneActivity"></activity>
+        <activity
+            android:launchMode="standard"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:name=".ui.my.PersonCenterActivity">
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:name=".ui.wallet.WalletActivity">
+        </activity>
+        <activity android:name=".ui.my.identification.UserIdentificationActivity">
+
+        </activity>
+        <activity android:name=".ui.my.carmanage.CarLearderListActivity"></activity>
+
+        <activity
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:name=".ui.my.carmanage.CreatCarLeaderActivity"></activity>
+
+        <activity
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:name=".ui.my.carmanage.CarTeamInfoActivity"></activity>
+
+        <activity
+            android:launchMode="singleTop"
+            android:name=".ui.login.LoginActivity">
+        </activity>
+        <activity android:name=".ui.login.ForgetPassActivity"></activity>
+        <activity android:name=".ui.login.VerificationCodeLoginActivity">
+        </activity>
+        <activity android:name=".ui.order.waybill.manage.OrderManageMapActivity"></activity>
+
+         <activity android:name=".weight.utils.preview.PlusImageActivity"></activity>
+        <activity android:name=".ui.my.setment.account.ChooseConsignCompanyActivity"></activity>
+
+        <activity android:name=".ui.baidu.TracingActivity"></activity>
+
+        <activity
+            android:launchMode="standard"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:name=".ui.order.OrderMainActivity">
+
+        </activity>
+
+        <!-- push必须的组件声明  START -->
+        <receiver android:name=".ui.push.MyPushMessageReceiver">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
+                <action android:name="com.baidu.android.pushservice.action.RECEIVE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.CLICK" />
+                <!-- 使用华为代理功能必须声明,用于接收华为的透传 -->
+                <action android:name="com.huawei.android.push.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+
+        <receiver
+            android:name="com.baidu.android.pushservice.PushServiceReceiver"
+             android:process=":bdservice_v1" >
+         <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED" />
+        <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+        <action android:name="com.baidu.android.pushservice.action.notification.SHOW" />
+        <action android:name="com.baidu.android.pushservice.action.media.CLICK" />
+        <!-- 以下四项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+        <action android:name="android.intent.action.MEDIA_MOUNTED" />
+        <action android:name="android.intent.action.USER_PRESENT" />
+        <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+        <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+    </intent-filter>
+
+  </receiver>
+
+        <receiver
+            android:name="com.baidu.android.pushservice.RegistrationReceiver"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.METHOD" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.baidu.android.pushservice.PushService"
+            android:exported="true"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.baidu.android.pushservice.CommandService"
+            android:exported="true" />
+
+        <provider
+            android:name="com.baidu.android.pushservice.PushInfoProvider"
+            android:authorities="com.saimawzc.freight.bdpush"
+            android:exported="true"
+            android:process=":bdservice_v1"
+            android:protectionLevel="signature"
+            android:writePermission="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.saimawzc.freight" />
+        <service
+            android:name="com.baidu.android.pushservice.job.PushJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":bdservice_v1" />
+        <!-- push必须的组件声明  END -->
+        <service android:name=".weight.utils.serves.FloatWindowService" />
+        <provider
+            android:name=".weight.utils.update.MNUpdateApkFileProvider"
+            android:authorities="${applicationId}.updateFileProvider"
+            android:enabled="true"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/mn_update_file_provider" />
+        </provider>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <!-- 鹰眼 kcKPgo9GQKZo7PvKOGjurEOTGPoPBtyr-->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="vgeLKIdHRsGehtBtH1YzmpxaR5NUbaSX" />
+
+        <service
+            android:name="com.baidu.trace.LBSTraceService"
+            android:enabled="true"
+            android:process=":remote">
+        </service>
+
+        <!-- 在百度开发者中心查询应用的API Key   -->
+        <meta-data
+            android:name="api_key"
+            android:value="vgeLKIdHRsGehtBtH1YzmpxaR5NUbaSX" />
+
+        <service
+            android:foregroundServiceType="location"
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+
+        <service
+            android:enabled="true"
+            android:exported="true"
+            android:process=":music_service"
+            android:name=".weight.utils.serves.SingASongService">
+
+        </service>
+
+        <receiver
+            android:name="com.saimawzc.freight.ui.phone.PhoneBroadcastReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL"/>
+                <action android:name="android.intent.action.PHONE_STATE"/>
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".weight.waterpic.JcTakePhoneActivity"></activity>
+        <activity android:name=".ui.order.ShowArtActivity"></activity>
+        <activity android:name="com.saimawzc.freight.ui.order.face.FaceLivenessExpActivity"></activity>
+        <!--将com.baidu.idl.face.demo替换成您工程的包名-->
+        <provider android:authorities="com.saimawzc.freight.liantian.ac.provider"
+            android:name="com.baidu.liantian.LiantianProvider"
+            android:exported="true"/>
+
+        <meta-data
+         android:name="com.amap.api.v2.apikey"
+         android:value="0afcb8bd8ca861a0aa9116e2b9a4b1ec" />
+        <!--- 一像素保活-->
+        <activity
+            android:excludeFromRecents="true"
+           android:theme="@style/TransparentStyle"
+            android:taskAffinity="com.saimawzc.freight"
+            android:name="com.saimawzc.freight.weight.utils.keeplive.onepixe.KeepLiveActivity">
+
+        </activity>
+
+        <service android:name="com.saimawzc.freight.weight.utils.keeplive.onepixe.ScreenService" >
+        </service>
+
+        <service
+            android:process=":remote"
+            android:exported="true"
+            android:name="com.saimawzc.freight.weight.utils.keeplive.jobhander.JobHandlerService"
+            android:permission="android.permission.BIND_JOB_SERVICE"></service>
+
+    </application>
+
+</manifest>

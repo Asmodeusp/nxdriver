@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/bg"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.saimawzc.freight.weight.MyDrawerLayout
+        android:id="@+id/draw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/common_toolbar"></include>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px88dp">
+                <LinearLayout
+                    android:paddingTop="@dimen/px10dp"
+                    android:paddingLeft="@dimen/px28dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tvtoday"
+                        android:textSize="@dimen/px28dp"
+                        android:gravity="left"
+                        android:text="当天"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/tvlinetoday"
+                        android:layout_marginTop="@dimen/px8dp"
+                        android:background="@color/blue"
+                        android:layout_width="35dp"
+                        android:layout_height="@dimen/px6dp">
+
+                    </TextView>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:paddingTop="@dimen/px10dp"
+                    android:paddingLeft="@dimen/px28dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tvsevenday"
+                        android:textSize="@dimen/px28dp"
+                        android:gravity="left"
+                        android:text="七天"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                    <TextView
+                        android:visibility="invisible"
+                        android:id="@+id/tvlinesave"
+                        android:layout_marginTop="@dimen/px8dp"
+                        android:background="@color/blue"
+                        android:layout_width="35dp"
+                        android:layout_height="@dimen/px6dp">
+
+                    </TextView>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:paddingTop="@dimen/px10dp"
+                    android:paddingLeft="@dimen/px28dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tvmonth"
+                        android:textSize="@dimen/px28dp"
+                        android:gravity="left"
+                        android:text="一个月"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                    <TextView
+                        android:visibility="invisible"
+                        android:id="@+id/tvlinemonth"
+                        android:layout_marginTop="@dimen/px8dp"
+                        android:background="@color/blue"
+                        android:layout_width="40dp"
+                        android:layout_height="@dimen/px6dp">
+
+                    </TextView>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:paddingTop="@dimen/px10dp"
+                    android:paddingLeft="@dimen/px28dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tvmore"
+                        android:textSize="@dimen/px28dp"
+                        android:gravity="left"
+                        android:text="更多筛选"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                    <TextView
+                        android:visibility="invisible"
+                        android:id="@+id/tvlinemore"
+                        android:layout_marginTop="@dimen/px8dp"
+                        android:background="@color/blue"
+                        android:layout_width="50dp"
+                        android:layout_height="@dimen/px6dp">
+
+                    </TextView>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <include layout="@layout/common_line"></include>
+
+            <android.support.v7.widget.RecyclerView
+                android:background="@color/white"
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                ></android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+        <include layout="@layout/draw_tradedelation"></include>
+
+    </com.saimawzc.freight.weight.MyDrawerLayout>
+
+</LinearLayout>

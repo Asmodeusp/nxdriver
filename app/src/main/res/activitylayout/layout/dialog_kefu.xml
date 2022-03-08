@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_list_btn_8dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginLeft="100dp"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/px100dp"
+            android:id="@+id/tvkf"
+            android:gravity="center"
+            android:text="客服电话"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/px30dp"
+            android:hint=""
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="@dimen/px40dp"
+            android:layout_below="@+id/tvkf"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvDayPhone"
+                android:textStyle="bold"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/px26dp"
+                android:text="4008874005"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:id="@+id/tvNightPhone"
+                android:layout_marginTop="@dimen/px20dp"
+                android:textStyle="bold"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/px26dp"
+                android:text="17398448233(夜间)"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px40dp"
+                android:background="@null"
+                android:gravity="center"
+                android:hint=""
+                android:text="投诉电话"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/px30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvtousuPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px20dp"
+                android:text="13895189901(投诉)"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/px26dp"
+                android:textStyle="bold">
+
+            </TextView>
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+</LinearLayout>

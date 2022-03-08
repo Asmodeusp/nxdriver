@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/bg"
+    android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"></include>
+
+
+   <LinearLayout
+       android:gravity="center"
+       android:id="@+id/llchangeRole"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="@dimen/px240dp"
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <com.saimawzc.freight.weight.CircleImageView
+           android:id="@+id/imgchange"
+           android:textSize="@dimen/px30dp"
+           android:textColor="@color/white"
+           android:gravity="center"
+           android:text=""
+           android:layout_width="@dimen/px240dp"
+           android:layout_height="@dimen/px240dp" />
+
+       <TextView
+           android:gravity="center"
+           android:layout_marginTop="@dimen/px20dp"
+           android:textSize="@dimen/px28dp"
+           android:textColor="@color/white"
+           android:id="@+id/btnChangRole"
+           android:layout_width="148dp"
+           android:layout_height="42dp"
+           android:background="@drawable/loading_btn_login"
+           android:text="">
+
+       </TextView>
+
+
+   </LinearLayout>
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:id="@+id/llchangeApp"
+        android:layout_below="@+id/llchangeRole"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/px240dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.saimawzc.freight.weight.CircleImageView
+            android:src="@drawable/ico_changehz"
+            android:layout_below="@+id/btnChangRole"
+            android:textSize="@dimen/px30dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:text="我找车货主端"
+            android:layout_width="@dimen/px240dp"
+            android:layout_height="@dimen/px240dp" />
+
+        <TextView
+            android:gravity="center"
+            android:layout_marginTop="@dimen/px20dp"
+            android:textSize="@dimen/px28dp"
+            android:textColor="@color/white"
+            android:id="@+id/btnChangAPP"
+            android:layout_width="148dp"
+            android:layout_height="42dp"
+            android:background="@drawable/loading_btn_login"
+            android:text="我找车货主端">
+
+        </TextView>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
