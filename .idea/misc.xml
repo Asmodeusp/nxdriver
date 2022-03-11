@@ -3,10 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/activitylayout/layout/activity_login.xml" value="0.17255434782608695" />
+        <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/activitylayout/layout/small_order.xml" value="0.25" />
+        <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/fragmentlayout/layout/fragment_addsuggest.xml" value="0.15715579710144928" />
+        <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/fragmentlayout/layout/fragment_orderdelation.xml" value="0.25" />
+        <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/fragmentlayout/layout/fragment_sendcardelation.xml" value="0.25" />
+        <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/fragmentlayout/layout/fragmentment_smallconpany.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/itemlayout/layout/item_planorder.xml" value="0.25" />
         <entry key="..\:/nxDriver/app/src/main/res/activitylayout/layout/activity_login.xml" value="0.1" />
       </map>
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>

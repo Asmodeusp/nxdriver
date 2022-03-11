@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.saimawzc.freight.R;
@@ -72,6 +73,9 @@ public class SendCarDelationFragment extends BaseFragment
     @BindView(R.id.tvStartTask) DragTV tvStartTask;
     @BindView(R.id.tvLCId) TextView tvLCId;
     @BindView(R.id.tvLWText) TextView tvLWText;
+    @BindView(R.id.resTxt2Relative)
+    RelativeLayout resTxt2Relative;
+    @BindView(R.id.resTxt2Text) TextView resTxt2Text;
     private  WaitExecuteDto.WaitExecuteData data;
 
 
@@ -178,6 +182,12 @@ public class SendCarDelationFragment extends BaseFragment
             tvpaicheEndTime.setText(dtos.getEndTime());
             tvLCId.setText(dtos.getLcbh());
             tvLWText.setText(dtos.getLwxx());
+            if (dtos.getResTxt2()!=null&&!TextUtils.isEmpty(dtos.getResTxt2())) {
+                resTxt2Text.setText(dtos.getResTxt2());
+            }else {
+                resTxt2Relative.setVisibility(View.GONE);
+            }
+
             if(type==1){//小单
                 navLineManage=new LinearLayoutManager(mContext);
                 navLineManage.setOrientation(LinearLayoutManager.HORIZONTAL);

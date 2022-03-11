@@ -77,6 +77,8 @@ public class LoginModelImple extends BasEModeImple implements LoginModel {
                 });
 
                 listener.successful(role);
+                String  channelId = (String) SPUtils.get(BaseApplication.getInstance(), "channelId", "");
+                submitPushInfo(channelId);
             }
 
             @Override
@@ -124,7 +126,6 @@ public class LoginModelImple extends BasEModeImple implements LoginModel {
                         Http.initHttp(view.getContext());
                     }
                 });
-
                 listener.successful(role);
                 String  channelId = (String) SPUtils.get(BaseApplication.getInstance(), "channelId", "");
                 submitPushInfo(channelId);

@@ -113,6 +113,8 @@ public class OrderDelationFragment extends BaseFragment
     @BindView(R.id.imgautoarrive)ImageView imgArrive;
     @BindView(R.id.tvofftime)TextView tvOffTime;
     @BindView(R.id.tvspaceTime)TextView tvSpaceTime;
+    @BindView(R.id.resTxt2)TextView resTxt2;
+    @BindView(R.id.resTxt2Linear)LinearLayout resTxt2Linear;
     @Override
     public int initContentView() {
         return R.layout.fragment_orderdelation;
@@ -252,7 +254,11 @@ public class OrderDelationFragment extends BaseFragment
             tvMakePeople.setText(dto.getChoose().getMakerName());
             tvPayXieyi.setText(dto.getChoose().getPayProtocolName());
             tvMark.setText(dto.getChoose().getRemark());
-
+            if (dto.getChoose().getResTxt2()!=null&&!TextUtils.isEmpty(dto.getChoose().getResTxt2())) {
+                resTxt2.setText(dto.getChoose().getResTxt2());
+            }else {
+                resTxt2Linear.setVisibility(View.GONE);
+            }
             tvReceiveObj.setText(dto.getChoose().getPushAlarmRoleName());
             tvhZname.setText(dto.getChoose().getAlarmHzName());
             tvRoute.setText(dto.getRouteName());

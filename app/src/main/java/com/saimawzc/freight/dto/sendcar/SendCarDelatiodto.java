@@ -23,6 +23,17 @@ public class SendCarDelatiodto {
     private String  lcbh;
     private String lwxx;
 
+    public String getResTxt2() {
+        return resTxt2;
+    }
+
+    public void setResTxt2(String resTxt2) {
+        this.resTxt2 = resTxt2;
+    }
+
+    private String resTxt2;
+
+
     public String getLcbh() {
         if (lcbh!=null) {
             return lcbh;
@@ -162,7 +173,6 @@ public class SendCarDelatiodto {
     public void setProvideUnload(int provideUnload) {
         this.provideUnload = provideUnload;
     }
-
     public int getProvideInvoice() {
         return provideInvoice;
     }
