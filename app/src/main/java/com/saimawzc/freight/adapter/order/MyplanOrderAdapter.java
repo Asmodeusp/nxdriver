@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -113,7 +114,12 @@ public class MyplanOrderAdapter extends BaseAdapter {
             }else {
                 ((ViewHolder) holder).viewTab4.setVisibility(View.GONE);
             }
-
+            if (TextUtils.isEmpty(dto.getResTxt2())) {
+                ((ViewHolder) holder).resTxt2TextLin.setVisibility(View.GONE);
+            }else {
+                ((ViewHolder) holder).resTxt2TextLin.setVisibility(View.VISIBLE);
+                ((ViewHolder) holder).resTxt2Text.setText(dto.getResTxt2());
+            }
 
             ((ViewHolder) holder).tvBigNo.setText(dto.getPlanWayBillNo());
             ((ViewHolder) holder).tvAdress.setText(dto.getFromUserAddress());
@@ -286,6 +292,8 @@ public class MyplanOrderAdapter extends BaseAdapter {
 
         @BindView(R.id.layprice)LinearLayout layPrice;
         @BindView(R.id.tvprice)TextView tvPrice;
+        @BindView(R.id.resTxt2Text)TextView resTxt2Text;
+        @BindView(R.id.resTxt2TextLin)LinearLayout resTxt2TextLin;
 
 
     }

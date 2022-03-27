@@ -331,7 +331,7 @@ public class DriverMainFragment extends BaseImmersionFragment
                         }
                         isRuning++;
                     }
-                }, 5000);//3秒后执行Runnable中的run方法
+                }, 3000);//3秒后执行Runnable中的run方法
             }
         }
         // 更新围栏回调
@@ -532,6 +532,7 @@ public class DriverMainFragment extends BaseImmersionFragment
             //查询监控对象状态响应结果
             List<MonitoredStatusInfo> monitoredStatusInfos = response.getMonitoredStatusInfos();
             int temp=0;
+
             for (MonitoredStatusInfo monitoredStatusInfo : monitoredStatusInfos) {
                 monitoredStatusInfo.getFenceId();
                 MonitoredStatus status = monitoredStatusInfo.getMonitoredStatus();//获取状态

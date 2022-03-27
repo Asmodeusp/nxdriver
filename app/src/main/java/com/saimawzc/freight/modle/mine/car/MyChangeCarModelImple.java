@@ -39,6 +39,7 @@ public class MyChangeCarModelImple extends BasEModeImple implements MyChangeCarM
             public void success(MyCarDto response) {
                 view.stopRefresh();
                 view.dissLoading();
+                view.compelete(response);
                 Log.e("msg","获取长度"+response.getList());
                 listener.callbackbrand(response);
             }

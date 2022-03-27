@@ -115,6 +115,8 @@ public class OrderDelationFragment extends BaseFragment
     @BindView(R.id.tvspaceTime)TextView tvSpaceTime;
     @BindView(R.id.resTxt2)TextView resTxt2;
     @BindView(R.id.resTxt2Linear)LinearLayout resTxt2Linear;
+    private Double pointPrice;
+
     @Override
     public int initContentView() {
         return R.layout.fragment_orderdelation;
@@ -160,6 +162,7 @@ public class OrderDelationFragment extends BaseFragment
         adpater=new WayBillGoodAdpater(mDatas,mContext,1);
         rv.setLayoutManager(layoutManager);
         rv.setAdapter(adpater);
+
     }
 
     @OnClick({R.id.tvAgreen,R.id.tvRefuse})
@@ -208,6 +211,7 @@ public class OrderDelationFragment extends BaseFragment
             }else if(dto.getTranType()==2){
                 tvTrantWay.setText("船运");
             }
+
             tvSendCompany.setText(dto.getFromName());
             tvSendAdress.setText(dto.getFromUserAddress());
             tvSendBussiTime.setText(dto.getFromOperateTime());
@@ -225,7 +229,8 @@ public class OrderDelationFragment extends BaseFragment
             }else if(dto.getBusinessType()==3){
                 tvBussType.setText("平台业务");
             }
-
+            //运价
+            Double pointPrice = dto.getPointPrice();
             for(int i=0;i<dto.getList().size();i++){
                 AddWayBillGoodsDto tempDto=new AddWayBillGoodsDto();
                 GoodsCompanyDto goodNameDto=new GoodsCompanyDto();
@@ -233,7 +238,7 @@ public class OrderDelationFragment extends BaseFragment
                 goodNameDto.setId(dto.getList().get(i).getMaterialsId());
                 tempDto.setGoodsCompanyDto(goodNameDto);
                 tempDto.setUtil(dto.getList().get(i).getUnit());
-                tempDto.setGoodPrice(dto.getList().get(i).getPrice());
+                tempDto.setGoodPrice(pointPrice);
                 tempDto.setGoodNum(dto.getList().get(i).getWeight());
                 tempDto.setUnitName(dto.getList().get(i).getUnitName());
                 tempDto.setBussType(dto.getBusinessType());
@@ -399,7 +404,9 @@ public class OrderDelationFragment extends BaseFragment
             }else {
                 ImageLoadUtil.displayImage(mContext,R.drawable.ico_unchoose,imgArrive);
             }
+
         }
+
 
     }
 

@@ -2,10 +2,12 @@ package com.saimawzc.freight.adapter.order;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.saimawzc.freight.R;
@@ -77,7 +79,12 @@ public class OrderBiddAdapter extends BaseAdapter {
     public void onBindViewHolder(final RecyclerView.ViewHolder holder, final int position) {
         if(holder instanceof ViewHolder){
             WayBillDto.OrderBillData dto=mDatas.get(position);
-
+            if (TextUtils.isEmpty(dto.getResTxt2())) {
+                ((ViewHolder) holder).resTxt2Linear.setVisibility(View.GONE);
+            }else {
+                ((ViewHolder) holder).resTxt2Linear.setVisibility(View.VISIBLE);
+                ((ViewHolder) holder).resTxt2Text.setText(dto.getResTxt2());
+            }
             ((ViewHolder) holder).tvAdress.setText(dto.getFromUserAddress());
             ((ViewHolder) holder).tvAdressTo.setText(dto.getToUserAddress());
             ((ViewHolder) holder).tvWayBillNo.setText(dto.getWayBillNo());
@@ -207,6 +214,9 @@ public class OrderBiddAdapter extends BaseAdapter {
         @BindView(R.id.viewtab2)TextView viewtab2;
         @BindView(R.id.viewtab3)TextView viewtab3;
         @BindView(R.id.viewtab4)TextView viewtab4;
+        @BindView(R.id.resTxt2Text)TextView resTxt2Text;
+        @BindView(R.id.resTxt2Linear)
+        LinearLayout resTxt2Linear;
 
     }
     @Override

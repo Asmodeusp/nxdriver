@@ -1,7 +1,9 @@
 package com.saimawzc.freight.adapter.order;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +18,7 @@ import com.saimawzc.freight.adapter.FooterHolder;
 import com.saimawzc.freight.base.BaseActivity;
 import com.saimawzc.freight.dto.order.SendCarDto;
 import com.saimawzc.freight.dto.order.bill.MyPlanOrderDto;
+import com.saimawzc.freight.weight.utils.StringUtil;
 import com.saimawzc.freight.weight.utils.loadimg.ImageLoadUtil;
 
 import java.util.ArrayList;
@@ -138,9 +141,15 @@ public class SendCarAdapter extends BaseAdapter {
     }
 
     @Override
-    public void onBindViewHolder(final RecyclerView.ViewHolder holder, final int position) {
+    public void onBindViewHolder(final RecyclerView.ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         if(holder instanceof ViewHolder){
             SendCarDto.SendCarData dto=mDatas.get(position);
+            if (TextUtils.isEmpty(dto.getResTxt2())) {
+                ((ViewHolder) holder).resTxt2Linear.setVisibility(View.GONE);
+            }else {
+                ((ViewHolder) holder).resTxt2Linear.setVisibility(View.VISIBLE);
+                ((ViewHolder) holder).resTxt2Text.setText(dto.getResTxt2());
+            }
             ImageLoadUtil.displayImage(mContext,dto.getCompanyLogo(),((ViewHolder) holder).imageView);
              ((ViewHolder) holder).tvAdress.setText(dto.getFromUserAddress());
              ((ViewHolder) holder).tvAdressTo.setText(dto.getToUserAddress());
@@ -150,7 +159,10 @@ public class SendCarAdapter extends BaseAdapter {
              ((ViewHolder) holder).tvTime.setText(dto.getCreateTime());
             ((ViewHolder) holder).tvDanhao.setText(dto.getDispatchCarNo());
             ((ViewHolder) holder).tvSiji.setText(dto.getSjName()+"|"+dto.getCarNo());
-            ((ViewHolder) holder).tvtrant.setText(dto.getMaterialsName());
+            if (dto.getMaterialsName()!=null) {
+                ((ViewHolder) holder).tvtrant.setText(StringUtil.ToDBC(dto.getMaterialsName()));
+            }
+
             if(isShowCheck){
                 ((ViewHolder) holder).checkBox.setVisibility(View.VISIBLE);
             }else {
@@ -176,12 +188,10 @@ public class SendCarAdapter extends BaseAdapter {
                 setBtnStyle(mContext,((ViewHolder) holder).viewTab1,R.drawable.shape_list_btn,R.color.gray333);
                 setBtnStyle(mContext,((ViewHolder) holder).viewTab2,R.drawable.shape_list_btn_red,R.color.red);
             }else if(type.equals("2")){//运输中
-
                 ((ViewHolder) holder).viewTab1.setText("物流信息");
                 ((ViewHolder) holder).viewTab1.setVisibility(View.VISIBLE);
                 ((ViewHolder) holder).viewTab2.setVisibility(View.VISIBLE);
                 ((ViewHolder) holder).viewTab2.setText("当前位置");
-
                 ((ViewHolder) holder).viewtab3.setText("同意撤单");
                 if(dto.getIsCancel()==1){
                     ((ViewHolder) holder).viewtab3.setVisibility(View.VISIBLE);
@@ -321,15 +331,13 @@ public class SendCarAdapter extends BaseAdapter {
         @BindView(R.id.from_company)TextView fhUtil;
         @BindView(R.id.to_company)TextView shUtil;
         @BindView(R.id.checkBox) CheckBox checkBox;
-
-
-
         @BindView(R.id.tvSiji)TextView tvSiji;
         @BindView(R.id.tvtrant)TextView tvtrant;
         @BindView(R.id.viewtab1)TextView viewTab1;
         @BindView(R.id.viewtab2)TextView viewTab2;
         @BindView(R.id.viewtab3)TextView viewtab3;
-
+        @BindView(R.id.resTxt2Linear)LinearLayout resTxt2Linear;
+        @BindView(R.id.resTxt2Text)TextView resTxt2Text;
     }
     @Override
     public void changeMoreStatus(int status) {

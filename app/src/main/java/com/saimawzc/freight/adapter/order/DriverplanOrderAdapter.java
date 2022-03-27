@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,7 +34,7 @@ import butterknife.ButterKnife;
 
 public class DriverplanOrderAdapter extends BaseAdapter {
 
-    private List<MyPlanOrderDto.planOrderData> mDatas=new ArrayList<>();
+    private List<MyPlanOrderDto.planOrderData> mDatas = new ArrayList<>();
     private Context mContext;
     private LayoutInflater mInflater;
 
@@ -42,6 +43,7 @@ public class DriverplanOrderAdapter extends BaseAdapter {
     public void setOnTabClickListener(OnTabClickListener onItemTabClickListener) {
         this.onTabClickListener = onItemTabClickListener;
     }
+
     public interface OnTabClickListener {
         void onItemClick(String type, int position);
     }
@@ -50,10 +52,10 @@ public class DriverplanOrderAdapter extends BaseAdapter {
         this.mDatas = mDatas;
         this.mContext = mContext;
         mInflater = LayoutInflater.from(mContext);
-        activity=(BaseActivity) mContext;
+        activity = (BaseActivity) mContext;
     }
 
-    public void setData(List<MyPlanOrderDto.planOrderData> mDatas ) {
+    public void setData(List<MyPlanOrderDto.planOrderData> mDatas) {
         this.mDatas = mDatas;
         notifyDataSetChanged();
     }
@@ -61,16 +63,17 @@ public class DriverplanOrderAdapter extends BaseAdapter {
     public List<MyPlanOrderDto.planOrderData> getData() {
         return mDatas;
     }
+
     public void addMoreData(List<MyPlanOrderDto.planOrderData> newDatas) {
         mDatas.addAll(newDatas);
         notifyDataSetChanged();
     }
+
     @Override
     public int getItemViewType(int position) {
         if (position + 1 == getItemCount()) {
             return TYPE_FOOTER;
-        }
-        else {
+        } else {
             return TYPE_ITEM;
         }
     }
@@ -89,21 +92,27 @@ public class DriverplanOrderAdapter extends BaseAdapter {
 
     @Override
     public void onBindViewHolder(final RecyclerView.ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
-        if(holder instanceof ViewHolder){
-            MyPlanOrderDto.planOrderData dto=mDatas.get(position);
-            ImageLoadUtil.displayImage(mContext,dto.getCompanyLogo(),((ViewHolder) holder).imageView);
-            String util=dto.getUnitName();
-            if(dto.getTranType()==1){//派车
+        if (holder instanceof ViewHolder) {
+            MyPlanOrderDto.planOrderData dto = mDatas.get(position);
+            ImageLoadUtil.displayImage(mContext, dto.getCompanyLogo(), ((ViewHolder) holder).imageView);
+            if (TextUtils.isEmpty(dto.getResTxt2())) {
+                ((ViewHolder) holder).resTxt2Linear.setVisibility(View.GONE);
+            }else {
+                ((ViewHolder) holder).resTxt2Linear.setVisibility(View.VISIBLE);
+                ((ViewHolder) holder).resTxt2Text.setText(dto.getResTxt2());
+            }
+            String util = dto.getUnitName();
+            if (dto.getTranType() == 1) {//派车
                 ((ViewHolder) holder).viewTab1.setText("派车");
-            }else if(dto.getTranType()==2){//派船
+            } else if (dto.getTranType() == 2) {//派船
                 ((ViewHolder) holder).viewTab1.setText("派船");
             }
-            if(dto.getPlanStatus()==2){
+            if (dto.getPlanStatus() == 2) {
                 ((ViewHolder) holder).tvStatus.setText("已暂停");
 
-            }else if(dto.getPlanStatus()==3){
+            } else if (dto.getPlanStatus() == 3) {
                 ((ViewHolder) holder).tvStatus.setText("已终止");
-            }else {
+            } else {
                 ((ViewHolder) holder).tvStatus.setText("");
             }
             ((ViewHolder) holder).tvAdress.setText(dto.getFromUserAddress());
@@ -111,13 +120,13 @@ public class DriverplanOrderAdapter extends BaseAdapter {
             ((ViewHolder) holder).tvFromCompany.setText(dto.getFromName());//发货单位
             ((ViewHolder) holder).tvToCopmpany.setText(dto.getToName());
             ((ViewHolder) holder).tvGoodesNmae.setText(dto.getMaterialsName());
-            ((ViewHolder) holder).tvGoodsNum.setText(dto.getPointWeight()+util);
-            ((ViewHolder) holder).tvOverNum.setText(dto.getOverWeight()+util);
+            ((ViewHolder) holder).tvGoodsNum.setText(dto.getPointWeight() + util);
+            ((ViewHolder) holder).tvOverNum.setText(dto.getOverWeight() + util);
             ((ViewHolder) holder).tvbigNo.setText(dto.getPlanWayBillNo());
-            if(dto.getBindSmartLock()==1){
+            if (dto.getBindSmartLock() == 1) {
                 ((ViewHolder) holder).tvIsBindLock.setText("是（请确认司机已下发电子锁）");
                 ((ViewHolder) holder).tvIsBindLock.setTextColor(mContext.getResources().getColor(R.color.red));
-            }else {
+            } else {
                 ((ViewHolder) holder).tvIsBindLock.setText("否");
                 ((ViewHolder) holder).tvIsBindLock.setTextColor(mContext.getResources().getColor(R.color.gray999));
             }
@@ -134,31 +143,31 @@ public class DriverplanOrderAdapter extends BaseAdapter {
                             .setheight(ViewGroup.LayoutParams.WRAP_CONTENT)
                             .setFouse(true)
                             .builder()
-                            .showAsLaction(((ViewHolder) holder).llMore, Gravity.LEFT,0,0);
+                            .showAsLaction(((ViewHolder) holder).llMore, Gravity.LEFT, 0, 0);
 
-                    popupWindowUtil.setOnClickListener(new int[]{R.id.rlapplystop, R.id.rlzhuabao,R.id.creat_smallorder}, new View.OnClickListener() {
+                    popupWindowUtil.setOnClickListener(new int[]{R.id.rlapplystop, R.id.rlzhuabao, R.id.creat_smallorder}, new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Bundle bundle;
-                            switch (v.getId()){
+                            switch (v.getId()) {
                                 case R.id.rlapplystop://
                                     popupWindowUtil.dismiss();
-                                    bundle=new Bundle();
-                                    bundle.putString("from","applypause");
-                                    bundle.putString("id",mDatas.get(position).getId());
-                                    bundle.putString("type",1+"");
-                                    activity.readyGo(OrderMainActivity.class,bundle);
+                                    bundle = new Bundle();
+                                    bundle.putString("from", "applypause");
+                                    bundle.putString("id", mDatas.get(position).getId());
+                                    bundle.putString("type", 1 + "");
+                                    activity.readyGo(OrderMainActivity.class, bundle);
                                     break;
                                 case R.id.rlzhuabao://
-                                     activity.showMessage("转包功能正在抓紧开发中。。。。");
+                                    activity.showMessage("转包功能正在抓紧开发中。。。。");
                                     popupWindowUtil.dismiss();
                                     break;
                                 case R.id.creat_smallorder:
-                                bundle=new Bundle();
-                                bundle.putString("from","addwaybill");
-                                bundle.putSerializable("data",mDatas.get(position));
-                                activity.readyGo(OrderMainActivity.class,bundle);
-                                break;
+                                    bundle = new Bundle();
+                                    bundle.putString("from", "addwaybill");
+                                    bundle.putSerializable("data", mDatas.get(position));
+                                    activity.readyGo(OrderMainActivity.class, bundle);
+                                    break;
                             }
                         }
                     });
@@ -166,8 +175,7 @@ public class DriverplanOrderAdapter extends BaseAdapter {
             });
 
 
-
-            if(onTabClickListener!=null){
+            if (onTabClickListener != null) {
                 ((ViewHolder) holder).viewTab1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -215,7 +223,8 @@ public class DriverplanOrderAdapter extends BaseAdapter {
                 });
 
             }
-        }if (holder instanceof FooterHolder) {
+        }
+        if (holder instanceof FooterHolder) {
 
             switch (load_more_status) {
                 case PULLUP_LOAD_MORE:
@@ -239,7 +248,7 @@ public class DriverplanOrderAdapter extends BaseAdapter {
 
     @Override
     public int getItemCount() {
-        return mDatas.size() == 0 ? 0 : mDatas.size()+1;
+        return mDatas.size() == 0 ? 0 : mDatas.size() + 1;
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -247,25 +256,47 @@ public class DriverplanOrderAdapter extends BaseAdapter {
             super(itemView);
             ButterKnife.bind(this, itemView);
         }
-        @BindView(R.id.tvAdress)TextView tvAdress;
-        @BindView(R.id.image) ImageView imageView;
 
-        @BindView(R.id.tvgoodsname)TextView tvGoodesNmae;
-        @BindView(R.id.tvgoodsnum)TextView tvGoodsNum;
-        @BindView(R.id.tvovernum)TextView tvOverNum;
-        @BindView(R.id.viewtab1)TextView viewTab1;
-        @BindView(R.id.viewtab2)TextView viewTab2;
-        @BindView(R.id.viewtab3)TextView viewTab3;
-        @BindView(R.id.viewtab4)TextView viewTab4;
-        @BindView(R.id.tvAdressTo)TextView tvAdressTo;
-        @BindView(R.id.tvstatus)TextView tvStatus;
-        @BindView(R.id.ico_more) LinearLayout llMore;
-        @BindView(R.id.from_company)TextView tvFromCompany;
-        @BindView(R.id.to_company)TextView tvToCopmpany;
-        @BindView(R.id.tvbigNo)TextView tvbigNo;
-        @BindView(R.id.tvISbindlock)TextView tvIsBindLock;
+        @BindView(R.id.tvAdress)
+        TextView tvAdress;
+        @BindView(R.id.image)
+        ImageView imageView;
+
+        @BindView(R.id.tvgoodsname)
+        TextView tvGoodesNmae;
+        @BindView(R.id.tvgoodsnum)
+        TextView tvGoodsNum;
+        @BindView(R.id.tvovernum)
+        TextView tvOverNum;
+        @BindView(R.id.viewtab1)
+        TextView viewTab1;
+        @BindView(R.id.viewtab2)
+        TextView viewTab2;
+        @BindView(R.id.viewtab3)
+        TextView viewTab3;
+        @BindView(R.id.viewtab4)
+        TextView viewTab4;
+        @BindView(R.id.tvAdressTo)
+        TextView tvAdressTo;
+        @BindView(R.id.tvstatus)
+        TextView tvStatus;
+        @BindView(R.id.ico_more)
+        LinearLayout llMore;
+        @BindView(R.id.from_company)
+        TextView tvFromCompany;
+        @BindView(R.id.to_company)
+        TextView tvToCopmpany;
+        @BindView(R.id.tvbigNo)
+        TextView tvbigNo;
+        @BindView(R.id.tvISbindlock)
+        TextView tvIsBindLock;
+        @BindView(R.id.resTxt2Linear)
+        LinearLayout resTxt2Linear;
+        @BindView(R.id.resTxt2Text)
+        TextView resTxt2Text;
 
     }
+
     @Override
     public void changeMoreStatus(int status) {
         load_more_status = status;

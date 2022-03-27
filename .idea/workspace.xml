@@ -6,7 +6,6 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="msg" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
@@ -15,8 +14,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="833655a7-358c-4303-ae09-7ef1850ed49e" name="Default Changelist" comment="第一次提交">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/nxdriver.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileContent/annotation-processors.bin" afterDir="false" />
@@ -32,44 +29,72 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/adapter/order/DriverplanOrderAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/adapter/order/DriverplanOrderAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/adapter/order/MyplanOrderAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/adapter/order/MyplanOrderAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/adapter/order/OrderBiddAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/adapter/order/OrderBiddAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/adapter/order/SendCarAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/adapter/order/SendCarAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/adapter/order/mainindex/RobOrderAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/adapter/order/mainindex/RobOrderAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/adapter/order/mainindex/ShareOrderAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/adapter/order/mainindex/ShareOrderAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/adapter/order/mainindex/WaitOrderAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/adapter/order/mainindex/WaitOrderAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/adapter/order/waybill/WayBillGoodAdpater.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/adapter/order/waybill/WayBillGoodAdpater.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/adapter/sendcar/WaitExecuteAdpater.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/adapter/sendcar/WaitExecuteAdpater.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/constants/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/dto/order/OrderDelationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/dto/order/OrderDelationDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/dto/sendcar/SendCarDelatiodto.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/dto/sendcar/SendCarDelatiodto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/dto/order/SendCarDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/dto/order/SendCarDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/dto/order/bill/MyPlanOrderDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/dto/order/bill/MyPlanOrderDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/dto/order/bill/WayBillDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/dto/order/bill/WayBillDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/dto/order/mainindex/RobOrderDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/dto/order/mainindex/RobOrderDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/dto/order/mainindex/WaitOrderDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/dto/order/mainindex/WaitOrderDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/dto/sendcar/WaitExecuteDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/dto/sendcar/WaitExecuteDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/modle/login/imple/LoginModelImple.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/modle/login/imple/LoginModelImple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/modle/mine/car/MyChangeCarModelImple.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/modle/mine/car/MyChangeCarModelImple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/ui/my/car/RegisterCarFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/ui/my/car/RegisterCarFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/ui/order/waybill/OrderDelationFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/ui/order/waybill/OrderDelationFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/ui/sendcar/driver/SendCarDelationFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/ui/sendcar/driver/SendCarDelationFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/fragmentlayout/layout/fragment_orderdelation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/fragmentlayout/layout/fragment_orderdelation.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/fragmentlayout/layout/fragment_sendcardelation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/fragmentlayout/layout/fragment_sendcardelation.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/compile_library_classes/debug/classes.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/compile_library_classes/debug/classes.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/compile_only_not_namespaced_r_class_jar/debug/generateDebugRFile/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/compile_only_not_namespaced_r_class_jar/debug/generateDebugRFile/R.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/full_jar/debug/createFullJarDebug/full.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/full_jar/debug/createFullJarDebug/full.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/incremental/debug-mergeJniLibs/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/incremental/debug-mergeJniLibs/merge-state" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/incremental/mergeDebugShaders/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/incremental/mergeDebugShaders/merger.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/incremental/packageDebugAssets/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/incremental/packageDebugAssets/merger.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/incremental/packageDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/incremental/packageDebugResources/merger.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/idcardquality/IDcardQualityProcess.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/idcardquality/IDcardQualityProcess.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/Camera1Control$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/Camera1Control$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/Camera1Control.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/Camera1Control.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/Camera2Control$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/Camera2Control$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/Camera2Control$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/Camera2Control$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/Camera2Control.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/Camera2Control.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraActivity$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraActivity$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraActivity$6$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraActivity$6$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraNativeHelper$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraNativeHelper$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraNativeHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraNativeHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraThreadPool$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraThreadPool$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraThreadPool.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraThreadPool.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraView.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/MaskView.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/MaskView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/OCRCameraLayout.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/OCRCameraLayout.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/OCRFrameLayout.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/camera/OCRFrameLayout.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/crop/CropView.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/crop/CropView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/crop/FrameOverlayView.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/baidu/ocr/ui/crop/FrameOverlayView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/runtime_library_classes/debug/classes.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/runtime_library_classes/debug/classes.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/ui/sendcar/driver/SendCarWaitExecuteFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/ui/sendcar/driver/SendCarWaitExecuteFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/ui/tab/driver/DriverMainFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/ui/tab/driver/DriverMainFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/weight/utils/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/weight/utils/StringUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/itemlayout/layout/item_addwaybill_good.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/itemlayout/layout/item_addwaybill_good.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/itemlayout/layout/item_driver_planorder.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/itemlayout/layout/item_driver_planorder.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/itemlayout/layout/item_orderbidd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/itemlayout/layout/item_orderbidd.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/itemlayout/layout/item_planorder.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/itemlayout/layout/item_planorder.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/itemlayout/layout/item_robbill.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/itemlayout/layout/item_robbill.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/itemlayout/layout/item_role.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/itemlayout/layout/item_role.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/itemlayout/layout/item_sendcar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/itemlayout/layout/item_sendcar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/itemlayout/layout/item_share_order.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/itemlayout/layout/item_share_order.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/itemlayout/layout/item_waitexcute.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/itemlayout/layout/item_waitexcute.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/itemlayout/layout/item_waitorder.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/itemlayout/layout/item_waitorder.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/compile_library_classes/release/classes.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/compile_library_classes/release/classes.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/compile_only_not_namespaced_r_class_jar/release/generateReleaseRFile/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/compile_only_not_namespaced_r_class_jar/release/generateReleaseRFile/R.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/full_jar/release/createFullJarRelease/full.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/full_jar/release/createFullJarRelease/full.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/incremental/mergeReleaseJniLibFolders/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/incremental/mergeReleaseJniLibFolders/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/incremental/mergeReleaseShaders/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/incremental/mergeReleaseShaders/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/incremental/packageReleaseAssets/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/incremental/packageReleaseAssets/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/incremental/packageReleaseResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/incremental/packageReleaseResources/compile-file-map.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/incremental/packageReleaseResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/incremental/packageReleaseResources/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/incremental/release-mergeJniLibs/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/incremental/release-mergeJniLibs/merge-state" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/idcardquality/IDcardQualityProcess.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/idcardquality/IDcardQualityProcess.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/Camera1Control$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/Camera1Control$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/Camera1Control.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/Camera1Control.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/Camera2Control$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/Camera2Control$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/Camera2Control$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/Camera2Control$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/Camera2Control.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/Camera2Control.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraActivity$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraActivity$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraActivity$6$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraActivity$6$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraActivity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraNativeHelper$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraNativeHelper$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraNativeHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraNativeHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraThreadPool$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraThreadPool$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraThreadPool.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraThreadPool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraView.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/CameraView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/MaskView.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/MaskView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/OCRCameraLayout.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/OCRCameraLayout.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/OCRFrameLayout.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/camera/OCRFrameLayout.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/crop/CropView.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/crop/CropView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/crop/FrameOverlayView.class" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/baidu/ocr/ui/crop/FrameOverlayView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build/intermediates/runtime_library_classes/release/classes.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/intermediates/runtime_library_classes/release/classes.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build/outputs/logs/manifest-merger-release-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/build/outputs/logs/manifest-merger-release-report.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,6 +173,7 @@
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
+    <property name="android-custom-viewC:/Users/Kim/Desktop/nxdriver/app/src/main/java/com/saimawzc/freight/weight/CaterpillarIndicator.java_SELECTED" value="CaterpillarIndicator" />
     <property name="android-custom-viewC:/Users/wangs/AppData/Local/Android/Sdk/sources/android-30/android/view/View.java_SELECTED" value="View" />
     <property name="android-custom-viewC:/Users/wangs/AppData/Local/Android/Sdk/sources/android-30/android/view/View.java_View_DIMENSIONS" value="1080&#10;1920" />
     <property name="android-custom-viewC:/Users/wangs/AppData/Local/Android/Sdk/sources/android-30/android/widget/ImageView.java_ImageView_DIMENSIONS" value="1080&#10;1920" />
@@ -155,7 +181,7 @@
     <property name="android-custom-viewC:/Users/wangs/Desktop/nxDriver/app/src/main/java/com/saimawzc/freight/weight/NoData.java_NoData_DIMENSIONS" value="1080&#10;1920" />
     <property name="android-custom-viewC:/Users/wangs/Desktop/nxDriver/app/src/main/java/com/saimawzc/freight/weight/NoData.java_SELECTED" value="NoData" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="D:/Zwgz-master" />
+    <property name="last_opened_file_path" value="D:/ddzy2.0/ddzy-android" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -244,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646700483143</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="第一次提交">
+      <created>1646977260568</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1646977260568</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -267,78 +300,36 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-method">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/modle/sendcar/imple/WaitExecuteModelImple.java</url>
-          <line>206</line>
-          <properties class="com.saimawzc.freight.modle.sendcar.imple.WaitExecuteModelImple" method="getLcInfoDto" />
-          <option name="timeStamp" value="36" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/ui/sendcar/AlreadySendCarFrament.java</url>
+          <line>315</line>
+          <properties class="com.saimawzc.freight.ui.sendcar.AlreadySendCarFrament" method="getSendCarList" />
+          <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-method">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/ui/my/car/SearchCarFragment.java</url>
-          <line>132</line>
-          <properties class="com.saimawzc.freight.ui.my.car.SearchCarFragment" method="compelete" />
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-method">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/modle/login/imple/LoginModelImple.java</url>
-          <line>53</line>
-          <properties method="success" />
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-method">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/modle/login/imple/LoginModelImple.java</url>
-          <line>36</line>
-          <properties class="com.saimawzc.freight.modle.login.imple.LoginModelImple" method="login" />
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-method">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/modle/sendcar/imple/WaitExecuteModelImple.java</url>
-          <line>229</line>
-          <properties method="success" />
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-method">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/ui/sendcar/driver/SendCarWaitExecuteFragment.java</url>
-          <line>426</line>
-          <properties class="com.saimawzc.freight.ui.sendcar.driver.SendCarWaitExecuteFragment" method="getLcInfoDto" />
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-method">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/ui/sendcar/driver/ScSearchDriverFragment.java</url>
-          <line>278</line>
-          <properties class="com.saimawzc.freight.ui.sendcar.driver.ScSearchDriverFragment" method="getDriverList" />
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-method">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/ui/order/waybill/manage/SendCarChooseDriverFragment.java</url>
-          <line>296</line>
-          <properties class="com.saimawzc.freight.ui.order.waybill.manage.SendCarChooseDriverFragment" method="getDriverList" />
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-method">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/ui/login/SplashActivity.java</url>
-          <line>82</line>
-          <properties class="com.saimawzc.freight.ui.login.SplashActivity" method="turnToMain" />
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-method">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/modle/login/imple/LoginModelImple.java</url>
-          <line>93</line>
-          <properties class="com.saimawzc.freight.modle.login.imple.LoginModelImple" method="login" />
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-method">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/modle/login/imple/LoginModelImple.java</url>
-          <line>140</line>
-          <properties class="com.saimawzc.freight.modle.login.imple.LoginModelImple" method="submitPushInfo" />
-          <option name="timeStamp" value="48" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/ui/sendcar/CloseSendCarFrament.java</url>
+          <line>213</line>
+          <properties class="com.saimawzc.freight.ui.sendcar.CloseSendCarFrament" method="getSendCarList">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="79" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/ui/my/car/SearchCarFragment.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="37" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/adapter/order/SendCarAdapter.java</url>
+          <line>161</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/build.gradle</url>
+          <line>14</line>
+          <option name="timeStamp" value="81" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.saimawzc.freight.dto.sendcar.SendCarDelatiodto" memberName="materialsList" />
+      </pinned-members>
+    </pin-to-top-manager>
     <watches-manager>
       <configuration name="Remote">
         <watch expression="((carInfoData)((java.util.ArrayList)dtos).get(0)).id" custom="com.saimawzc.freight.dto.order.CarInfolDto.carInfoData,java.util.ArrayList" />

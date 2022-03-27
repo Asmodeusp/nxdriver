@@ -39,6 +39,7 @@ public class WayBillGoodAdpater extends BaseAdapter {
     private Context mContext;
     private LayoutInflater mInflater;
     private int type=0;
+    private Double  pointPrice;
 
     public WayBillGoodAdpater(List<AddWayBillGoodsDto> mDatas, Context mContext) {
         this.mDatas = mDatas;
@@ -54,6 +55,16 @@ public class WayBillGoodAdpater extends BaseAdapter {
         activity=(BaseActivity) mContext;
         this.type=type;
     }
+
+    public WayBillGoodAdpater(List<AddWayBillGoodsDto> mDatas, Double pointPrice, Context mContext, int i) {
+        this.mDatas = mDatas;
+        this.mContext = mContext;
+        mInflater = LayoutInflater.from(mContext);
+        activity=(BaseActivity) mContext;
+        this.type=i;
+        this.pointPrice=pointPrice;
+    }
+
     public void setData(List<AddWayBillGoodsDto> mDatas ) {
         this.mDatas = mDatas;
         notifyDataSetChanged();
@@ -108,6 +119,7 @@ public class WayBillGoodAdpater extends BaseAdapter {
             }
             if(dto.getGoodprice_two()>0){
                 ((ViewHolder) holder).edGoodPrice.setText(dto.getGoodprice_two()+"元");
+//                ((ViewHolder) holder).edGoodPrice.setText(pointPrice+"元");
             }else {
                 ((ViewHolder) holder).edGoodPrice.setHint("");
             }

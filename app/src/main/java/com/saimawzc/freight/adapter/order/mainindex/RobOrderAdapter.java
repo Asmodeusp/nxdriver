@@ -4,11 +4,13 @@ import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
+import android.text.TextUtils;
 import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.saimawzc.freight.R;
 import com.saimawzc.freight.adapter.BaseAdapter;
@@ -88,6 +90,12 @@ public class RobOrderAdapter extends BaseAdapter {
            ((ViewHolder) holder).tvAdressTo.setText(dto.getToUserAddress());
            ((ViewHolder) holder).tvToCompany.setText(dto.getToName());
            ((ViewHolder) holder).tvFromCompany.setText(dto.getFromName());
+            if (TextUtils.isEmpty(dto.getResTxt2())) {
+                ((ViewHolder) holder).resTxt2Linear.setVisibility(View.GONE);
+            }else {
+                ((ViewHolder) holder).resTxt2Linear.setVisibility(View.VISIBLE);
+                ((ViewHolder) holder).resTxt2Text.setText(dto.getResTxt2());
+            }
            if(dto.getTranType()==2){
                ((ViewHolder) holder).tvtrantType.setText("船运");
            }else {
@@ -218,6 +226,9 @@ public class RobOrderAdapter extends BaseAdapter {
         @BindView(R.id.tvAdressTo)TextView tvAdressTo;
         @BindView(R.id.to_company)TextView tvToCompany;
         @BindView(R.id.from_company)TextView tvFromCompany;
+        @BindView(R.id.resTxt2Text)TextView resTxt2Text;
+        @BindView(R.id.resTxt2Linear)
+        LinearLayout resTxt2Linear;
     }
     @Override
     public void changeMoreStatus(int status) {

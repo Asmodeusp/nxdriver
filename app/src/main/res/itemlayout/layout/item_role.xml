@@ -200,7 +200,7 @@
                 </ImageView>
                 <TextView
                     android:ellipsize="end"
-                    android:maxLines="2"
+
                     android:layout_weight="1"
                     android:layout_marginLeft="@dimen/px16dp"
                     android:id="@+id/tvMessage"

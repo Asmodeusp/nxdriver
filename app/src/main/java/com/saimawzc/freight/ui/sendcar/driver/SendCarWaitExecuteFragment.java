@@ -427,7 +427,7 @@ public class SendCarWaitExecuteFragment extends BaseFragment
     public void getLcInfoDto(LcInfoDto lcInfoDto) {
         //提示popupWindow
         View inflate = LayoutInflater.from(mContext).inflate(R.layout.message_send, null, false);
-        TextView messageText = inflate.findViewById(R.id.messageText);
+        final TextView messageText = inflate.findViewById(R.id.messageText);
 
         // PopUpWindow 传入 ContentView
         popupWindow = new PopupWindow(inflate, 200, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -482,7 +482,15 @@ public class SendCarWaitExecuteFragment extends BaseFragment
                                             if (scanCodeDto.getStock_code().equals(lcbh)) {
 
                                             }else {
-
+                                                messageText.setText("料仓不匹配");
+                                                popupWindow.showAtLocation(aaaa, Gravity.CENTER, 0, 0);
+                                                new Handler(new Handler.Callback() {
+                                                    @Override
+                                                    public boolean handleMessage(@NonNull Message msg) {
+                                                        popupWindow.dismiss();
+                                                        return false;
+                                                    }
+                                                }).sendEmptyMessageDelayed(0, 3000);
                                             }
                                         }
 
@@ -528,7 +536,15 @@ public class SendCarWaitExecuteFragment extends BaseFragment
                                             if (scanCodeDto.getStock_code().equals(lcbh)) {
 
                                             }else {
-
+                                                messageText.setText("料仓不匹配");
+                                                popupWindow.showAtLocation(aaaa, Gravity.CENTER, 0, 0);
+                                                new Handler(new Handler.Callback() {
+                                                    @Override
+                                                    public boolean handleMessage(@NonNull Message msg) {
+                                                        popupWindow.dismiss();
+                                                        return false;
+                                                    }
+                                                }).sendEmptyMessageDelayed(0, 3000);
                                             }
                                         }
 

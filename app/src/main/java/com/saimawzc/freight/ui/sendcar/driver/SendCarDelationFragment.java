@@ -183,6 +183,7 @@ public class SendCarDelationFragment extends BaseFragment
             tvLCId.setText(dtos.getLcbh());
             tvLWText.setText(dtos.getLwxx());
             if (dtos.getResTxt2()!=null&&!TextUtils.isEmpty(dtos.getResTxt2())) {
+                resTxt2Relative.setVisibility(View.VISIBLE);
                 resTxt2Text.setText(dtos.getResTxt2());
             }else {
                 resTxt2Relative.setVisibility(View.GONE);

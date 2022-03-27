@@ -2,6 +2,7 @@ package com.saimawzc.freight.adapter.sendcar;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -79,14 +80,19 @@ public class WaitExecuteAdpater extends BaseAdapter {
     public void onBindViewHolder(final RecyclerView.ViewHolder holder, final int position) {
         if (holder instanceof ViewHolder) {
             WaitExecuteDto.WaitExecuteData dto = mDatas.get(position);
-            if (dto.getLcResult()!=null&&dto.getLcbh()!=null) {
-                if(dto.getLcbh().length()>0&&Integer.parseInt(dto.getLcResult())<2){
+            if (dto.getLcResult() != null && dto.getLcbh() != null) {
+                if (dto.getLcbh().length() > 0 && Integer.parseInt(dto.getLcResult()) < 2) {
                     ((ViewHolder) holder).scanCodeButton.setVisibility(View.VISIBLE);
-                }else {
+                } else {
                     ((ViewHolder) holder).scanCodeButton.setVisibility(View.GONE);
                 }
             }
-
+            if (TextUtils.isEmpty(dto.getResTxt2())) {
+                 ((ViewHolder) holder).resTxt2Linear.setVisibility(View.GONE);
+            }else {
+                ((ViewHolder) holder).resTxt2Linear.setVisibility(View.VISIBLE);
+                ((ViewHolder) holder).resTxt2Text.setText(dto.getResTxt2());
+            }
             ((ViewHolder) holder).tvAdress.setText(dto.getFromUserAddress());
             ((ViewHolder) holder).tvAdressTo.setText(dto.getToUserAddress());
             ((ViewHolder) holder).tvFromCompany.setText(dto.getFromName());
@@ -247,8 +253,12 @@ public class WaitExecuteAdpater extends BaseAdapter {
         TextView tvToCompany;
         @BindView(R.id.tvcarnum)
         TextView tvCarNum;
+        @BindView(R.id.resTxt2Text)
+        TextView resTxt2Text;
         @BindView(R.id.scanCodeButton)
         LinearLayout scanCodeButton;
+        @BindView(R.id.resTxt2Linear)
+        LinearLayout resTxt2Linear;
 
 
     }

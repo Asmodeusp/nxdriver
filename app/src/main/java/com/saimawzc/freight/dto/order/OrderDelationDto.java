@@ -1,5 +1,7 @@
 package com.saimawzc.freight.dto.order;
 
+import android.text.TextUtils;
+
 import java.util.List;
 
 /***
@@ -14,7 +16,7 @@ public class OrderDelationDto {
     private String companyId;
     private String companyName;
     private String confirmor;
-    private String  confirmorStactics;
+    private String confirmorStactics;
     private String fromId;
     private String fromName;
     private String fromUserAddress;
@@ -30,6 +32,7 @@ public class OrderDelationDto {
     private String planWayBillNo;
     private String resTxt2;
     private int businessType;
+
 
     public String getResTxt2() {
         return resTxt2;
@@ -54,6 +57,7 @@ public class OrderDelationDto {
     public void setPlanWayBillNo(String planWayBillNo) {
         this.planWayBillNo = planWayBillNo;
     }
+
     private String trackRouteId;
     private String routeName;
 
@@ -91,7 +95,7 @@ public class OrderDelationDto {
 
     private String confirmorName;
 
-    private String  fromLocation;
+    private String fromLocation;
     private String autoSignName;
 
     private String confirmorStacticsName;
@@ -174,7 +178,21 @@ public class OrderDelationDto {
         this.confirmorStacticsName = confirmorStacticsName;
     }
 
-    private List<listdata>  list;
+    private List<listdata> list;
+    private Double pointPrice;
+
+    public Double getPointPrice() {
+        if (pointPrice != null) {
+            return pointPrice;
+        }else {
+            return 0.00;
+        }
+
+    }
+
+    public void setPointPrice(Double pointPrice) {
+        this.pointPrice = pointPrice;
+    }
 
     public List<listdata> getList() {
         return list;
@@ -197,9 +215,11 @@ public class OrderDelationDto {
     public String getToOperateTime() {
         return toOperateTime;
     }
+
     public void setToOperateTime(String toOperateTime) {
         this.toOperateTime = toOperateTime;
     }
+
     private String singStacticsName;
     private String toId;
     private String toName;
@@ -269,6 +289,7 @@ public class OrderDelationDto {
     public String getFromId() {
         return fromId;
     }
+
     public String getArrivalStartTime() {
         return arrivalStartTime;
     }
@@ -284,6 +305,7 @@ public class OrderDelationDto {
     public void setArrivalEndTime(String arrivalEndTime) {
         this.arrivalEndTime = arrivalEndTime;
     }
+
     public void setFromId(String fromId) {
         this.fromId = fromId;
     }
@@ -416,7 +438,7 @@ public class OrderDelationDto {
         this.wayBillType = wayBillType;
     }
 
-    public class choosedata{
+    public class choosedata {
         private int check;//是否验货
         private int loadPhotos;//是否拍照
         private int provideInvoice;//是否提供发票
@@ -429,7 +451,7 @@ public class OrderDelationDto {
         private String payProtocolName;
         private String remark;
         private String thirdPartyNo;
-        private  int outFactoryPhotos;
+        private int outFactoryPhotos;
         private int stopAlarm;
         private int alarmTime;
         private int bindSmartLock;
@@ -447,9 +469,9 @@ public class OrderDelationDto {
         private String travelYears;
         private String relationComName;
         private int fenceClock;
-        private  int openTransport;
-        private  int openFactorySignIn;
-        private  int openArrival;
+        private int openTransport;
+        private int openFactorySignIn;
+        private int openArrival;
         private int autoTransport;
         private String roadLoss;
         private int poundAlarm;
@@ -459,6 +481,7 @@ public class OrderDelationDto {
         private String beiDouOffTime;
         private String spaceTime;
         private String resTxt2;
+
 
         public String getResTxt2() {
             return resTxt2;
@@ -515,6 +538,7 @@ public class OrderDelationDto {
         public void setPoundAlarm(int poundAlarm) {
             this.poundAlarm = poundAlarm;
         }
+
         public String getRoadLoss() {
             return roadLoss;
         }
@@ -796,14 +820,15 @@ public class OrderDelationDto {
         }
     }
 
-    public class listdata{
+    public class listdata {
         private String id;
         private String materialsId;
         private String materialsName;
-        private double price;
+
         private double weight;
         private int unit;
         private String unitName;
+        private double price;
         private double goodsPrice;
 
         public double getGoodsPrice() {

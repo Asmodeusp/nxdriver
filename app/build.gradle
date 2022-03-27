@@ -14,8 +14,8 @@ android {
         minSdkVersion 20
         targetSdkVersion 30
         multiDexEnabled true //Howard 2017-08-31 解决方法数超过65536的问题
-        versionCode 17
-        versionName "1.4.6"//1.4.4
+        versionCode 20
+        versionName "4.5.5"//1.4.4
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         ndk {
             abiFilters  'armeabi-v7a','arm64-v8a'

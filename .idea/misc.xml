@@ -5,11 +5,29 @@
       <map>
         <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/activitylayout/layout/activity_login.xml" value="0.17255434782608695" />
         <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/activitylayout/layout/small_order.xml" value="0.25" />
+        <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/fragmentlayout/layout/fragment_addaccount.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/fragmentlayout/layout/fragment_addsuggest.xml" value="0.15715579710144928" />
+        <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/fragmentlayout/layout/fragment_driver_mine.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/fragmentlayout/layout/fragment_mine.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/fragmentlayout/layout/fragment_my_car.xml" value="0.26992753623188404" />
+        <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/fragmentlayout/layout/fragment_mydriver.xml" value="0.26992753623188404" />
         <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/fragmentlayout/layout/fragment_orderdelation.xml" value="0.25" />
+        <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/fragmentlayout/layout/fragment_register_car.xml" value="0.13323201621073963" />
         <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/fragmentlayout/layout/fragment_sendcardelation.xml" value="0.25" />
+        <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/fragmentlayout/layout/fragment_waitorder.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/fragmentlayout/layout/fragmentment_smallconpany.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/itemlayout/layout/item_addwaybill_good.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/itemlayout/layout/item_driver_planorder.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/itemlayout/layout/item_orderbidd.xml" value="0.26992753623188404" />
         <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/itemlayout/layout/item_planorder.xml" value="0.25" />
+        <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/itemlayout/layout/item_robbill.xml" value="0.26992753623188404" />
+        <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/itemlayout/layout/item_role.xml" value="0.253125" />
+        <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/itemlayout/layout/item_searchcar.xml" value="0.26992753623188404" />
+        <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/itemlayout/layout/item_sendcar.xml" value="0.253125" />
+        <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/itemlayout/layout/item_share_order.xml" value="0.25" />
+        <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/itemlayout/layout/item_waitexcute.xml" value="0.26992753623188404" />
+        <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/itemlayout/layout/item_waitorder.xml" value="0.26992753623188404" />
+        <entry key="..\:/Users/Kim/Desktop/nxdriver/app/src/main/res/itemlayout/layout/itiem_searchdriver.xml" value="0.26992753623188404" />
         <entry key="..\:/nxDriver/app/src/main/res/activitylayout/layout/activity_login.xml" value="0.1" />
       </map>
     </option>

@@ -113,13 +113,9 @@ public class LoginModelImple extends BasEModeImple implements LoginModel {
                 Hawk.put(PreferenceKey.USER_INFO,response);
                 Hawk.put(PreferenceKey.LOGIN_TYPE,role);
                 Hawk.put(PreferenceKey.ID,response.getToken());
-
-
                 Hawk.put(PreferenceKey.USER_ACCOUNT,account);
                 Hawk.put(PreferenceKey.PASS_WORD,pass);
                 Hawk.put(PreferenceKey.ISREMEMBER_PASS,"1");
-
-
                 ((Activity)view.getContext()).runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -130,7 +126,6 @@ public class LoginModelImple extends BasEModeImple implements LoginModel {
                 String  channelId = (String) SPUtils.get(BaseApplication.getInstance(), "channelId", "");
                 submitPushInfo(channelId);
             }
-
             @Override
             public void fail(String code, String message) {
                 listener.onFail(message);

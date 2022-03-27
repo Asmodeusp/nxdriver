@@ -55,8 +55,31 @@ public class MyPlanOrderDto {
         private String weightUnitName;
         private  int isPrice;
         private String price;
+        private String resTxt2;
 
+        public String getWeightUnitName() {
+            return weightUnitName;
+        }
 
+        public void setWeightUnitName(String weightUnitName) {
+            this.weightUnitName = weightUnitName;
+        }
+
+        public int getIsPrice() {
+            return isPrice;
+        }
+
+        public void setIsPrice(int isPrice) {
+            this.isPrice = isPrice;
+        }
+
+        public String getResTxt2() {
+            return resTxt2;
+        }
+
+        public void setResTxt2(String resTxt2) {
+            this.resTxt2 = resTxt2;
+        }
 
         public int isPrice() {
             return isPrice;

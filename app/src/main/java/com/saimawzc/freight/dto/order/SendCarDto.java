@@ -49,6 +49,15 @@ public class SendCarDto {
         private String fromUserAddress;
         private String toUserAddress;
         private int isCancel;
+        private String resTxt2;
+
+        public String getResTxt2() {
+            return resTxt2;
+        }
+
+        public void setResTxt2(String resTxt2) {
+            this.resTxt2 = resTxt2;
+        }
 
         public int getIsCancel() {
             return isCancel;
