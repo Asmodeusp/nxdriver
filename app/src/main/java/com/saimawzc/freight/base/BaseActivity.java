@@ -28,6 +28,7 @@ import android.os.Message;
 import android.provider.MediaStore;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.FileProvider;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -50,6 +51,9 @@ import com.baidu.ocr.ui.camera.CameraActivity;
 import com.baidu.trace.LBSTraceClient;
 import com.baidu.trace.Trace;
 import com.baidu.trace.api.entity.LocRequest;
+import com.hjq.permissions.OnPermissionCallback;
+import com.hjq.permissions.Permission;
+import com.hjq.permissions.XXPermissions;
 import com.saimawzc.freight.ui.DriverMainActivity;
 import com.saimawzc.freight.ui.MainActivity;
 import com.saimawzc.freight.ui.login.LoginActivity;
@@ -106,6 +110,7 @@ import java.util.Set;
 
 import butterknife.ButterKnife;
 
+import static com.baidu.navisdk.ui.util.TipTool.toast;
 import static com.saimawzc.freight.ui.my.identification.DriverCarrierFragment.REQUEST_CODE_PIC;
 
 /**
@@ -161,10 +166,12 @@ public abstract class BaseActivity extends AppCompatActivity {
         initListener();
         //初始化沉浸式
         initImmersionBar();
+
         if (mNeedOnBus) {
             EventBus.getDefault().register(this);
         }
     }
+
 
 
 

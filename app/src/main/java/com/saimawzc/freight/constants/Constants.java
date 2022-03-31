@@ -11,13 +11,13 @@ import com.saimawzc.freight.base.BaseActivity;
 public class Constants {
 
     /***测试***/
- public static final String Baseurl ="http://180.76.240.138:8005/";//
+    public static final String Baseurl = "http://180.76.240.138:8005/";//
 // public static final String Baseurl ="http://120.48.17.182:8005/";//  http://106.12.165.54:8005//
 // public static final String Baseurl ="http://106.12.165.54:8005/";//  http://106.12.165.54:8005//
 // public static final String Baseurl ="http://192.168.102.8:8005/";//  http://106.12.165.54:8005//
 
-// public static final String Baseurl ="http://192.168.101.29:8005/";//  http://106.12.165.54:8005/
- public static final String baseSwUrl = "http://106.12.165.54:8201/";
+    // public static final String Baseurl ="http://192.168.101.29:8005/";//  http://106.12.165.54:8005/
+    public static final String baseSwUrl = "http://106.12.165.54:8201/";
 
     /***正式***/
 //    public static final String Baseurl = "https://app.api.wzcwlw.com/";
@@ -59,5 +59,5 @@ public class Constants {
     public static final int QUALITY_LOW = 1;
     public static final int QUALITY_HIGH = 2;
     public static final int QUALITY_CUSTOM = 3;
-    
+
 }

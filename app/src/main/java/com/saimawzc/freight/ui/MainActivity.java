@@ -1,13 +1,19 @@
 package com.saimawzc.freight.ui;
 
+import static com.baidu.navisdk.ui.util.TipTool.toast;
+
 import android.Manifest;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.text.TextUtils;
@@ -15,6 +21,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.hjq.permissions.OnPermissionCallback;
+import com.hjq.permissions.XXPermissions;
 import com.saimawzc.freight.R;
 import com.saimawzc.freight.base.BaseActivity;
 import com.saimawzc.freight.constants.Constants;
@@ -55,39 +63,46 @@ import org.greenrobot.eventbus.EventBus;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+
 import butterknife.BindView;
 
 
-
-
 public class MainActivity extends BaseActivity
-        implements OnTabSelectListener,BadgeDismissListener, DriverMainView {
+        implements OnTabSelectListener, BadgeDismissListener, DriverMainView {
+    private String[] PERMISSIONSS_LOCATION = new String[]{
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.ACCESS_COARSE_LOCATION,
+    };
     @Titles
-    private static final int[] mTitles = {R.string.tab1,R.string.tab2,R.string.tab3,R.string.tab4};
+    private static final int[] mTitles = {R.string.tab1, R.string.tab2, R.string.tab3, R.string.tab4};
     @SeleIcons
-    private static final int[] mSeleIcons = {R.drawable.ico_mainindex_blue,R.drawable.ico_yundan_blue,R.drawable.ico_paicheblue,R.drawable.ico_main_blue};
+    private static final int[] mSeleIcons = {R.drawable.ico_mainindex_blue, R.drawable.ico_yundan_blue, R.drawable.ico_paicheblue, R.drawable.ico_main_blue};
     @NorIcons
     private static final int[] mNormalIcons = {R.drawable.ico_mainindex_gray, R.drawable.ico_yundan_gray, R.drawable.ico_paiche_gray, R.drawable.ico_mine_gray};
-    @BindView(R.id.tabbar)JPTabBar mTabbar;
+    @BindView(R.id.tabbar)
+    JPTabBar mTabbar;
     private Fragment[] fragments;
     private MainIndexFragment mainIndexFragment;
     private WaybillIndexFragment waybillFragment;
     private SendCarIndexFragment findFragment;
     private MineFragment mineFragment;
     private MainPersonter personter;
+    private NormalDialog normalDialog = null;
+
     @Override
     protected int getViewId() {
         return R.layout.activity_main;
     }
+
     @Override
     protected void init() {
-        mContext=this;
-        if(!isLogin()){
+        mContext = this;
+        if (!isLogin()) {
             readyGo(LoginActivity.class);
         }
-        personter=new MainPersonter(this,mContext);
+        personter = new MainPersonter(this, mContext);
         personter.getFram();
-        userInfoDto=Hawk.get(PreferenceKey.USER_INFO);
+        userInfoDto = Hawk.get(PreferenceKey.USER_INFO);
         initpermissionChecker();
         mainIndexFragment = new MainIndexFragment();
         waybillFragment = new WaybillIndexFragment();
@@ -96,7 +111,7 @@ public class MainActivity extends BaseActivity
         mTabbar.setTabListener(this);
         fragments = new Fragment[]{mainIndexFragment, waybillFragment, findFragment, mineFragment};
         getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainer, mainIndexFragment)
-               .show(mainIndexFragment)
+                .show(mainIndexFragment)
                 .commit();
         mTabbar.setTabListener(this);
         //设置Badge消失的代理
@@ -112,17 +127,17 @@ public class MainActivity extends BaseActivity
         } catch (Exception e) {
             e.printStackTrace();
         }
-        if(Hawk.get(PreferenceKey.CITY_INFO)==null){
+        if (Hawk.get(PreferenceKey.CITY_INFO) == null) {
             cacheArae();
         }
 
-        try{
-            File file=new File(ImageUtil.getSystemPhotoPath(MainActivity.this));
-            if(personter!=null){
+        try {
+            File file = new File(ImageUtil.getSystemPhotoPath(MainActivity.this));
+            if (personter != null) {
                 personter.deleteFile(file);
             }
 
-        }catch (Exception e){
+        } catch (Exception e) {
         }
         new Thread(new Runnable() {
             @Override
@@ -138,6 +153,7 @@ public class MainActivity extends BaseActivity
     }
 
     private boolean isBreak = false;
+
     @Override
     public void onBackPressed() {
         if (isBreak) {
@@ -154,13 +170,43 @@ public class MainActivity extends BaseActivity
         }
     }
 
+    private void checkLocation() {
+        if (XXPermissions.isGranted(context, PERMISSIONSS_LOCATION)) {
+            Log.e("MainActivity", "授权");
+        } else {
+            Log.d("MainActivity", "授权了");
+        }
+        XXPermissions.with(this)
+                // 申请多个权限
+                .permission(PERMISSIONSS_LOCATION)
+                .request(new OnPermissionCallback() {
+
+                    @Override
+                    public void onGranted(List<String> permissions, boolean all) {
+                        toast("获取定位成功");
+                        if (normalDialog!=null) {
+                            normalDialog.dismiss();
+                        }
+                    }
+
+                    @Override
+                    public void onDenied(List<String> permissions, boolean never) {
+                        toast("获取定位权限失败，请手动获取权限");
+                        // 如果是被永久拒绝就跳转到应用权限系统设置页面
+                        initDiaLog();
+                    }
+                });
+
+    }
+
     @Override
     protected void onGetBundle(Bundle bundle) {
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode==100){
+        if (requestCode == 100) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 if (Settings.canDrawOverlays(this)) {
                     showMessage("有权限");
@@ -169,7 +215,38 @@ public class MainActivity extends BaseActivity
                 }
             }
         }
+        if (requestCode == XXPermissions.REQUEST_CODE) {
+            if (XXPermissions.isGranted(this, Manifest.permission.ACCESS_FINE_LOCATION) &&
+                    XXPermissions.isGranted(this, Manifest.permission.ACCESS_COARSE_LOCATION)) {
+                toast("您已经在权限设置页授予了定位权限");
+                if (normalDialog!=null) {
+                    normalDialog.dismiss();
+                }
+            } else {
+                initDiaLog();
+
+
+            }
+        }
     }
+
+    private void initDiaLog() {
+        normalDialog = new NormalDialog(mContext).isTitleShow(false)
+
+                .content("未获取定位权限，是否跳转权限授权页面")
+                .showAnim(new BounceTopEnter()).dismissAnim(new SlideBottomExit())
+                .btnNum(1).btnText("确认");
+        normalDialog.setCanceledOnTouchOutside(false);
+        normalDialog.setOnBtnClickL(
+                new OnBtnClickL() {//搜索
+                    @Override
+                    public void onBtnClick() {
+                        XXPermissions.startPermissionActivity(context, PERMISSIONSS_LOCATION);
+                    }
+                });
+        normalDialog.show();
+    }
+
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         switch (requestCode) {
@@ -182,22 +259,25 @@ public class MainActivity extends BaseActivity
                 } else {
                     //将用户引导至安装未知应用界面。
                     //Intent intent = new Intent(Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES);
-                   // startActivityForResult(intent, 1001);
+                    // startActivityForResult(intent, 1001);
                 }
                 break;
         }
     }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
         unBindForApp();
-        if(dialog!=null){
-            if(!context.isDestroy(context)){
+        if (dialog != null) {
+            if (!context.isDestroy(context)) {
                 dialog.dismiss();
             }
         }
     }
-    int  currentTabIndex=0;
+
+    int currentTabIndex = 0;
+
     @Override
     public void onTabSelect(int index) {
         if (currentTabIndex != index) {
@@ -210,40 +290,49 @@ public class MainActivity extends BaseActivity
         }
         currentTabIndex = index;
     }
+
     @Override
     public void onClickMiddle(View middleBtn) {
     }
+
     @Override
     public void onDismiss(int position) {//红点消失
     }
+
     /**
      * 判断该用户是否已经认证
-     * ***/
+     ***/
     private NormalDialog dialog;
+
     @Override
     protected void onResume() {
         super.onResume();
-        if(personter!=null){
+        checkLocation();
+        if (personter != null) {
             personter.getLessess();
         }
-        if(!TextUtils.isEmpty(Hawk.get(PreferenceKey.isChange_or_login, "")) &&
+        if (!TextUtils.isEmpty(Hawk.get(PreferenceKey.isChange_or_login, "")) &&
                 (Hawk.get(PreferenceKey.isChange_or_login, "").equals("true"))) {
 
             Log.e("msg", "发送重新登录广播");
             EventBus.getDefault().post(Constants.reshChangeCYS);
             Hawk.put(PreferenceKey.isChange_or_login, "false");
         }
+
+
     }
-    private void getPersonterData(){
+
+
+    private void getPersonterData() {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 mineApi.getPersoneCener().enqueue(new CallBack<PersonCenterDto>() {
                     @Override
                     public void success(final PersonCenterDto response) {
-                        Hawk.put(PreferenceKey.PERSON_CENTER,response);
-                        if(response.getAuthState()==0){
-                            if(dialog==null){//未认证
+                        Hawk.put(PreferenceKey.PERSON_CENTER, response);
+                        if (response.getAuthState() == 0) {
+                            if (dialog == null) {//未认证
                                 dialog = new NormalDialog(mContext).isTitleShow(false)
                                         .content("您当前未认证，请前往认证？")
                                         .showAnim(new BounceTopEnter()).dismissAnim(new SlideBottomExit())
@@ -253,17 +342,17 @@ public class MainActivity extends BaseActivity
                                     new OnBtnClickL() {//搜索
                                         @Override
                                         public void onBtnClick() {
-                                            Bundle bundle=null;
-                                            if(response.getRoleType()==2){//认证承运商
-                                                bundle=new Bundle();
-                                                bundle.putString("from","useridentification");
-                                            }else if(response.getRoleType()==3){//认证司机
-                                                bundle =new Bundle();
-                                                bundle.putString("from","sijicarriver");
-                                                readyGo(PersonCenterActivity.class,bundle);
+                                            Bundle bundle = null;
+                                            if (response.getRoleType() == 2) {//认证承运商
+                                                bundle = new Bundle();
+                                                bundle.putString("from", "useridentification");
+                                            } else if (response.getRoleType() == 3) {//认证司机
+                                                bundle = new Bundle();
+                                                bundle.putString("from", "sijicarriver");
+                                                readyGo(PersonCenterActivity.class, bundle);
                                             }
-                                            readyGo(PersonCenterActivity.class,bundle);
-                                            if(!isDestroy(MainActivity.this)){
+                                            readyGo(PersonCenterActivity.class, bundle);
+                                            if (!isDestroy(MainActivity.this)) {
                                                 dialog.dismiss();
                                             }
                                         }
@@ -275,10 +364,11 @@ public class MainActivity extends BaseActivity
                                         }
                                     });
                             dialog.show();
-                        }else {
+                        } else {
 
                         }
                     }
+
                     @Override
                     public void fail(String code, String message) {
                         context.showMessage(message);
@@ -295,6 +385,7 @@ public class MainActivity extends BaseActivity
                 navigationBarColor(R.color.bg).
                 init();
     }
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -303,26 +394,26 @@ public class MainActivity extends BaseActivity
 
     @Override
     public void getMyCarrive(List<MyCarrierDto> carrierDtos) {
-        if(carrierDtos==null||carrierDtos.size()<=0){
+        if (carrierDtos == null || carrierDtos.size() <= 0) {
             mTabbar.HideBadge(3);
-        }else {
-            mTabbar.ShowBadge(3,"");
+        } else {
+            mTabbar.ShowBadge(3, "");
         }
     }
 
     @Override
     public void getmylessee(List<MyLessessDto> lessessDtos) {
-        if(lessessDtos==null||lessessDtos.size()<=0){
+        if (lessessDtos == null || lessessDtos.size() <= 0) {
             mTabbar.HideBadge(3);
-        }else {
-            mTabbar.ShowBadge(3,"");
+        } else {
+            mTabbar.ShowBadge(3, "");
         }
     }
 
     @Override
     public void getDialog(FrameDto dto) {
-        if(dto!=null){
-            if(!TextUtils.isEmpty(dto.getContent())){
+        if (dto != null) {
+            if (!TextUtils.isEmpty(dto.getContent())) {
                 showDialog(dto.getContent());
             }
         }
@@ -345,11 +436,11 @@ public class MainActivity extends BaseActivity
 
     @Override
     public void Toast(String str) {
-        if(TextUtils.isEmpty(PreferenceKey.CYS_IS_INDENFICATION)||!Hawk.get(PreferenceKey.CYS_IS_INDENFICATION,"").equals("1")){
-            if(!str.contains("权限")){
+        if (TextUtils.isEmpty(PreferenceKey.CYS_IS_INDENFICATION) || !Hawk.get(PreferenceKey.CYS_IS_INDENFICATION, "").equals("1")) {
+            if (!str.contains("权限")) {
                 context.showMessage(str);
             }
-        }else {
+        } else {
             context.showMessage(str);
         }
     }
@@ -358,15 +449,16 @@ public class MainActivity extends BaseActivity
     public void oncomplete() {
 
     }
-    private void showDialog(String contect){
+
+    private void showDialog(String contect) {
         final BottomDialogUtil bottomDialogUtil = new BottomDialogUtil.Builder()
                 .setContext(context) //设置 context
                 .setContentView(R.layout.dialog_sijitip) //设置布局文件
                 .setOutSideCancel(false) //设置点击外部取消
                 .builder()
                 .show();
-        TextView tvOrder= (TextView) bottomDialogUtil.getItemView(R.id.tvOrder);
-        TextView tvcontect=(TextView) bottomDialogUtil.getItemView(R.id.tvcontect);
+        TextView tvOrder = (TextView) bottomDialogUtil.getItemView(R.id.tvOrder);
+        TextView tvcontect = (TextView) bottomDialogUtil.getItemView(R.id.tvcontect);
         tvcontect.setText(contect);
         tvOrder.setOnClickListener(new View.OnClickListener() {
             @Override

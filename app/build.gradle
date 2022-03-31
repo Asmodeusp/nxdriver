@@ -11,7 +11,7 @@ android {
     useLibrary 'org.apache.http.legacy'
     defaultConfig {
         applicationId "com.saimawzc.freight"
-        minSdkVersion 20
+        minSdkVersion 24
         targetSdkVersion 30
         multiDexEnabled true //Howard 2017-08-31 解决方法数超过65536的问题
         versionCode 20
@@ -110,7 +110,8 @@ android {
         /** 相册选择*/
         implementation 'cn.finalteam:galleryfinal:1.4.8.7'
         implementation 'com.easyandroid:easytools:1.1.9'
-
+        // 权限请求框架：https://github.com/getActivity/XXPermissions
+        implementation 'com.github.getActivity:XXPermissions:13.5'
         implementation 'com.android.support:recyclerview-v7:26.0.0-alpha1'
         /** 网络访问                                    */
         implementation 'com.squareup.retrofit2:retrofit:2.3.0'

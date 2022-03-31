@@ -6,14 +6,16 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+    <option name="TOOL_WINDOW_REGEXP_FILTER" value="false" />
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="833655a7-358c-4303-ae09-7ef1850ed49e" name="Default Changelist" comment="第一次提交">
+    <list default="true" id="833655a7-358c-4303-ae09-7ef1850ed49e" name="Default Changelist" comment="修改部分BUG">
+      <change afterPath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileContent/fileContent.lock" afterDir="false" />
@@ -21,17 +23,28 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/base/BaseActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/base/BaseActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/constants/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/weight/utils/api/mine/MineApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/weight/utils/api/mine/MineApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/ui/DriverMainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/ui/DriverMainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/ui/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/ui/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/ui/order/PlanOrderFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/ui/order/PlanOrderFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/ui/order/waybill/ApplyPauseTrantFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/ui/order/waybill/ApplyPauseTrantFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/weight/utils/Permissions/PermissionsUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/fragmentlayout/layout/fragment_mine.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/fragmentlayout/layout/fragment_mine.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[emulator-5554]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[HLRDU19702009683]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -93,7 +106,7 @@
   <component name="PropertiesComponent">
     <property name="ApkExportedModule" value="nxdriver.app" />
     <property name="BundleExportedModule" value="nxDriver.app" />
-    <property name="DEBUGGABLE_DEVICE" value="emulator-5554" />
+    <property name="DEBUGGABLE_DEVICE" value="huawei-sea_al10-HLRDU19702009683" />
     <property name="DEBUGGABLE_PROCESS" value="com.saimawzc.freight" />
     <property name="DEBUGGER_ID" value="Auto" />
     <property name="ExportApk.ApkPath" value="D:\" />
@@ -112,7 +125,7 @@
     <property name="android-custom-viewC:/Users/wangs/Desktop/nxDriver/app/src/main/java/com/saimawzc/freight/weight/NoData.java_SELECTED" value="NoData" />
     <property name="android-custom-viewD:/AndroidSDK/sources/android-30/android/view/View.java_SELECTED" value="View" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="D:/ddzy2.0/ddzy2.1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/weight/utils" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -120,8 +133,12 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Kim\Desktop\nxdriver\app\src\main\java\com\saimawzc\freight\weight\utils" />
       <recent name="C:\Users\wangs\Desktop\nxDriver\app\src\main\res\drawable" />
       <recent name="C:\Users\wangs\Desktop\nxDriver\app\src\main\res\drawable-xhdpi" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.saimawzc.freight.weight.utils" />
     </key>
   </component>
   <component name="RunManager">
@@ -222,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648370744684</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="修改部分BUG">
+      <created>1648464576122</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1648464576122</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -239,7 +263,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="第一次提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="第一次提交" />
+    <MESSAGE value="修改部分BUG" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改部分BUG" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -257,6 +282,20 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-method">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/ui/MainActivity.java</url>
+          <line>307</line>
+          <properties class="com.saimawzc.freight.ui.MainActivity" method="onResume" />
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-method">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/ui/MainActivity.java</url>
+          <line>206</line>
+          <properties class="com.saimawzc.freight.ui.MainActivity" method="onActivityResult">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="85" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/saimawzc/freight/adapter/order/SendCarAdapter.java</url>

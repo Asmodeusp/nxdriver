@@ -398,7 +398,9 @@
             android:exported="true"
             android:name="com.saimawzc.freight.weight.utils.keeplive.jobhander.JobHandlerService"
             android:permission="android.permission.BIND_JOB_SERVICE"></service>
-
+        <meta-data
+            android:name="ScopedStorage"
+            android:value="true" />
     </application>
 
 </manifest>

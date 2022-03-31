@@ -276,9 +276,7 @@ public class PlanOrderFragment extends BaseFragment implements PlanOrderView {
 
     @Override
     public void getPlanOrderList(List<MyPlanOrderDto.planOrderData> dtos) {
-        for (MyPlanOrderDto.planOrderData dto : dtos) {
-            Log.e("aaaaaa",dto.getCompanyId());
-        }
+
         if(page==1){
             mDatas.clear();
             adapter.notifyDataSetChanged();
